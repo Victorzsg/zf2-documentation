@@ -1,12 +1,10 @@
 .. _user-guide.skeleton-application:
 
-Getting started: A skeleton application
+开始：骨架应用
 =======================================
 
-In order to build our application, we will start with the
-`ZendSkeletonApplication <https://github.com/zendframework/ZendSkeletonApplication>`_ 
-available on `github <https://github.com/>`_. Use Composer (http://getcomposer.org)
-to create a new project from scratch with Zend Framework:
+为创建我们的应用，我们以`ZendSkeletonApplication <https://github.com/zendframework/ZendSkeletonApplication>`_ （可以通过 `github <https://github.com/>`_ 获得）开始。
+使用composer(http://getcomposer.org)来创建一个新zend framework应用。
 
 .. code-block:: bash
    :linenos:
@@ -14,22 +12,16 @@ to create a new project from scratch with Zend Framework:
     php composer.phar create-project --stability="dev" repository-url="https://packages.zendframework.com" zendframework/skeleton-application path/to/install
     php composer.phar update
 
-.. note::
+.. 注意::
 
-    Another way to install the ZendSkeletonApplication is to use github.  Go to 
-    https://github.com/zendframework/ZendSkeletonApplication and click the “Zip”
-    button. This will download a file with a name like
-    ``ZendSkeletonApplication-master.zip`` or
-    similar. 
+    另一个安装ZendSkeletonApplication的方法是使用github。去https://github.com/zendframework/ZendSkeletonApplication 单击“ZIP”按钮就会下载一个``ZendSkeletonApplication-master.zip``相似的文件。
 
-    Unzip this file into the directory where you keep all your vhosts and rename the
-    resultant directory to ``zf2-tutorial``. 
+    把此文件解压到虚拟主机目录并重命名为``zf2-tutorial``。
 
-    ZendSkeletonApplication is set up to use Composer (http://getcomposer.org) to
-    resolve its dependencies. In this case, the dependency is Zend Framework 2
-    itself.
+    ZendSkeletonApplication使用Composer (http://getcomposer.org)来解决它的依赖性，在这里，依赖指的是zf2自己。
 
     To install Zend Framework 2 into our application we simply type:
+    安装zf2到我们的应用，我们只用输入：
 
     .. code-block:: bash
        :linenos:
@@ -38,7 +30,7 @@ to create a new project from scratch with Zend Framework:
         php composer.phar install
         php composer.phar update
 
-    from the ``zf2-tutorial`` folder. This takes a while. You should see an output like:
+    从``zf2-tutorial`` 目录。等一会，我们会看到类似下面的输出：
 
     .. code-block:: bash
        :linenos:
@@ -49,9 +41,9 @@ to create a new project from scratch with Zend Framework:
 
         Generating autoload files
 
-.. note::
+.. 注意::
 
-    If you see this message: 
+    如果看到这样的信息： 
 
     .. code-block:: bash
        :linenos:
@@ -59,8 +51,7 @@ to create a new project from scratch with Zend Framework:
         [RuntimeException]      
           The process timed out. 
 
-    then your connection was too slow to download the entire package in time, and composer
-    timed out. To avoid this, instead of running:
+    说明你的网速太慢而不能及时下载完整的包，导致composer超时。为避免这个错误，用下面的命令代替：
 
     .. code-block:: bash
        :linenos:
@@ -68,7 +59,7 @@ to create a new project from scratch with Zend Framework:
         php composer.phar install
         php composer.phar update
 
-    run instead:
+    运行：
 
     .. code-block:: bash
        :linenos:
@@ -76,27 +67,27 @@ to create a new project from scratch with Zend Framework:
         COMPOSER_PROCESS_TIMEOUT=5000 php composer.phar install
         COMPOSER_PROCESS_TIMEOUT=5000 php composer.phar update
         
-.. note::
+.. 注意::
 
-   For windows users with wamp:
+   使用windows系统wamp的用户：
    
-   1. Install composer for windows
-      Check composer is properly installed by running 
+   1. 安装windows的composer
+      通过以下命令检查是否正确安装 
       
       .. code-block:: bash
          :linenos:
          
          composer
          
-   2. Install git for windows. Also need to add git path in windows environment variable
-      Check git is properly installed by running
+   2. 安装windows版本git，也需要把git路径添加到windows环境变量
+      通过以下命令检查git是否正确安装
       
       .. code-block:: bash
          :linenos:
          
          git
          
-   3. Now install zf2 using command
+   3. 现在用命令行安装zf2
       
       .. code-block:: bash
          :linenos:
@@ -104,14 +95,12 @@ to create a new project from scratch with Zend Framework:
          composer create-project --repository-url="https://packages.zendframework.com" -s dev zendframework/skeleton-application path/to/install
    
 
-We can now move on to the web server setup.
+现在我们来设置web服务器设置。
 
-Using the Apache Web Server
+使用Apache Web Server
 ---------------------------
 
-You now need to create an Apache virtual host for the application and edit your
-hosts file so that ``http://zf2-tutorial.localhost`` will serve ``index.php`` from the
-``zf2-tutorial/public`` directory.
+你的创建一个Apache虚拟主机，以便可以通过 ``http://zf2-tutorial.localhost`` 访问``zf2-tutorial/public``目录的index.php页面。
 
 Setting up the virtual host is usually done within ``httpd.conf`` or
 ``extra/httpd-vhosts.conf``.  If you are using ``httpd-vhosts.conf``, ensure
