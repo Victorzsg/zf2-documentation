@@ -3,21 +3,13 @@
 Modules
 =======
 
-Zend Framework 2 uses a module system to organise your main
-application-specific code within each module. The Application module provided by
-the skeleton is used to provide bootstrapping, error and routing configuration to
-the whole application. It is usually used to provide application level
-controllers for, say, the home page of an application, but we are not going to
-use the default one provided in this tutorial as we want our album list to be
-the home page, which will live in our own module.
+Zend Framework 2使用module系统的每一个module来组织你的每一个应用功能。骨架的应用module为整个应用提供引导，错误和路由配置。module通常用来给应用级的控制器提供功能，比如，一个应用的主页，但是这里我们不打算使用教程默认的module，我们希望使用自己的module使我们的列表页作为首页。
 
-We are going to put all our code into the Album module which will contain our
-controllers, models, forms and views, along with configuration. We’ll also tweak
-the Application module as required.
+我们打算把代码放在Album模型，它包含我们的controllers，modules，和configuration。我们可以根据需要调整这个模型。
 
-Let’s start with the directories required.
+我们从需要的目录开始。
 
-Setting up the Album module
+设置Album模型
 ---------------------------
 
 Start by creating a directory called ``Album`` under ``module`` with the following
