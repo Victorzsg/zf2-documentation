@@ -1,29 +1,19 @@
 .. _user-guide.conclusion:
 
-Conclusion
+总结
 ==========
 
-This concludes our brief look at building a simple, but fully functional, MVC
-application using Zend Framework 2. 
+这个总结回顾了，使用zf2创建一个简单但是功能全面的MVC应用。
 
-In this tutorial we but briefly touched quite a number of different parts of
-the framework.
+在这个简单的教程中，我们触及了框架的很多部分。
 
-The most important part of applications built with Zend Framework 2 are the
-:ref:`modules <zend.module-manager.intro>`, the building blocks of any 
-:ref:`MVC ZF2 application <zend.mvc.intro>`.
+用zf2创建的应用的最重要的部分是 :ref:`modules <zend.module-manager.intro>`， 
+:ref:`MVC ZF2 应用 <zend.mvc.intro>`的基石。
 
-To ease the work with dependencies inside our applications, we use the
-:ref:`service manager <zend.service-manager.intro>`.
+我们使用:ref:`service manager <zend.service-manager.intro>`，来简化我们创建应用所依赖的工作。
 
-To be able to map a request to controllers and their actions, we use
-:ref:`routes <zend.mvc.routing>`.
+为了能解析对控制器和控制器方法的请求，我们使用:ref:`routes <zend.mvc.routing>`。
 
-Data persistence, in most cases, includes using :ref:`Zend\\Db <zend.db.adapter>`
-to communicate with one of the databases. Input data is filtered and validated
-with :ref:`input filters <zend.input-filter.intro>` and together with 
-:ref:`Zend\\Form <zend.form.intro>` they provide a strong bridge between
-the domain model and the view layer.
+数据持续性，在多数情况下，包括使用 :ref:`Zend\\Db <zend.db.adapter>` 和某种数据库通讯。输入数据会被 :ref:`input filters <zend.input-filter.intro>` 和:ref:`Zend\\Form <zend.form.intro>` 过滤并验证，它们是模型和视图之间牢固的桥梁。
 
-:ref:`Zend\\View <zend.view.quick-start>` is responsible for the View in the MVC
-stack, together with a vast amount of :ref:`view helpers <zend.view.helpers>`.
+:ref:`Zend\\View <zend.view.quick-start>` 和大量的  :ref:`view helpers <zend.view.helpers>` 处理mvc视图的展示。
