@@ -102,16 +102,11 @@
 
 你的创建一个Apache虚拟主机，以便可以通过 ``http://zf2-tutorial.localhost`` 访问``zf2-tutorial/public``目录的index.php页面。
 
-Setting up the virtual host is usually done within ``httpd.conf`` or
-``extra/httpd-vhosts.conf``.  If you are using ``httpd-vhosts.conf``, ensure
-that this file is included by your main ``httpd.conf`` file.  Some Linux distributions 
-(ex: Ubuntu) package Apache so that configuration files are stored in ``/etc/apache2`` 
-and create one file per virtual host inside folder ``/etc/apache2/sites-enabled``.  In 
-this case, you would place the virtual host block below into the file 
-``/etc/apache2/sites-enabled/zf2-tutorial``.
+设置虚拟主机通常需要设置 ``httpd.conf`` 或
+``extra/httpd-vhosts.conf``。如果使用 ``httpd-vhosts.conf`` 要确保该文件已经被 ``httpd.conf`` 包含进来。
+一些Linux发行版本（如Ubuntu）包含Apache，它们的配置文件存储在 ``/etc/apache2``，并且为``/etc/apache2/sites-enabled``目录内的每一个虚拟主机创建一个文件。在这种情况下，你要把虚拟主机部分放在文件``/etc/apache2/sites-enabled/zf2-tutorial``中。
 
-Ensure that ``NameVirtualHost`` is defined and set to “\*:80” or similar, and then
-define a virtual host along these lines:
+确保 ``NameVirtualHost`` 已经设置并设置为“\*:80”，然后在下面的代码中配置一个虚拟主机：
 
 .. code-block:: apache
    :linenos:
@@ -128,31 +123,29 @@ define a virtual host along these lines:
         </Directory>
     </VirtualHost>
 
-Make sure that you update your ``/etc/hosts`` or
-``c:\windows\system32\drivers\etc\hosts`` file so that ``zf2-tutorial.localhost``
-is mapped to ``127.0.0.1``. The website can then be accessed using
-``http://zf2-tutorial.localhost``.
+确保 ``/etc/hosts`` 和
+``c:\windows\system32\drivers\etc\hosts`` 文件已做了修改，以使 ``zf2-tutorial.localhost``
+指向 ``127.0.0.1``。 这样网站就可以通过``http://zf2-tutorial.localhost``访问了。
 
 .. code-block:: none
    :linenos:
 
     127.0.0.1               zf2-tutorial.localhost localhost
 
-Restart Apache.
+重启Apache。
 
-If you've done it correctly, it should look something like this:
+如果你已经正确地做了以上这些，你应该能够看到如下内容：
 
 .. image:: ../images/user-guide.skeleton-application.hello-world.png
     :width: 940 px
 
-To test that your ``.htaccess`` file is working, navigate to
-``http://zf2-tutorial.localhost/1234`` and you should see this:
+测试``.htaccess`` 文件是否设置正确，打开``http://zf2-tutorial.localhost/1234`` 页面，你应该看到如下界面：
 
 .. image:: ../images/user-guide.skeleton-application.404.png
     :width: 940 px
 
-If you see a standard Apache 404 error, then you need to fix ``.htaccess`` usage
-before continuing.  If you're are using IIS with the URL Rewrite Module, import the following:
+如果你看到了一个标准的Apache 404页面，你就得在继续下一步之前重新检查 ``.htaccess`` 的使用。
+如果你使用的是开启了URL Rewrite模块的IIS服务器，导入如下代码：
 
 .. code-block:: apache
    :linenos:
@@ -160,42 +153,35 @@ before continuing.  If you're are using IIS with the URL Rewrite Module, import 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [NC,L]
 
-You now have a working skeleton application and we can start adding the specifics
-for our application.
+现在你有了一个可以运行的骨架应用，我们开始给它添加细节。
 
-Using the Built-in PHP CLI Server
+使用内置的PHP CLI服务
 ---------------------------------
 
-Alternatively — if you are using PHP 5.4 or above — you can use the built-in CLI server (cli-server). To do this, you
-just start the server in the root directory:
+另外 —— 如果你使用版本5.4以上的PHP —— 你可以使用内置的CLI服务（cli-server）。你只用在根目录开启服务就可以使用它了：
 
 .. code-block:: bash
     :linenos:
     
     php -S 0.0.0.0:8080 -t public/ public/index.php
 
-This will make the website available on port 8080 on all network interfaces, using
-``public/index.php`` to handle routing. This means the site is accessible via http://localhost:8080
-or http://<your-local-IP>:8080.
+这样，通过所有网络接口的8080端口就可以访问此网站了，用 ``public/index.php`` 来控制路由。
+这意味着通过 http://localhost:8080 或者 http://<your-local-IP>:8080 来访问网站。
 
-If you’ve done it right, you should see the same result as with Apache above.
+如果你做的都正确，你应该能够看到和上面的Apache一样的结果。
 
-To test that your routing is working, navigate to
-http://localhost:8080/1234 and you should see the same error page as with Apache above.
+为了测试你的路由是正确的，访问http://localhost:8080/1234 ，你会看到和上面的Apache一样的错误页面。
 
-.. note::
+.. 注意::
 
-    The built-in CLI server is **for development only**.
+    内置CLI 服务 **只限于开发**。
 
-Error reporting
+错误报告
 ---------------
 
-Optionally, *when using Apache*, you can use the ``APPLICATION_ENV`` setting in 
-your ``VirtualHost`` to let PHP output all its errors to the browser. This can be 
-useful during the development of your application.
+另外， *使用Apache时*， 你可以用 ``VirtualHost`` 中的 ``APPLICATION_ENV`` 设置来让PHP把所有的错误输出到浏览器。在开发过程中，这是很有用的。
 
-Edit ``index.php`` from the ``zf2-tutorial/public/`` directory and change it to
-the following:
+编辑 ``zf2-tutorial/public/`` 目录的 ``index.php`` ：
 
 .. code-block:: php
    :linenos:
