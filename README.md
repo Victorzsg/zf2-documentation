@@ -18,3 +18,4 @@ Zend Framework 2 中文手册源码
 + zh目录是copy官方文档en目录里的内容：https://github.com/zendframework/zf2-documentation/tree/master/docs/languages/en
 + 翻译好后，可以使用sphinx制作成html文档
 + 制作成品效果参考：http://shaoyikai.github.io
++ 有任何建议或疑问，可以联系我qq：807862588，或zf2中文手册qq群：174303524
