@@ -67,35 +67,26 @@ zf2用 ``ModuleManager`` 来加载和配置一个module。它们会去模型目�
         }
     }
 
-The ``ModuleManager`` will call ``getAutoloaderConfig()`` and ``getConfig()``
-automatically for us.
+``ModuleManager`` 会为我们自动调用 ``getAutoloaderConfig()`` 和 ``getConfig()`` 。
 
-Autoloading files
+自动加载文件
 ^^^^^^^^^^^^^^^^^
 
-Our ``getAutoloaderConfig()`` method returns an array that is compatible with
-ZF2’s ``AutoloaderFactory``. We configure it so that we add a class map file to
-the ``ClassMapAutoloader`` and also add this module’s namespace to the
-``StandardAutoloader``. The standard autoloader requires a namespace and the
-path where to find the files for that namespace. It is PSR-0 compliant and so
-classes map directly to files as per the `PSR-0 rules
-<https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md>`_.
+``getAutoloaderConfig()`` 方法返回一个ZF2的 ``AutoloaderFactory`` 数组。配置它以使我们添加一个 ``ClassMapAutoloader`` 类映射文件，另外，把这个模型的命名空间也添加到``StandardAutoloader``。标准的自动加载需要一个命名空间和找到命名空间文件的路径。这符合PSR-0命名标准 <https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md>`_，通过该标准，类直接映射到文件。
 
-As we are in development, we don’t need to load files via the classmap, so we provide an empty array for the
-classmap autoloader. Create a file called ``autoload_classmap.php`` under ``zf2-tutorial/module/Album``:
+由于在开发中，我们不需要通过映射类加载文件，所以我们给自动加载映射类提供了一个空数组。在 ``zf2-tutorial/module/Album`` 中创建一个  ``autoload_classmap.php`` 文件：
 
 .. code-block:: php
    :linenos:
 
     return array();
 
-As this is an empty array, whenever the autoloader looks for a class within the
-``Album`` namespace, it will fall back to the to ``StandardAutoloader`` for us.
+由于是空数组，所以无论何时自动加载机去查找 ``Album`` 命名空间中的文件，都会转向 ``StandardAutoloader`` 。
 
-.. note::
+.. 注意::
 
-    If you are using Composer, you could instead just create an empty
-    ``getAutoloaderConfig() { }`` and add to composer.json:
+    如果使用Composer，你只用创建一个空的 ``getAutoloaderConfig() { }`` 并添加到composer。
+    json:
 
     .. code-block:: javascript
        :linenos:
@@ -104,17 +95,14 @@ As this is an empty array, whenever the autoloader looks for a class within the
             "psr-0": { "Album": "module/Album/src/" }
         },
 
-    If you go this way, then you need to run ``php composer.phar update`` to update 
-    the composer autoloading files.
+    如果以这种方式，你得运行 ``php composer.phar update`` 命令来升级composer自动加载文件。
 
-Configuration
+配置
 -------------
 
-Having registered the autoloader, let’s have a quick look at the ``getConfig()``
-method in ``Album\Module``.  This method simply loads the
-``config/module.config.php`` file.
+注册了自动加载，让我们来看看 ``Album\Module`` 中的 ``getConfig()`` 方法。这个方法只是加载了 ``config/module.config.php`` 文件。
 
-Create a file called ``module.config.php`` under ``zf2-tutorial/module/Album/config``:
+在 ``zf2-tutorial/module/Album/config`` 中创建 ``module.config.php`` 文件：
 
 .. code-block:: php
    :linenos:
