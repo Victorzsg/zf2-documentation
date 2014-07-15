@@ -12,8 +12,7 @@ Zend Framework 2使用module系统的每一个module来组织你的每一个应�
 设置Album模型
 ---------------------------
 
-Start by creating a directory called ``Album`` under ``module`` with the following
-subdirectories to hold the module’s files:
+在有以下子目录的 ``module`` 中创建一个 ``Album`` 的目录，用它来保存模型的文件：
 
 .. code-block:: text
    :linenos:
@@ -31,20 +30,12 @@ subdirectories to hold the module’s files:
                     /album
                         /album
 
-As you can see the ``Album`` module has separate directories for the different
-types of files we will have. The PHP files that contain classes within the
-``Album`` namespace live in the ``src/Album`` directory so that we can have
-multiple namespaces within our module should we require it. The view directory
-also has a sub-folder called ``album`` for our module’s view scripts.
+就像上面一样，我们的文件放在 ``Album`` 模型的几个目录里。包含 ``Album`` 命名空间的PHP类文件放在 ``src/Album`` 目录，以便需要的时候在module中使用多个命名空间。视图目录也有一个 ``Album`` 子目录，用来存放模型的视图脚本。
 
-In order to load and configure a module, Zend Framework 2 has a
-``ModuleManager``. This will look for ``Module.php`` in the root of the module
-directory (``module/Album``) and expect to find a class called ``Album\Module``
-within it. That is, the classes within a given module will have the namespace of
-the module’s name, which is the directory name of the module.
+zf2用 ``ModuleManager`` 来加载和配置一个module。它们会去模型目录（``module/Album``）根目录中的 ``Module.php`` 文件查找一个叫做 ``Album/Module`` 的类。就是说，特定模型的类会有该模型的命名空间，即模型的目录名。
 
-Create ``Module.php`` in the ``Album`` module:
-Create a file called ``Module.php`` under ``zf2-tutorial/module/Album``:
+在 ``Album`` 模型创建一个 ``Module.php`` 文件：
+在 ``zf2-tutorial/module/Album`` 里创建一个名叫 ``Module.php`` 的文件：
 
 .. code-block:: php
    :linenos:
