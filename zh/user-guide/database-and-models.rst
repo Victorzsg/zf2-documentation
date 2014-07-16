@@ -247,10 +247,7 @@ Album 模型） 文件：
 列出唱片
 --------------
 
-In order to list the albums, we need to retrieve them from the model and pass
-them to the view. To do this, we fill in ``indexAction()`` within
-``AlbumController``.  Update the ``AlbumController``’s ``indexAction()`` like
-this:
+为了列出唱片，我们需要把它们从model中检索出来并传递到视图中去。为此，我们在 ``AlbumController`` 控制器中编写 ``indexAction()`` 方法。修改 ``AlbumController`` 中的 ``indexAction()`` 方法成这样：
 
 .. code-block:: php
    :linenos:
@@ -265,12 +262,8 @@ this:
         }
     // ...
 
-With Zend Framework 2, in order to set variables in the view, we return a
-``ViewModel`` instance where the first parameter of the constructor is an array
-from the action containing data we need. These are then automatically passed to
-the view script. The ``ViewModel`` object also allows us to change the view
-script that is used, but the default is to use ``{controller name}/{action
-name}``. We can now fill in the ``index.phtml`` view script:
+在zf2中，为了在view中设置变量，我们返回一个 ``ViewModel``。这些会自动被传递到视图脚本中。``ViewModel`` 对象也允许我们改变正在使用的视图脚本，但是默认使用的是 ``{controller name}/{action
+name}``。现在编写 ``index.phtml`` 视图脚本：
 
 .. code-block:: php
    :linenos:
@@ -306,22 +299,13 @@ name}``. We can now fill in the ``index.phtml`` view script:
     <?php endforeach; ?>
     </table>
 
-The first thing we do is to set the title for the page (used in the layout) and
-also set the title for the ``<head>`` section using the ``headTitle()`` view
-helper which will display in the browser’s title bar. We then create a link to
-add a new album.
+我们先来给页面设置title（应用在布局中），使用 ``headTitle()`` 视图辅助函数设置 ``<head>`` 部分的title，它将展示在浏览器的标题栏。然后我们创建一个添加新唱片的链接。
 
-The ``url()`` view helper is provided by Zend Framework 2 and is used to create
-the links we need. The first parameter to ``url()`` is the route name we wish to use
-for construction of the URL, and the second parameter is an array of all the
-variables to fit into the placeholders to use. In this case we use our ‘album’
-route which is set up to accept two placeholder variables: ``action`` and ``id``.
+zf2提供了  ``url()`` 视图辅助函数来创建我们需要的链接。 ``url()`` 的第一个参数是我们希望使用的路径名，第二个参数是变量占位符的数组。这里，使用我们的‘album’路径，并且设置两个占位符变量 ``action`` 和 ``id``。
 
-We iterate over the ``$albums`` that we assigned from the controller action. The
-Zend Framework 2 view system automatically ensures that these variables are
-extracted into the scope of the view script, so that we don’t have to worry
-about prefixing them with ``$this->`` as we used to have to do with Zend
-Framework 1; however you can do so if you wish.
+我们循环从控制器方法中分配的 ``$albums`` 变量。zf2视图系统会自动确保这些变量被提取到视图的作用域，这样我们不用担心像使用zf1一样在它们前面放置 ``$this->``；但是，你喜欢的话也可以这么做。
+
+
 
 We then create a table to display each album’s title and artist, and provide
 links to allow for editing and deleting the record. A standard ``foreach:`` loop
