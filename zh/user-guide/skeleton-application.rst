@@ -139,7 +139,7 @@
 .. image:: ../images/user-guide.skeleton-application.hello-world.png
     :width: 940 px
 
-测试``.htaccess`` 文件是否设置正确，打开``http://zf2-tutorial.localhost/1234`` 页面，你应该看到如下界面：
+测试 ``.htaccess`` 文件是否设置正确，打开 ``http://zf2-tutorial.localhost/1234`` 页面，你应该看到如下界面：
 
 .. image:: ../images/user-guide.skeleton-application.404.png
     :width: 940 px
