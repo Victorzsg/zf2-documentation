@@ -6,9 +6,9 @@
 数据库
 ------------
 
-现在我们有了``Album``模块，并且建立了控制器方法和视图脚本，是时候看看我们应用程序的模型部分了。模型是处理完成应用核心目标的部分（所谓的“商业逻辑”），对我们来说，就是操作数据库。我们利用zf2的``Zend\Db\TableGateway\TableGateway``类在数据库表中查找、添加、更新和删除数据。 
+现在我们有了 ``Album`` 模块，并且建立了控制器方法和视图脚本，是时候看看我们应用程序的模型部分了。模型是处理完成应用核心目标的部分（所谓的“商业逻辑”），对我们来说，就是操作数据库。我们利用zf2的 ``Zend\Db\TableGateway\TableGateway`` 类在数据库表中查找、添加、更新和删除数据。 
 
-我们将通过PHP的PDO驱动来使用Mysql。创建一个数据库``zf2tutorial``，运行下面的SQL语句来创建album表，并给它添加一些数据。
+我们将通过PHP的PDO驱动来使用Mysql。创建一个数据库 ``zf2tutorial`` ，运行下面的SQL语句来创建album表，并给它添加一些数据。
 
 .. code-block:: sql
    :linenos:
@@ -39,9 +39,9 @@
 
 Zend Framework没有提供一个 ``Zend\Model`` 组件，因为模型是你的商业逻辑，这些该由你来决定他们是怎么运行的。有许多组件可以使用，它们取决于你的需要。一种方法是用类表示应用程序中的每个实体模型，然后使用映射程序加载和保存实体对象到数据库。另一种是使用对象映射技术（ORM），例如Doctrine 或 Propel。
 
-本教程中，我们打算创建一个简单的模型类，创建一个``AlbumTable``类来使用``Zend\Db\TableGateway\TableGateway``类，在``Zend\Db\TableGateway\TableGateway``类中，每一个唱片对象是一个 ``Album`` 对象 （成为*实体*）。这是表数据网关设计模式的实现，与数据表中数据实现对接。注意表数据网关模式会成为大型系统中的限制。很容易犯的一个错误是，将数据库连接代码放在控制器方法中，因为这些都被``Zend\Db\TableGateway\AbstractTableGateway``公开了。*不要这样做！*
+本教程中，我们打算创建一个简单的模型类，创建一个 ``AlbumTable`` 类来使用 ``Zend\Db\TableGateway\TableGateway`` 类，在 ``Zend\Db\TableGateway\TableGateway`` 类中，每一个唱片对象是一个 ``Album`` 对象 （成为*实体*）。这是表数据网关设计模式的实现，与数据表中数据实现对接。注意表数据网关模式会成为大型系统中的限制。很容易犯的一个错误是，将数据库连接代码放在控制器方法中，因为这些都被 ``Zend\Db\TableGateway\AbstractTableGateway`` 公开了。 *不要这样做！* 
 
-让我们开始在``module/Album/src/Album/Model``创建一个叫做``Album.php``的文件：
+让我们开始在 ``module/Album/src/Album/Model`` 创建一个叫做 ``Album.php`` 的文件：
 
 .. code-block:: php
    :linenos:
@@ -62,9 +62,9 @@ Zend Framework没有提供一个 ``Zend\Model`` 组件，因为模型是你的�
         }
     }
 
-我们的``Album``实体对象只是一个简单的PHP类。为了和``Zend\Db``的 ``TableGateway`` 类一起运行，我们需要实例化 ``exchangeArray()``方法。这个方法仅仅把传递过来的数据复制到对象的属性。使用表单的时候，我们稍后会添加一个输入过滤机制。
+我们的 ``Album`` 实体对象只是一个简单的PHP类。为了和 ``Zend\Db`` 的 ``TableGateway`` 类一起运行，我们需要实例化 ``exchangeArray()`` 方法。这个方法仅仅把传递过来的数据复制到对象的属性。使用表单的时候，我们稍后会添加一个输入过滤机制。
 
-下一步，我们在``module/Album/src/Album/Model``目录创建``AlbumTable.php``文件：
+下一步，我们在 ``module/Album/src/Album/Model`` 目录创建 ``AlbumTable.php`` 文件：
 
 .. code-block:: php
    :linenos:
@@ -124,14 +124,14 @@ Zend Framework没有提供一个 ``Zend\Model`` 组件，因为模型是你的�
         }
     }
 
-这里稍微麻烦一些。首先，我们给``TableGateway``类的构造函数设置protected属性``$tableGateway``。我们使用它对我们的模型数据库表进行操作。
+这里稍微麻烦一些。首先，我们给 ``TableGateway`` 类的构造函数设置protected属性 ``$tableGateway`` 。我们使用它对我们的模型数据库表进行操作。
 
-然后，我们创建一些应用将会使用到的辅助函数。``fetchAll()``从数据库中取出所有的唱片信息放在一个 ``结果集``中，``getAlbum()``取出一条``唱片``对象数据，``saveAlbum()``或者在数据库中添加一条信息，或者修改一条已经存在的信息，``deleteAlbum()``把某条数据完全删除。每一个方法的代码是有效且容易理解的。
+然后，我们创建一些应用将会使用到的辅助函数。 ``fetchAll()`` 从数据库中取出所有的唱片信息放在一个 ``结果集`` 中， ``getAlbum()`` 取出一条 ``唱片`` 对象数据， ``saveAlbum()`` 或者在数据库中添加一条信息，或者修改一条已经存在的信息， ``deleteAlbum()`` 把某条数据完全删除。每一个方法的代码是有效且容易理解的。
 
 使用服务管理来配置表入口并注入到album表
 ----------------------------------------------------------------------------------
 
-为了使用相同的``AlbumTable``实例，我们会用``服务管理``来说明怎么创建一个。This is most easily done in the
+为了使用相同的 ``AlbumTable`` 实例，我们会用 ``服务管理`` 来说明怎么创建一个。This is most easily done in the
 Module class where we create a method called ``getServiceConfig()`` which is
 automatically called by the ``ModuleManager`` and applied to the ``ServiceManager``.
 We’ll then be able to retrieve it in our controller when we need it.

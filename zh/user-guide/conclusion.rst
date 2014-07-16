@@ -13,4 +13,4 @@
 
 为了能解析对控制器和控制器方法的请求，我们使用 :ref:`routes <zend.mvc.routing>` 。
 
-数据持续性，在多数情况下，包括使用 :ref:`Zend\\Db <zend.db.adapter>` 和某种数据库通讯。输入数据会被 :ref:`input filters <zend.input-filter.intro>` 和 :ref:`Zend\\Form <zend.form.intro>` 过滤并验证，它们是模型和视图之间牢固的桥梁。:ref:`Zend\\View <zend.view.quick-start>` 和大量的  :ref:`view helpers <zend.view.helpers>` 处理mvc视图的展示。
+数据持续性，在多数情况下，包括使用 :ref:`Zend\\Db <zend.db.adapter>` 和某种数据库通讯。输入数据会被 :ref:`input filters <zend.input-filter.intro>` 和 :ref:`Zend\\Form <zend.form.intro>` 过滤并验证，它们是模型和视图之间牢固的桥梁。:ref:`Zend\\View <zend.view.quick-start>` 和大量的 :ref:`view helpers <zend.view.helpers>` 处理mvc视图的展示。

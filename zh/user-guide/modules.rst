@@ -67,7 +67,7 @@ zf2用 ``ModuleManager`` 来加载和配置一个module。它们会去模型目�
         }
     }
 
-``ModuleManager`` 会为我们自动调用 ``getAutoloaderConfig()`` 和 ``getConfig()`` 。
+``ModuleManager`` 会为我们自动调用 ``getAutoloaderConfig()`` 和 ``getConfig()``。
 
 自动加载文件
 ^^^^^^^^^^^^^^^^^

@@ -3,8 +3,8 @@
 开始：骨架应用
 =======================================
 
-为创建我们的应用，我们以 `ZendSkeletonApplication <https://github.com/zendframework/ZendSkeletonApplication>`_ （可以通过 `github <https://github.com/>`_ 获得）开始。
-使用composer(http://getcomposer.org)来创建一个新zend framework应用。
+为创建我们的应用，我们以 `ZendSkeletonApplication <https://github.com/zendframework/ZendSkeletonApplication>`_ （通过 `github <https://github.com/>`_ 获得）开始。
+使用 composer(http://getcomposer.org)来创建一个新zend framework应用。
 
 .. code-block:: bash
    :linenos:
@@ -12,11 +12,11 @@
     php composer.phar create-project --stability="dev" repository-url="https://packages.zendframework.com" zendframework/skeleton-application path/to/install
     php composer.phar update
 
-.. 注意::
+.. note::
 
-    另一个安装ZendSkeletonApplication的方法是使用github。去https://github.com/zendframework/ZendSkeletonApplication 单击“ZIP”按钮就会下载一个``ZendSkeletonApplication-master.zip``相似的文件。
+    另一个安装ZendSkeletonApplication的方法是使用github。去 `GitHub <https://github.com/zendframework/ZendSkeletonApplication>`_ 单击“ZIP”按钮就会下载一个 ``ZendSkeletonApplication-master.zip`` 相似的文件。
 
-    把此文件解压到虚拟主机目录并重命名为``zf2-tutorial``。
+    把此文件解压到虚拟主机目录并重命名为 ``zf2-tutorial``。
 
     ZendSkeletonApplication使用Composer (http://getcomposer.org)来解决它的依赖性，在这里，依赖指的是zf2自己。
 
@@ -30,7 +30,7 @@
         php composer.phar install
         php composer.phar update
 
-    从``zf2-tutorial`` 目录。等一会，我们会看到类似下面的输出：
+    从 ``zf2-tutorial`` 目录。等一会，我们会看到类似下面的输出：
 
     .. code-block:: bash
        :linenos:
@@ -41,7 +41,7 @@
 
         Generating autoload files
 
-.. 注意::
+.. note::
 
     如果看到这样的信息： 
 
@@ -67,7 +67,7 @@
         COMPOSER_PROCESS_TIMEOUT=5000 php composer.phar install
         COMPOSER_PROCESS_TIMEOUT=5000 php composer.phar update
         
-.. 注意::
+.. note::
 
    使用windows系统wamp的用户：
    
@@ -100,13 +100,13 @@
 使用Apache Web Server
 ---------------------------
 
-你的创建一个Apache虚拟主机，以便可以通过 ``http://zf2-tutorial.localhost`` 访问``zf2-tutorial/public``目录的index.php页面。
+你的创建一个Apache虚拟主机，以便可以通过 ``http://zf2-tutorial.localhost`` 访问 ``zf2-tutorial/public`` 目录的index.php页面。
 
-设置虚拟主机通常需要设置 ``httpd.conf`` 或
+设置虚拟主机通常需要设置 ``httpd.conf`` 或 
 ``extra/httpd-vhosts.conf``。如果使用 ``httpd-vhosts.conf`` 要确保该文件已经被 ``httpd.conf`` 包含进来。
-一些Linux发行版本（如Ubuntu）包含Apache，它们的配置文件存储在 ``/etc/apache2``，并且为``/etc/apache2/sites-enabled``目录内的每一个虚拟主机创建一个文件。在这种情况下，你要把虚拟主机部分放在文件``/etc/apache2/sites-enabled/zf2-tutorial``中。
+一些Linux发行版本（如Ubuntu）包含Apache，它们的配置文件存储在 ``/etc/apache2``，并且为 ``/etc/apache2/sites-enabled`` 目录内的每一个虚拟主机创建一个文件。在这种情况下，你要把虚拟主机部分放在文件 ``/etc/apache2/sites-enabled/zf2-tutorial`` 中。
 
-确保 ``NameVirtualHost`` 已经设置并设置为“\*:80”，然后在下面的代码中配置一个虚拟主机：
+确保 ``NameVirtualHost`` 已经设置为“\*:80”，然后在下面的代码中配置一个虚拟主机：
 
 .. code-block:: apache
    :linenos:
@@ -124,8 +124,8 @@
     </VirtualHost>
 
 确保 ``/etc/hosts`` 和
-``c:\windows\system32\drivers\etc\hosts`` 文件已做了修改，以使 ``zf2-tutorial.localhost``
-指向 ``127.0.0.1``。 这样网站就可以通过``http://zf2-tutorial.localhost``访问了。
+``c:\windows\system32\drivers\etc\hosts`` 文件已做了修改，以使 ``zf2-tutorial.localhost`` 
+指向 ``127.0.0.1``。 这样网站就可以通过 ``http://zf2-tutorial.localhost`` 访问了。
 
 .. code-block:: none
    :linenos:
@@ -166,13 +166,13 @@
     php -S 0.0.0.0:8080 -t public/ public/index.php
 
 这样，通过所有网络接口的8080端口就可以访问此网站了，用 ``public/index.php`` 来控制路由。
-这意味着通过 http://localhost:8080 或者 http://<your-local-IP>:8080 来访问网站。
+这意味着通过 http://localhost:8080 或者 http://your-local-IP:8080 来访问网站。
 
 如果你做的都正确，你应该能够看到和上面的Apache一样的结果。
 
 为了测试你的路由是正确的，访问http://localhost:8080/1234 ，你会看到和上面的Apache一样的错误页面。
 
-.. 注意::
+.. note::
 
     内置CLI 服务 **只限于开发**。
 
@@ -181,7 +181,7 @@
 
 另外， *使用Apache时*， 你可以用 ``VirtualHost`` 中的 ``APPLICATION_ENV`` 设置来让PHP把所有的错误输出到浏览器。在开发过程中，这是很有用的。
 
-编辑 ``zf2-tutorial/public/`` 目录的 ``index.php`` ：
+编辑 ``zf2-tutorial/public/`` 目录的 ``index.php``：
 
 .. code-block:: php
    :linenos:
