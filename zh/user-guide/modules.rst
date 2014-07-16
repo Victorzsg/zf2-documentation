@@ -3,11 +3,11 @@
 模型
 =======
 
-Zend Framework 2使用module系统的每一个module来组织你的每一个应用功能。骨架的应用module为整个应用提供引导，错误和路由配置。module通常用来给应用级的控制器提供功能，比如，一个应用的主页，但是这里我们不打算使用教程默认的module，我们希望使用自己的module使我们的列表页作为首页。
+Zend Framework 2使用module系统的每一个module来组织应用的每一个功能。骨架应用的module为整个应用提供引导，错误和路由配置。module通常用来给应用级的控制器提供功能，比如，一个应用的主页，但是这里我们不打算使用教程默认的module，我们希望使用自己的module使我们的列表页作为首页。
 
 我们打算把代码放在Album模型，它包含我们的controllers，modules，和configuration。我们可以根据需要调整这个模型。
 
-我们从需要的目录开始。
+现在开始创建需要的目录。
 
 设置Album模型
 ---------------------------
@@ -30,7 +30,7 @@ Zend Framework 2使用module系统的每一个module来组织你的每一个应�
                     /album
                         /album
 
-就像上面一样，我们的文件放在 ``Album`` 模型的几个目录里。包含 ``Album`` 命名空间的PHP类文件放在 ``src/Album`` 目录，以便需要的时候在module中使用多个命名空间。视图目录也有一个 ``Album`` 子目录，用来存放模型的视图脚本。
+就像上面一样，我们的文件放在 ``Album`` 模型的几个目录里。``Album`` 命名空间包含的PHP类文件保存在 ``src/Album`` 目录，需要的时候，可以在module中使用多个命名空间。视图目录也有一个 ``Album`` 子目录，用来存放模型的视图脚本。
 
 zf2用 ``ModuleManager`` 来加载和配置一个module。它们会去模型目录（``module/Album``）根目录中的 ``Module.php`` 文件查找一个叫做 ``Album/Module`` 的类。就是说，特定模型的类会有该模型的命名空间，即模型的目录名。
 
@@ -72,7 +72,7 @@ zf2用 ``ModuleManager`` 来加载和配置一个module。它们会去模型目�
 自动加载文件
 ^^^^^^^^^^^^^^^^^
 
-``getAutoloaderConfig()`` 方法返回一个ZF2的 ``AutoloaderFactory`` 数组。配置它以使我们添加一个 ``ClassMapAutoloader`` 类映射文件，另外，把这个模型的命名空间也添加到``StandardAutoloader``。标准的自动加载需要一个命名空间和找到命名空间文件的路径。这符合PSR-0命名标准 <https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md>`_，通过该标准，类直接映射到文件。
+``getAutoloaderConfig()`` 方法返回一个ZF2的 ``AutoloaderFactory`` 数组。配置它以使我们添加一个 ``ClassMapAutoloader`` 类映射文件，另外，把这个模型的命名空间也添加到 ``StandardAutoloader``。标准的自动加载需要一个命名空间和找到命名空间文件的路径。这符合 `PSR-0 <https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md>`_ 命名标准，通过该标准，类直接映射到文件。
 
 由于在开发中，我们不需要通过映射类加载文件，所以我们给自动加载映射类提供了一个空数组。在 ``zf2-tutorial/module/Album`` 中创建一个  ``autoload_classmap.php`` 文件：
 
