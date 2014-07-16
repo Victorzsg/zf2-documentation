@@ -3,7 +3,8 @@
 开始：骨架应用
 =======================================
 
-为创建我们的应用，我们以`ZendSkeletonApplication <https://github.com/zendframework/ZendSkeletonApplication>`_ （可以通过 `github <https://github.com/>`_ 获得）开始。
+为创建我们的应用，我们以 [_ZendSkeletonApplication_](https://github.com/zendframework/ZendSkeletonApplication)
+ （可以通过 `_github_ <https://github.com/>`_ 获得）开始。
 使用composer(http://getcomposer.org)来创建一个新zend framework应用。
 
 .. code-block:: bash
