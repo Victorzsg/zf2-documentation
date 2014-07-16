@@ -1,4 +1,4 @@
-Using Zend\\Paginator in your Album Module
+在Album 模型使用Zend\\Paginator
 ===========================================
 
 In this tutorial we will use the

@@ -1,6 +1,6 @@
 .. _learning.view.placeholders.intro:
 
-Introduction
+说明
 ============
 
 In :ref:`the previous chapter <learning.layout>`, we looked at primarily the Two Step View pattern, which allows

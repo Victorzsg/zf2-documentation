@@ -1,6 +1,6 @@
 .. _learning.lucene.indexing:
 
-Indexing
+索引
 ========
 
 Indexing is performed by adding a new document to an existing or new index:

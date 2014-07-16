@@ -1,6 +1,6 @@
 .. _migration.zf1_zf2_parallel:
 
-Running Zend Framework 2 and Zend Framework 1 in parallel
+同时运行Zend Framework 2 和 Zend Framework 1
 =========================================================
 
 From a technical point of view it is absolutely possible to run ZF2 in parallel

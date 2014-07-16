@@ -1,6 +1,6 @@
 .. _learning.plugins.intro:
 
-Introduction
+说明
 ============
 
 Zend Framework makes heavy use of plugin architectures. Plugins allow for easy extensibility and customization of

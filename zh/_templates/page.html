@@ -82,48 +82,45 @@ Enable Analytics tracking on the docs.
 {% block footer %}
 {{ super() }}
 <div id="edit-button">
-    <img src="{{ pathto('_static/edit.gif',1) }}" alt="Edit this document" title="Edit this document" onclick="javascript:$('#editor-trap').toggle();">
+    <img src="{{ pathto('_static/edit.gif',1) }}" alt="编辑文档" title="编辑文档" onclick="javascript:$('#editor-trap').toggle();">
 </div>
      
 <div id="editor-trap">
-    <h3>Edit this document</h3>
+    <h3>编辑此文档</h3>
 
     <p>
-        The source code of this file is hosted on GitHub. Everyone can
-        update and fix errors in this document with few clicks -
-        no downloads needed.
+        这个文件的源码托管在GitHub上。任何人都可以更新文档或修改文档中的错误 - 不需要下载。
     <p>
 
     <ol>
 
         <li>
-            Login with your <a href="http://www.github.com">GitHub</a> account.
+            登录你的 <a href="http://www.github.com">GitHub</a> 账户。
         </li>
 
         <li>
-            Go to
-            <a href="https://github.com/zendframework/zf2-documentation/edit/master/docs/languages/en/{{ pagename }}.rst">
+            跳转到
+            <a href="https://github.com/shaoyikai/zf2-documentation/edit/master/zh/{{ pagename }}.rst">
                 {{ title }}
-            </a> on GitHub.
+            </a>
         </li>
 
         <li>
-            Edit file contents using GitHub's text editor in your web browser
+            在你的浏览器中使用github的文档编辑器编辑文档内容
         </li>
 
         <li>
-            Fill in the <b>Commit message</b> text box at the end of the page telling <i>why</i>
-            you did the changes. Press <b>Propose file change</b> button next to it when done.
+            在页面下面填写<b>Commit message</b>，告诉我们 <i>为什么</i>
+            你这么修改。完了后按下 <b>Propose file change</b> 按钮。
         </li>
 
 
         <li>
-            On <i>Send a pull request</i> page you don't need to fill in text anymore. Just
-            press <b>Send pull request</b> button.
+            在 <i>Send a pull request</i> 页，你不用填写任何东西。只用按下 <b>Send pull request</b> 按钮。
         </li>
 
         <li>
-            Your changes are now queued for review under project's <a href="https://github.com/zendframework/zf2-documentation/pulls">Pull requests</a> tab on GitHub.
+            你做的改变会放在github上项目 <a href="https://github.com/shaoyikai/zf2-documentation/pulls">Pull requests</a> 里面。
         </li>
     </ol>
 

@@ -1,6 +1,6 @@
 .. _getting-started-with-zend-studio.skeleton-application:
 
-A quick tour of the skeleton application
+骨架应用的快速介绍
 ========================================
 
 The skeleton application provides a lot of files, so it's worth having a quick

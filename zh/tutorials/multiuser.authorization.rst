@@ -1,6 +1,6 @@
 .. _learning.multiuser.authorization:
 
-Building an Authorization System in Zend Framework
+Zend Framework创建权限系统
 ==================================================
 
 .. _learning.multiuser.authorization.intro:

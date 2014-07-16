@@ -1,6 +1,6 @@
 .. _learning.plugins.usage:
 
-Using Plugins
+使用插件
 =============
 
 Components that make use of plugins typically use ``Zend\Loader\PluginLoader`` to do their work. This class has you

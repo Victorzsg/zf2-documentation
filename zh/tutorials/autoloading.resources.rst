@@ -1,6 +1,6 @@
 .. _learning.autoloading.resources:
 
-Resource Autoloading
+资源加载
 ====================
 
 Often, when developing an application, it's either difficult to package classes in the 1:1 classname:filename

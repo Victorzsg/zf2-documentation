@@ -1,6 +1,6 @@
 .. _learning.multiuser.sessions:
 
-Managing User Sessions In ZF
+ZF用户sessions管理
 ============================
 
 .. _learning.multiuser.sessions.intro:

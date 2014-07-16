@@ -1,6 +1,6 @@
 .. _learning.autoloading.usage:
 
-Basic Autoloader Usage
+自动加载使用基础
 ======================
 
 Now that we have an understanding of what autoloading is and the goals and design of Zend Framework's autoloading

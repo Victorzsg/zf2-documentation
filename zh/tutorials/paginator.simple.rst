@@ -1,6 +1,6 @@
 .. _learning.paginator.simple:
 
-Simple Examples
+简单示例
 ===============
 
 In this first example we won't do anything spectacular, but hopefully it will give you a good idea of what

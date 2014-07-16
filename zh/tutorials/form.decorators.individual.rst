@@ -1,6 +1,6 @@
 .. _learning.form.decorators.individual:
 
-Rendering Individual Decorators
+渲染个性化修饰符
 ===============================
 
 In the :ref:`previous section <learning.form.decorators.layering>`, we looked at how you can combine decorators to

@@ -1,7 +1,7 @@
 .. _coding-standard:
 
 **************************************
-Zend Framework Coding Standard for PHP
+Zend Framework编码标准
 **************************************
 
 .. _coding-standard.overview:

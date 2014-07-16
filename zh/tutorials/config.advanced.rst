@@ -1,6 +1,6 @@
 .. _tutorials.config.advanced:
 
-Advanced Configuration Tricks
+高级配置技巧
 =============================
 
 Configuration of Zend Framework 2 applications happens in several steps:

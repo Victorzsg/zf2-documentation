@@ -1,7 +1,7 @@
 .. _requirements:
 
 ***************************
-Zend Framework Requirements
+Zend Framework 环境需求
 ***************************
 
 .. _requirements.introduction:

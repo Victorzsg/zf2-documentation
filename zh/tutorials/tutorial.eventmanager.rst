@@ -1,6 +1,6 @@
 .. _tutorials.eventmanager.rst:
 
-Using the EventManager
+使用事件管理
 ======================
 
 This tutorial explores the various features of ``Zend\EventManager``.

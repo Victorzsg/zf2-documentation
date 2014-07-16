@@ -1,6 +1,6 @@
 .. _migration.overview:
 
-Migration from Zend Framework 1
+Zend Framework 1升级到2
 ===============================
 
 This guide is intended to provide tools and strategies for migrating from Zend

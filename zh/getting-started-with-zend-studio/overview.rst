@@ -1,6 +1,6 @@
 .. _getting-started-with-zend-studio.overview:
 
-Getting Started with Zend Framework 2
+开始学习Zend Framework 2
 =====================================
 
 This tutorial is intended to give an introduction to using Zend Framework 2 by

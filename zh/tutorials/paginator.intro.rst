@@ -1,6 +1,6 @@
 .. _learning.paginator.intro:
 
-Introduction
+说明
 ============
 
 Let's say you're creating a blogging application that will be home to your vast collection of blog posts. There is

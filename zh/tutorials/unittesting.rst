@@ -1,6 +1,6 @@
 .. _tutorials.unittesting.rst:
 
-Unit Testing a Zend Framework 2 application
+Zend Framework 2应用单元测试
 ===========================================
 
 A solid unit test suite is essential for ongoing development in large

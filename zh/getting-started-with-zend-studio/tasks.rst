@@ -1,6 +1,6 @@
 .. _getting-started-with-zend-studio.listing-tasks:
 
-Listing tasks
+任务清单
 =============
 
 In order to list the tasks, we need to retrieve them from the model layer and

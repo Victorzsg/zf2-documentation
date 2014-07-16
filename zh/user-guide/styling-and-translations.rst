@@ -1,6 +1,6 @@
 .. _user-guide.styling-and-translations:
 
-Styling and Translations
+样式和翻译
 ========================
 
 We’ve picked up the SkeletonApplication’s styling, which is fine, but we need to

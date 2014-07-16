@@ -1,6 +1,6 @@
 .. _migration.namespacing-old-classes:
 
-Namespacing Old Classes
+旧类的命名空间
 =======================
 
 ZF2's minimal version is PHP 5.3.  The most notable feature of PHP 5.3 is

@@ -1,6 +1,6 @@
 .. _learning.view.placeholders.basics:
 
-Basic Placeholder Usage
+占位符的基本用法
 =======================
 
 Zend Framework defines a generic ``placeholder()`` view helper that you may use for as many custom placeholders you

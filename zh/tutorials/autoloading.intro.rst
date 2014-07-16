@@ -1,6 +1,6 @@
 .. _learning.autoloading.intro:
 
-Introduction
+介绍
 ============
 
 Autoloading is a mechanism that eliminates the need to manually require dependencies within your *PHP* code. Per

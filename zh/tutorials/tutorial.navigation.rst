@@ -1,4 +1,4 @@
-Using Zend\\Navigation in your Album Module
+在Album 模型使用Zend\\Navigation 
 ===========================================
 
 In this tutorial we will use the :ref:`Zend\\Navigation component <zend.navigation.introduction>`

@@ -1,6 +1,6 @@
 .. _learning.lucene.index-opening:
 
-Index Opening and Creation
+开启与创建索引
 ==========================
 
 All index operations (e.g., creating a new index, adding a document to the index, deleting a document, searching

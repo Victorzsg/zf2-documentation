@@ -1,6 +1,6 @@
 .. _learning.form.decorators.conclusion:
 
-Conclusion
+总结
 ==========
 
 Form decorators are a system that takes some time to learn. At first, they will likely feel cumbersome and overly

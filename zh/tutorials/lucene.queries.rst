@@ -1,6 +1,6 @@
 .. _learning.lucene.queries:
 
-Supported queries
+查询支持
 =================
 
 ``Zend\Search\Lucene`` and Java Lucene support a powerful query language. It allows searching for individual terms,

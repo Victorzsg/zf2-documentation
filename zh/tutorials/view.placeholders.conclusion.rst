@@ -1,6 +1,6 @@
 .. _learning.view.placeholders.conclusion:
 
-View Placeholders: Conclusion
+视图占位符：总结
 =============================
 
 View placeholders are a simple and powerful method for creating rich layouts for your application. You can use a

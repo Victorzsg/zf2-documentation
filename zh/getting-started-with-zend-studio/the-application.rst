@@ -1,6 +1,6 @@
 .. _getting-started-with-zend-studio.the-application:
 
-The MyTaskList application
+应用的个人任务
 ==========================
 
 The application we are going to create is a to-do list manager. The application

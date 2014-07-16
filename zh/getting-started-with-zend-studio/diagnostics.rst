@@ -1,6 +1,6 @@
 .. _getting-started-with-zend-studio.diagnostics:
 
-Application Diagnostics
+应用诊断
 =======================
 
 One really useful feature of Zend Server is the code trace feature that can show

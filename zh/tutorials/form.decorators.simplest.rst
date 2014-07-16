@@ -1,6 +1,6 @@
 .. _learning.form.decorators.simplest:
 
-Decorator Basics
+装饰器基础
 ================
 
 .. _learning.form.decorators.simplest.decorator-overview:

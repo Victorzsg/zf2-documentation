@@ -1,6 +1,6 @@
 .. _getting-started-with-zend-studio.conclusion:
 
-Conclusion
+总结
 ==========
 
 This concludes our brief look at building a simple, but fully functional, Zend

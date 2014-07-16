@@ -1,7 +1,7 @@
 .. _dbadapter:
 
 ################################################
-Setting up a database adapter
+创建数据库适配器
 ################################################
 
 .. _dbadapter.introduction:

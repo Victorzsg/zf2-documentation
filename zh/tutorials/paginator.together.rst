@@ -1,6 +1,6 @@
 .. _learning.paginator.together:
 
-Putting it all Together
+组合起来
 =======================
 
 You have seen how to create a Paginator object, how to render the items on the current page, and how to render a

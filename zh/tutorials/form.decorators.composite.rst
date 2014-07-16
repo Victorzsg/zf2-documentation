@@ -1,6 +1,6 @@
 .. _learning.form.decorators.composite:
 
-Creating and Rendering Composite Elements
+创建和渲染复合元素
 =========================================
 
 In :ref:`the last section <learning.form.decorators.individual>`, we had an example showing a "date of birth

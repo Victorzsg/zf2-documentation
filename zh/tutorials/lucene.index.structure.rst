@@ -1,6 +1,6 @@
 .. _learning.lucene.index-structure:
 
-Lucene Index Structure
+索引结构
 ======================
 
 In order to fully utilize ``Zend\Search\Lucene``'s capabilities with maximum performance, you need to understand

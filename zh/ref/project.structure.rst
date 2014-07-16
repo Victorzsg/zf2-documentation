@@ -1,7 +1,7 @@
 .. _project-structure:
 
 *****************************************************************
-Recommended Project Structure for Zend Framework MVC Applications
+Zend Framework MVC 应用的推荐结构
 *****************************************************************
 
 .. _project-structure.overview:

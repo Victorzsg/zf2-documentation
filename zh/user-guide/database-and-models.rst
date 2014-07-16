@@ -1,9 +1,9 @@
 .. _user-guide.database-and-models:
 
-Database and models
+数据库和模型
 ===================
 
-The database
+数据库
 ------------
 
 Now that we have the ``Album`` module set up with controller action methods and
@@ -270,7 +270,7 @@ that they are not in the git repository (as ``local.php`` is ignored):
         ),
     );
 
-Back to the controller
+回到控制器
 ----------------------
 
 Now that the ``ServiceManager`` can create an ``AlbumTable`` instance for us, we

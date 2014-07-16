@@ -1,6 +1,6 @@
 .. _learning.form.decorators.intro:
 
-Introduction
+说明
 ============
 
 :ref:`Zend_Form <zend.form>` utilizes the **decorator** pattern in order to render elements and forms. Unlike the

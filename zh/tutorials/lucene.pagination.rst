@@ -1,6 +1,6 @@
 .. _learning.lucene.pagination:
 
-Search result pagination
+搜索结果分页
 ========================
 
 As :ref:`mentioned above <learning.lucene.searching.identifiers>`, search result hit objects use lazy loading for

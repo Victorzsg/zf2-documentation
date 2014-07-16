@@ -1,7 +1,7 @@
 .. _learning.di:
 
 #############################
-Learning Dependency Injection
+学习依赖注入
 #############################
 
 .. _learning.di.very-brief-introduction-to-di:

@@ -1,6 +1,6 @@
 .. _learning.form.decorators.layering:
 
-Layering Decorators
+装饰器层
 ===================
 
 If you were following closely in :ref:`the previous section <learning.form.decorators.simplest>`, you may have

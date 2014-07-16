@@ -1,6 +1,6 @@
 .. _learning.multiuser.authentication:
 
-Authenticating Users in Zend Framework
+Zend Framework用户认证
 ======================================
 
 .. _learning.multiuser.authentication.intro:

@@ -1,6 +1,6 @@
 .. _learning.plugins.conclusion:
 
-Conclusion
+总结
 ==========
 
 Understanding the concept of prefix paths and overriding existing plugins will help you with your understanding of

@@ -1,6 +1,6 @@
 .. _learning.lucene.intro:
 
-Zend\Search\Lucene Introduction
+Zend\Search\Lucene 说明
 ===============================
 
 The ``Zend\Search\Lucene`` component is intended to provide a ready-for-use full-text search solution. It doesn't

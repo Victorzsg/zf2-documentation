@@ -1,6 +1,6 @@
 .. _learning.multiuser.intro:
 
-Building Multi-User Applications With Zend Framework
+使用Zend Framework创建多用户应用
 ====================================================
 
 .. _learning.multiuser.intro.zf:

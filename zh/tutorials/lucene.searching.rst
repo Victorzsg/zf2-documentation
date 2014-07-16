@@ -1,6 +1,6 @@
 .. _learning.lucene.searching:
 
-Searching
+搜索
 =========
 
 Searching is performed by using the ``find()`` method:

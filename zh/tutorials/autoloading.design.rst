@@ -1,6 +1,6 @@
 .. _learning.autoloading.design:
 
-Goals and Design
+目标和设计
 ================
 
 .. _learning.autoloading.design.naming:

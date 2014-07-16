@@ -1,6 +1,6 @@
 .. _learning.view.placeholders.standard:
 
-Standard Placeholders
+标准占位符
 =====================
 
 In the :ref:`previous section <learning.view.placeholders.basics>`, we learned about the ``placeholder()`` view

@@ -1,5 +1,5 @@
 
-Standard Placeholders
+标准占位符
 =====================
 
 In the :ref:`previous section <learning.view.placeholders.basics>` , we learned about the ``placeholder()`` view helper, and how it can be used to aggregate custom content. In this section, we'll look at some of the concrete placeholders shipped with Zend Framework, and how you can use them to your advantage when creating complex composite layouts.

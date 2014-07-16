@@ -1,7 +1,7 @@
 .. _doc-standard:
 
 *************************************
-Zend Framework Documentation Standard
+Zend Framework 标准文档
 *************************************
 
 .. _doc-standard.overview:

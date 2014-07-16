@@ -1,6 +1,6 @@
 .. _learning.paginator.control:
 
-Pagination Control and ScrollingStyles
+分页控制和滚动样式
 ======================================
 
 Rendering the items for a page on the screen has been a good start. In the code snippets in previous section we

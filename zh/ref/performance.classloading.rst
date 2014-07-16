@@ -1,6 +1,6 @@
 .. _performance.classloading:
 
-Class Loading
+类的加载
 =============
 
 Anyone who ever performs profiling of a Zend Framework application will immediately recognize that class loading is
