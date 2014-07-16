@@ -6,17 +6,9 @@
 数据库
 ------------
 
-Now that we have the ``Album`` module set up with controller action methods and
-view scripts, it is time to look at the model section of our application.
-Remember that the model is the part that deals with the application’s core
-purpose (the so-called “business rules”) and, in our case, deals with the
-database. We will make use of the Zend Framework class
-``Zend\Db\TableGateway\TableGateway`` which is used to find, insert, update and
-delete rows from a database table.
+现在我们有了``Album``模块，并且建立了控制器方法和视图脚本，是时候看看我们应用程序的模型部分了。模型是处理完成应用核心目标的部分（所谓的“商业逻辑”），对我们来说，就是操作数据库。我们利用zf2的``Zend\Db\TableGateway\TableGateway``类在数据库表中查找、添加、更新和删除数据。 
 
-We are going to use MySQL, via PHP’s PDO driver, so create a database called
-``zf2tutorial``, and run these SQL statements to create the album table with some
-data in it.
+我们将通过PHP的PDO驱动来使用Mysql。创建一个数据库``zf2tutorial``，运行下面的SQL语句来创建album表，并给它添加一些数据。
 
 .. code-block:: sql
    :linenos:
@@ -38,31 +30,18 @@ data in it.
     INSERT INTO album (artist, title)
         VALUES  ('Gotye',  'Making  Mirrors');
 
-(The test data chosen happens to be the Bestsellers on Amazon UK at the time of
-writing!)
+（选择的这些测试数据恰好是在英国亚马逊的畅销书写作的时间！）
 
-We now have some data in a database and can write a very simple model for it.
+现在数据库中有一些数据，我们可以给它写一个简单的模型。
 
-The model files
+模型文件
 ---------------
 
-Zend Framework does not provide a ``Zend\Model`` component because the model is your
-business logic and it’s up to you to decide how you want it to work. There are
-many components that you can use for this depending on your needs. One approach
-is to have model classes represent each entity in your application and then
-use mapper objects that load and save entities to the database. Another is to
-use an Object-relational mapping (ORM) technology, such as Doctrine or Propel.
+Zend Framework没有提供一个 ``Zend\Model`` 组件，因为模型是你的商业逻辑，这些该由你来决定他们是怎么运行的。有许多组件可以使用，它们取决于你的需要。一种方法是用类表示应用程序中的每个实体模型，然后使用映射程序加载和保存实体对象到数据库。另一种是使用对象映射技术（ORM），例如Doctrine 或 Propel。
 
-For this tutorial, we are going to create a very simple model by creating an
-``AlbumTable`` class that uses the ``Zend\Db\TableGateway\TableGateway`` class
-in which each album object is an ``Album`` object (known as an *entity*). This is an
-implementation of the Table Data Gateway design pattern to allow for interfacing
-with data in a database table. Be aware though that the Table Data Gateway
-pattern can become limiting in larger systems. There is also a temptation to put
-database access code into controller action methods as these are exposed by
-``Zend\Db\TableGateway\AbstractTableGateway``. *Don’t do this*!
+本教程中，我们打算创建一个简单的模型类，创建一个``AlbumTable``类来使用``Zend\Db\TableGateway\TableGateway``类，在``Zend\Db\TableGateway\TableGateway``类中，每一个唱片对象是一个 ``Album`` 对象 （成为*实体*）。这是表数据网关设计模式的实现，与数据表中数据实现对接。注意表数据网关模式会成为大型系统中的限制。很容易犯的一个错误是，将数据库连接代码放在控制器方法中，因为这些都被``Zend\Db\TableGateway\AbstractTableGateway``公开了。*不要这样做！*
 
-Let’s start by creating a file called ``Album.php`` under ``module/Album/src/Album/Model``:
+让我们开始在``module/Album/src/Album/Model``创建一个叫做``Album.php``的文件：
 
 .. code-block:: php
    :linenos:
@@ -83,12 +62,9 @@ Let’s start by creating a file called ``Album.php`` under ``module/Album/src/A
         }
     }
 
-Our ``Album`` entity object is a simple PHP class. In order to work with
-``Zend\Db``’s ``TableGateway`` class, we need to implement the ``exchangeArray()``
-method. This method simply copies the data from the passed in array to our entity’s
-properties. We will add an input filter for use with our form later.
+我们的``Album``实体对象只是一个简单的PHP类。为了和``Zend\Db``的 ``TableGateway`` 类一起运行，我们需要实例化 ``exchangeArray()``方法。这个方法仅仅把传递过来的数据复制到对象的属性。使用表单的时候，我们稍后会添加一个输入过滤机制。
 
-Next, we create our ``AlbumTable.php`` file in ``module/Album/src/Album/Model`` directory like this:
+下一步，我们在``module/Album/src/Album/Model``目录创建``AlbumTable.php``文件：
 
 .. code-block:: php
    :linenos:
@@ -148,23 +124,14 @@ Next, we create our ``AlbumTable.php`` file in ``module/Album/src/Album/Model`` 
         }
     }
 
+这里稍微麻烦一些。首先，我们给``TableGateway``类的构造函数设置protected属性``$tableGateway``。我们使用它对我们的模型数据库表进行操作。
 
-There’s a lot going on here. Firstly, we set the protected property ``$tableGateway``
-to the ``TableGateway`` instance passed in the constructor. We will use this to
-perform operations on the database table for our albums.
+然后，我们创建一些应用将会使用到的辅助函数。``fetchAll()``从数据库中取出所有的唱片信息放在一个 ``结果集``中，``getAlbum()``取出一条``唱片``对象数据，``saveAlbum()``或者在数据库中添加一条信息，或者修改一条已经存在的信息，``deleteAlbum()``把某条数据完全删除。每一个方法的代码是有效且容易理解的。
 
-We then create some helper methods that our application will use to interface
-with the table gateway.  ``fetchAll()`` retrieves all albums rows from the
-database as a ``ResultSet``, ``getAlbum()`` retrieves a single row as an
-``Album`` object, ``saveAlbum()`` either creates a new row in the database or
-updates a row that already exists and ``deleteAlbum()`` removes the row
-completely. The code for each of these methods is, hopefully, self-explanatory.
-
-Using ServiceManager to configure the table gateway and inject into the AlbumTable
+使用服务管理来配置表入口并注入到album表
 ----------------------------------------------------------------------------------
 
-In order to always use the same instance of our ``AlbumTable``, we will use the
-``ServiceManager`` to define how to create one. This is most easily done in the
+为了使用相同的``AlbumTable``实例，我们会用``服务管理``来说明怎么创建一个。This is most easily done in the
 Module class where we create a method called ``getServiceConfig()`` which is
 automatically called by the ``ModuleManager`` and applied to the ``ServiceManager``.
 We’ll then be able to retrieve it in our controller when we need it.
