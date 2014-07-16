@@ -131,16 +131,9 @@ Zend Framework没有提供一个 ``Zend\Model`` 组件，因为模型是你的�
 使用服务管理来配置表入口并注入到album表
 ----------------------------------------------------------------------------------
 
-为了使用相同的 ``AlbumTable`` 实例，我们会用 ``服务管理`` 来说明怎么创建一个。This is most easily done in the
-Module class where we create a method called ``getServiceConfig()`` which is
-automatically called by the ``ModuleManager`` and applied to the ``ServiceManager``.
-We’ll then be able to retrieve it in our controller when we need it.
+为了使用相同的 ``AlbumTable`` 实例，我们会用 ``服务管理`` 来说明如何创建一个。最简单的做法是创建了一个叫做 ``getServiceConfig()`` 方法的模型类，它会被 ``ModuleManager`` 自动调用并被 ``ServiceManager`` 使用。这样，需要的时候我们就能在控制器中检索到它。
 
-To configure the ``ServiceManager``, we can either supply the name of the class
-to be instantiated or a factory (closure or callback) that instantiates the
-object when the ``ServiceManager`` needs it. We start by implementing
-``getServiceConfig()`` to provide a factory that creates an ``AlbumTable``. Add
-this method to the bottom of the ``Module.php`` file in ``module/Album``.
+配置 ``ServiceManager``，我们或者提供即将被实例化的类的名字，或者当 ``ServiceManager`` 需要的时候，提供一个工厂（关闭或回调）来实例化对象。我们使用 ``getServiceConfig()`` 来提供一个创建 ``唱片表`` 的工厂。把此方法添加到 ``module/Album`` 下面的文件 ``Module.php`` 里。
 
 .. code-block:: php
    :linenos:
@@ -179,31 +172,15 @@ this method to the bottom of the ``Module.php`` file in ``module/Album``.
         }
     }
 
-This method returns an array of ``factories`` that are all merged together by
-the ``ModuleManager`` before passing them to the ``ServiceManager``. The factory
-for ``Album\Model\AlbumTable`` uses the ``ServiceManager`` to create an
-``AlbumTableGateway`` to pass to the ``AlbumTable``. We also tell the
-``ServiceManager`` that an ``AlbumTableGateway`` is created by getting a
-``Zend\Db\Adapter\Adapter`` (also from the ``ServiceManager``) and using it
-to create a ``TableGateway`` object. The ``TableGateway`` is told to use an
-``Album`` object whenever it creates a new result row. The TableGateway
-classes use the prototype pattern for creation of result sets and entities.
-This means that instead of instantiating when required, the system clones a
-previously instantiated object. See
-`PHP Constructor Best Practices and the Prototype Pattern <http://ralphschindler.com/2012/03/09/php-constructor-best-practices-and-the-prototype-pattern>`_
-for more details.
+这个方法返回一个 ``工厂模式`` 数组，它们在被传递到 ``ServiceManager`` 之前被 ``ModuleManager`` 合并到了一起。``Album\Model\AlbumTable`` 工厂使用 ``ServiceManager`` 创建一个到``唱片表`` 的 ``唱片表入口``。通过获得一个 ``Zend\Db\Adapter\Adapter`` （来自 ``ServiceManager``)，并用它创建一个 ``表入口`` 对象，我们通知 ``ServiceManager`` 一个 ``唱片表入口`` 已经被创建。不论何时创建一行新的数据， ``TableGateway`` 被告知去调用 ``Album`` 对象。表入口类使用原型模式来创建结果集和实体。这就意味着，代替需要的时候才加载，系统会去复制一个事先实例化的对象。更多信息，请查看
+`PHP Constructor Best Practices and the Prototype Pattern <http://ralphschindler.com/2012/03/09/php-constructor-best-practices-and-the-prototype-pattern>`_。
 
-Finally, we need to configure the ``ServiceManager`` so that it knows how to get a
-``Zend\Db\Adapter\Adapter``. This is done using a factory called
-``Zend\Db\Adapter\AdapterServiceFactory`` which we can configure within the
-merged config system. Zend Framework 2’s ``ModuleManager`` merges all the
-configuration from each module’s ``module.config.php`` file and then merges in
-the files in ``config/autoload`` (``*.global.php`` and then ``*.local.php``
-files). We’ll add our database configuration information to ``global.php`` which
-you should commit to your version control system. You can use ``local.php``
-(outside of the VCS) to store the credentials for your database if you want to.
-Modify ``config/autoload/global.php`` (in the Zend Skeleton root, not inside the 
-Album module) with following code:
+最后，我们需要配置 ``ServiceManager`` ，使其知道如何获得一个 ``Zend\Db\Adapter\Adapter``。这是通过使用一个称为 ``Zend\Db\Adapter\AdapterServiceFactory`` 的工厂做到的，该工厂可以在合并的配置系统中配置。Zend Framework 2的 ``ModuleManager`` 把每个模型 ``module.config.php`` 文件的所有配置信息合并到 ``config/autoload`` （``*.global.php`` 和 ``*.local.php``
+文件中）。我们把数据库配置信息添加到 ``global.php`` ，你应该会把此文件提交到版本控制系统中。如果愿意，你可以用 ``local.php`` （不在VCS里面）储存数据凭证。
+
+
+修改 ``config/autoload/global.php`` （在Zend Skeleton 根目录，不在 
+Album 模型） 文件：
 
 .. code-block:: php
    :linenos:
@@ -224,8 +201,7 @@ Album module) with following code:
         ),
     );
 
-You should put your database credentials in ``config/autoload/local.php`` so
-that they are not in the git repository (as ``local.php`` is ignored):
+你应该把数据库凭证放在 ``config/autoload/local.php``，以使它们不在git仓库（因为 ``local.php`` 会被git忽略）：
 
 .. code-block:: php
    :linenos:
@@ -240,9 +216,7 @@ that they are not in the git repository (as ``local.php`` is ignored):
 回到控制器
 ----------------------
 
-Now that the ``ServiceManager`` can create an ``AlbumTable`` instance for us, we
-can add a method to the controller to retrieve it. Add ``getAlbumTable()`` to
-the ``AlbumController`` class:
+现在 ``ServiceManager`` 可以给我们创建一个 ``AlbumTable`` 实例，我们可以在控制器添加一个方法来使用它。为 ``AlbumController`` 类添加 ``getAlbumTable()`` 方法：
 
 .. code-block:: php
    :linenos:
@@ -257,22 +231,20 @@ the ``AlbumController`` class:
             return $this->albumTable;
         }
 
-You should also add:
+还要添加：
 
 .. code-block:: php
    :linenos:
 
     protected $albumTable;
 
-to the top of the class.
+到类的头部。
 
-We can now call ``getAlbumTable()`` from within our controller whenever we need
-to interact with our model.
+现在当我们需要操作模型的时候，就可以调用控制器中的 ``getAlbumTable()`` 方法。
 
-If the service locator was configured correctly in ``Module.php``, then we
-should get an instance of ``Album\Model\AlbumTable`` when calling ``getAlbumTable()``.
+如果服务探测器在 ``Module.php`` 中被正确的配置，当调用 getAlbumTable()`` 方法的时候，就会获得一个 ``Album\Model\AlbumTable`` 实例。
 
-Listing albums
+列出唱片
 --------------
 
 In order to list the albums, we need to retrieve them from the model and pass
