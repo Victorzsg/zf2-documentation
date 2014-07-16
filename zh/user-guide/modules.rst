@@ -1,6 +1,6 @@
 .. _user-guide.modules:
 
-Modules
+模型
 =======
 
 Zend Framework 2使用module系统的每一个module来组织你的每一个应用功能。骨架的应用module为整个应用提供引导，错误和路由配置。module通常用来给应用级的控制器提供功能，比如，一个应用的主页，但是这里我们不打算使用教程默认的module，我们希望使用自己的module使我们的列表页作为首页。
@@ -120,26 +120,16 @@ zf2用 ``ModuleManager`` 来加载和配置一个module。它们会去模型目�
         ),
     );
 
-The config information is passed to the relevant components by the
-``ServiceManager``.  We need two initial sections: ``controllers`` and
-``view_manager``. The controllers section provides a list of all the controllers
-provided by the module. We will need one controller, ``AlbumController``, which
-we’ll reference as ``Album\Controller\Album``. The controller key must
-be unique across all modules, so we prefix it with our module name.
+``ServiceManager`` 会把配置信息传递给相关组件。我们需要 ``controllers`` 和 ``view_manager`` 两个初始化部分。控制器部分提供了模块的控制器列表。我们需要一个控制器  ``AlbumController`` 放在 ``Album\Controller\Album`` ，这个控制器的键在所有模型中必须是唯一的，所以我们以我们的模型名作为它的前缀。
 
-Within the ``view_manager`` section, we add our view directory to the
-``TemplatePathStack`` configuration. This will allow it to find the view scripts for
-the ``Album`` module that are stored in our ``view/`` directory.
+在 ``view_manager`` 部分，我们把视图目录添加到 ``TemplatePathStack`` 配置，这样它就会找到放在 ``view/`` 目录的模块视图脚本。
 
-Informing the application about our new module
+把我们的新模块告诉给应用程序
 ----------------------------------------------
 
-We now need to tell the ``ModuleManager`` that this new module exists. This is done
-in the application’s ``config/application.config.php`` file which is provided by the
-skeleton application. Update this file so that its ``modules`` section contains the
-``Album`` module as well, so the file now looks like this:
+我们现在得告诉 ``ModuleManager`` 新模块的存在。这是通过骨架应用的 ``config/application.config.php`` 配置文件实现的。修改这个文件，使它的 ``modules`` 部分也包含 ``Album`` ，这样，文件看起来应该是这样的：
 
-(Changes required are highlighted using comments.)
+（修改高亮显示的注释部分）
 
 .. code-block:: php
    :linenos:
@@ -161,7 +151,6 @@ skeleton application. Update this file so that its ``modules`` section contains 
         ),
     );
 
-As you can see, we have added our ``Album`` module into the list of modules
-after the ``Application`` module.
+你看，我们已经把 ``Album`` 模块添加到模块列表的 ``Application`` 模块后面。
 
-We have now set up the module ready for putting our custom code into it.
+现在，我们已经设置好了模块，可以在里面编写我们的代码了。
