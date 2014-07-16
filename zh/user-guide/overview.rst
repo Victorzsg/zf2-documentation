@@ -19,7 +19,7 @@
 
     AllowOverride None
 
-to
+改成：
 
 .. code-block:: apache
    :linenos:
@@ -34,22 +34,20 @@ to
 
 教程的示例应用
 ------------------------
-
+并有编辑和删除唱片的链接，还有一个添加唱片的链接。
 我们即将创建的应用，是一个展示我们有多少唱片的简单的库存系统，主页会列出我们仓库的唱片，并且允许我们添加，编辑，删除CD，在我们的站点中，我们需要四个页面：
 
 +----------------+------------------------------------------------------------+
 | Page           | Description                                                |
 +================+============================================================+
-| List of albums | This will display the list of albums and provide links to  |
-|                | edit and delete them. Also, a link to enable adding new    |
-|                | albums will be provided.                                   |
+| List of albums | 这个页面会展示我们的唱片列表，并有编辑和删除唱片的链接，   |
+|                | 还有一个添加唱片的链接。                                   |
 +----------------+------------------------------------------------------------+
-| Add new album  | This page will provide a form for adding a new album.      |
+| Add new album  | 这个页面会有一个添加唱片的表单                             |
 +----------------+------------------------------------------------------------+
-| Edit album     | This page will provide a form for editing an album.        |
+| Edit album     | 这个页面会有一个编辑唱片的表单                             |
 +----------------+------------------------------------------------------------+
-| Delete album   | This page will confirm that we want to delete an album and |
-|                | then delete it.                                            |
+| Delete album   | 这个页面允许我们确认并删除唱片                             |
 +----------------+------------------------------------------------------------+
 
 我们需要把我们的数据存入数据库，只需要一张表保存这些字段：
