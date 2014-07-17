@@ -305,21 +305,13 @@ zf2提供了  ``url()`` 视图辅助函数来创建我们需要的链接。 ``ur
 
 我们循环从控制器方法中分配的 ``$albums`` 变量。zf2视图系统会自动确保这些变量被提取到视图的作用域，这样我们不用担心像使用zf1一样在它们前面放置 ``$this->``；但是，你喜欢的话也可以这么做。
 
-
-
-We then create a table to display each album’s title and artist, and provide
-links to allow for editing and deleting the record. A standard ``foreach:`` loop
-is used to iterate over the list of albums, and we use the alternate form using
-a colon and ``endforeach;`` as it is easier to scan than to try and match up
-braces. Again, the ``url()`` view helper is used to create the edit and delete
-links.
+我们可以创建一个表格来展示每一个唱片的标题和艺术家，并允许对它们进行编辑和删除操作。使用标准的 ``foreach:`` 循环列出唱片列表，相比尝试和匹配括号，以 ``endforeach;`` 结尾浏览更简单一些。此外，仍用 ``url()`` 辅助函数来创建编辑和删除链接。
 
 .. note::
 
-    We always use the ``escapeHtml()`` view helper to help protect
-    ourselves from Cross Site Scripting (XSS) vulnerabilities (see http://en.wikipedia.org/wiki/Cross-site_scripting).
+    我们通常使用 ``escapeHtml()`` 视图辅助函数来保护程序不受跨站点脚本(XSS)攻击（查看：http://en.wikipedia.org/wiki/Cross-site_scripting）。
 
-If you open ``http://zf2-tutorial.localhost/album`` you should see this:
+在浏览器输入 ``http://zf2-tutorial.localhost/album`` 你应该看到如下画面：
 
 .. image:: ../images/user-guide.database-and-models.album-list.png
     :width: 940 px
