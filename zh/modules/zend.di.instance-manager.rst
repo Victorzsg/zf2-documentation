@@ -1,6 +1,6 @@
 .. _zend.di.instancemanager:
 
-Zend\\Di InstanceManager
+Zend\\Di 事件管理器
 ========================
 
 The InstanceManager is responsible for any runtime information associated with the Zend\\Di\\Di DiC. This means that

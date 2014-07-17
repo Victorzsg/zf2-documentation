@@ -1,6 +1,6 @@
 .. _zend.crypt.public-key:
 
-Public key cryptography
+公钥密码系统
 =======================
 
 Public-key cryptography refers to a cryptographic system requiring two separate keys, one of which is secret and

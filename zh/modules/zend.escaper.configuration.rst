@@ -1,6 +1,6 @@
 .. _zend.escaper.configuration:
 
-Configuring Zend\\Escaper
+Zend\\Escaper 配置
 =========================
 
 ``Zend\Escaper\Escaper`` has only one configuration option available, and that is the encoding to be used by the

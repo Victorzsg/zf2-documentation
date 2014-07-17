@@ -1,6 +1,6 @@
 .. _zend.console.adapter:
 
-Console adapters
+控制台适配器
 ================
 
 Zend Framework 2 provides console abstraction layer, which works around various bugs and limitations in operating

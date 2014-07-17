@@ -1,6 +1,6 @@
 .. _zend.di.debugging-and-complex-use-cases:
 
-Zend\\Di Debugging & Complex Use Cases
+Zend\\Di 调试和复杂用例
 ======================================
 
 .. _zend.di.zend.di.debugging-and-complex-use-cases.debugging:

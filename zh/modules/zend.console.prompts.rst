@@ -1,6 +1,6 @@
 .. _zend.console.prompts:
 
-Console prompts
+命令行提示
 ===============
 
 In addition to :doc:`console abstraction layer <zend.console.adapter>` Zend Framework 2 provides numerous convenience

@@ -1,6 +1,6 @@
 .. _zend.crypt.password:
 
-Password
+密码
 ========
 
 In the ``Zend\Crypt\Password`` namespace you can find all the password formats supported by

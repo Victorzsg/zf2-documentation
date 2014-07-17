@@ -1,6 +1,6 @@
 .. _zend.crypt.blockcipher:
 
-Encrypt/decrypt using block ciphers
+Encrypt/decrypt 使用分组密码
 ===================================
 
 ``Zend\Crypt\BlockCipher`` implements the encrypt-then-authenticate mode using `HMAC`_ to provide authentication.

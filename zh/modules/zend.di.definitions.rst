@@ -1,6 +1,6 @@
 .. _zend.di.definition:
 
-Zend\\Di Definition
+Zend\\Di 定义
 ===================
 
 Definitions are the place where Zend\\Di attempts to understand the structure of the code it is attempting to wire.

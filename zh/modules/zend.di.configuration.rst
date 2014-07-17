@@ -1,6 +1,6 @@
 .. _zend.di.configuration:
 
-Zend\\Di Configuration
+Zend\\Di 配置
 ======================
 
 Most of the configuration for both the setup of Definitions as well as the setup of the Instance Manager can be

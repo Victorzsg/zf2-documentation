@@ -1,6 +1,6 @@
 .. _zend.console.introduction:
 
-Introduction to Zend\\Console
+Zend\\Console 介绍
 =============================
 
 Zend Framework 2 features built-in console support.

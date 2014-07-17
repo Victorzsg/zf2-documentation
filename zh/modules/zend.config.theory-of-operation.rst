@@ -1,6 +1,6 @@
 .. _zend.config.theory_of_operation:
 
-Theory of Operation
+操作原理
 ===================
 
 Configuration data are made accessible to ``Zend\Config\Config``'s constructor with an associative array,
