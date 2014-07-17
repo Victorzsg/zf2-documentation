@@ -1,6 +1,6 @@
 .. _zend.code.generator.reference:
 
-Zend\\Code\\Generator Reference
+Zend\\Code\\Generator 参考
 ===============================
 
 .. _zend.code.generator.reference.abstracts:

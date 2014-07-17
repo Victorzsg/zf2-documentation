@@ -1,6 +1,6 @@
 .. _zend.code.generator.examples:
 
-Zend\\Code\\Generator Examples
+Zend\\Code\\Generator 示例
 ==============================
 
 .. _zend.code.generator.examples.class:

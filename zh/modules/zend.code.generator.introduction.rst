@@ -1,6 +1,6 @@
 .. _zend.code.generator.introduction:
 
-Introduction
+介绍
 ============
 
 ``Zend\Code\Generator`` provides facilities to generate arbitrary code using an object-oriented interface, both to

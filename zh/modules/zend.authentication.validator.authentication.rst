@@ -1,6 +1,6 @@
 .. _zend.authentication.validator.authentication:
 
-Authentication Validator
+身份验证器
 ========================
 
 .. _zend.authentication.validator.authentication.introduction:

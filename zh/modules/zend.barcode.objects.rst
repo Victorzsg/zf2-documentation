@@ -1,6 +1,6 @@
 .. _zend.barcode.objects:
 
-Zend\\Barcode\\Barcode Objects
+Zend\\Barcode\\Barcode 对象
 ==============================
 
 Barcode objects allow you to generate barcodes independently of the rendering support. After generation, you can

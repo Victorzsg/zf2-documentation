@@ -1,6 +1,6 @@
 .. _zend.barcode.introduction:
 
-Introduction to Zend\\Barcode
+Zend\\Barcode 介绍
 =============================
 
 ``Zend\Barcode\Barcode`` provides a generic way to generate barcodes. The ``Zend\Barcode`` component is divided

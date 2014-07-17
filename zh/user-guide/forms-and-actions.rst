@@ -194,8 +194,7 @@
         }
     //...
 
-After adding the ``AlbumForm`` to the use list, we implement ``addAction()``.
-Let’s look at the ``addAction()`` code in a little more detail:
+添加 ``AlbumForm`` 到使用列表之后，我们实例化了 ``addAction()`` 方法。来看看 ``addAction()`` 代码的细节：
 
 .. code-block:: php
    :linenos:
@@ -203,9 +202,7 @@ Let’s look at the ``addAction()`` code in a little more detail:
     $form = new AlbumForm();
     $form->get('submit')->setValue('Add');
 
-We instantiate ``AlbumForm`` and set the label on the submit button to “Add”. We
-do this here as we’ll want to re-use the form when editing an album and will use
-a different label.
+我们实例化了 ``AlbumForm``，并设置了添加提交的标签。在这里我们这样做是为了，当编辑唱片的时候，用不同的标签重用表单。
 
 .. code-block:: php
    :linenos:

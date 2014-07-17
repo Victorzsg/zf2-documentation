@@ -2,7 +2,7 @@
 
 .. _zend.barcode.objects.details:
 
-Description of shipped barcodes
+条形码介绍
 -------------------------------
 
 You will find below detailed information about all barcode types shipped by default with Zend Framework.

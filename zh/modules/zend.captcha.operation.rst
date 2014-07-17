@@ -1,6 +1,6 @@
 .. _zend.captcha.operation:
 
-Captcha Operation
+验证码操作
 =================
 
 .. _zend.captcha.operation.interface:

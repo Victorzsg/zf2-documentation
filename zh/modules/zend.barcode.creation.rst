@@ -1,6 +1,6 @@
 .. _zend.barcode.creation:
 
-Barcode creation using Zend\\Barcode\\Barcode class
+使用Zend\\Barcode\\Barcode 类创建条码
 ===================================================
 
 .. _zend.barcode.creation.configuration:

@@ -1,6 +1,6 @@
 .. _zend.authentication.adapter.http:
 
-HTTP Authentication Adapter
+HTTP身份验证适配器
 ===========================
 
 .. _zend.authentication.adapter.http.introduction:

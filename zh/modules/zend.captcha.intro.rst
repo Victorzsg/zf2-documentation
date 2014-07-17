@@ -1,6 +1,6 @@
 .. _zend.captcha.introduction:
 
-Introduction to Zend\\Captcha
+Zend\\captcha 介绍
 =============================
 
 `CAPTCHA`_ stands for "Completely Automated Public Turing test to tell Computers and Humans Apart"; it is used as a
