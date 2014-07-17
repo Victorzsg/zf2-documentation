@@ -3,20 +3,15 @@
 表单和方法
 =================
 
-Adding new albums
+添加新唱片
 -----------------
 
-We can now code up the functionality to add new albums. There are two bits to
-this part:
+现在我们来编写添加唱片功能。有两点：
 
-* Display a form for user to provide details
-* Process the form submission and store to database
+* 展示一个用户提交信息的表单
+* 处理提交的表单数据并保存到数据库
 
-We use ``Zend\Form`` to do this. The ``Zend\Form`` component manages the form
-and, form validation, we add a ``Zend\InputFilter`` to our ``Album`` entity. We
-start by creating a new class ``Album\Form\AlbumForm`` that extends from
-``Zend\Form\Form`` to define our form.
-Create a file called ``AlbumForm.php`` in ``module/Album/src/Album/Form``:
+我们用 ``Zend\Form`` 来做这个。``Zend\Form`` 组件管理表单和表单验证，我们添加一个 ``Zend\InputFilter`` 到我们的 ``唱片`` 对象。我们创建一个扩展自 ``Zend\Form\Form`` 的 ``Album\Form\AlbumForm`` 新类来定义我们的表单。在 ``module/Album/src/Album/Form`` 中创建一个 ``AlbumForm.php`` 文件：
 
 .. code-block:: php
    :linenos:
@@ -61,14 +56,9 @@ Create a file called ``AlbumForm.php`` in ``module/Album/src/Album/Form``:
         }
     }
 
-Within the constructor of ``AlbumForm`` we do several things.  First, we set the name 
-of the form as we call the parent’s constructor.  we create four form elements: the id, title, artist, and submit button. For each item we set 
-various attributes and options, including the label to be displayed.
+在 ``AlbumForm``构造函数中，我们做了以下几件事情。首先，我们给这个表单设置名称，因为我们调用父类的构造函数。我们创建4个表单元素：id，title，artist和提交按钮。对每一项，我们都设置多个属性和选项，包括要被展示的标签。
 
-We also need to set up validation for this form. In Zend Framework 2 this is
-done using an input filter, which can either be standalone or defined within any class
-that implements the ``InputFilterAwareInterface`` interface, such as a model entity. In our case, we are
-going to add the input filter to the Album class, which resides in the ``Album.php`` file in ``module/Album/src/Album/Model``:
+我们也需要进行表单验证。在zf2中，这是通过输入过滤实现的，它既可以单独使用，也可以在继承自 ``InputFilterAwareInterface`` 接口的任何类定义，比如一个模型实例。在这里，我们打算给唱片类添加一个输入过滤器，它放在 ``module/Album/src/Album/Model` 中的 ``Album.php`` 文件里：
 
 .. code-block:: php
    :linenos:
