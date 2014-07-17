@@ -149,20 +149,13 @@
         }
     }
 
-The ``InputFilterAwareInterface`` defines two methods: ``setInputFilter()`` and
-``getInputFilter()``. We only need to implement ``getInputFilter()`` so we
-simply throw an exception  in ``setInputFilter()``.
+输入过滤感知接口 ``InputFilterAwareInterface`` 定义了两个方法：``setInputFilter()`` 和
+``getInputFilter()``。我们只用实例化 ``getInputFilter()``，所以我们仅仅在 ``setInputFilter()`` 中抛出一个异常。
 
-Within ``getInputFilter()``, we instantiate an ``InputFilter`` and then add the
-inputs that we require. We add one input for each property that we wish to
-filter or validate. For the ``id`` field we add an ``Int`` filter as we only
-need integers. For the text elements, we add two filters, ``StripTags`` and
-``StringTrim``, to remove unwanted HTML and unnecessary white space. We also set
-them to be *required* and add a ``StringLength`` validator to ensure that the
-user doesn’t enter more characters than we can store into the database.
+在 ``getInputFilter()`` 中，我们实例化了 ``InputFilter``，然后添加上我们需要的输入项。我们为每一个需要过滤和验证的属性添加一个表单。在 ``id`` 列，我们添加一个 ``Int`` 过滤器，因为我们只需要整型数字。文本域中，我们添加了两个过滤器，``StripTags`` 和
+``StringTrim`` 用来去除不需要的HTML代码和空格。我们还把它们设置为 *required* 并添加了一个 ``StringLength`` 来确保输入的字符长度不会超出我们的数据库允许存储的长度。
 
-We now need to get the form to display and then process it on submission. This
-is done within the ``AlbumController``’s ``addAction()``:
+现在我们需要先显示表格，提交的时候再处理它们。下面是 ``AlbumController`` 控制器的 ``addAction()`` 方法：
 
 .. code-block:: php
    :linenos:
