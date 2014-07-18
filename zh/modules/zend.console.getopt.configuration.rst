@@ -1,6 +1,6 @@
 .. _zend.console.getopt.configuration:
 
-配置 Zend\\Console\\Getopt
+Zend\\Console\\Getopt 配置
 =================================
 
 .. _zend.console.getopt.configuration.addrules:
