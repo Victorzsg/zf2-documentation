@@ -1,6 +1,6 @@
 .. _zend.http.headers:
 
-The Headers Class
+Headers 类
 =================
 
 .. _zend.http.headers.intro:

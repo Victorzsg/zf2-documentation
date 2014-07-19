@@ -1,6 +1,6 @@
 .. _zend.paginator.advanced:
 
-Advanced usage
+高级应用
 ==============
 
 .. _zend.paginator.advanced.adapters:

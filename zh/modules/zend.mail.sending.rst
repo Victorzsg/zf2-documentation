@@ -1,6 +1,6 @@
 .. _zend.mail.sending:
 
-Sending via SMTP
+通过 SMTP 发送
 ================
 
 To send mail via SMTP, ``Zend\Mail\Transport\Smtp`` needs to be created and registered with ``Zend\Mail`` before

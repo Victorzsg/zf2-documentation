@@ -1,6 +1,6 @@
 .. _zend.feed.consuming-rss:
 
-Consuming an RSS Feed
+使用RSS源
 =====================
 
 .. _zend.feed.consuming-rss.reading-feed:

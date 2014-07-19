@@ -1,6 +1,6 @@
 .. _zend.mail.attachments:
 
-E-mail Attachments
+E-mail 附件
 ==================
 
 In ZF1 files could be attached to an e-mail using ``Zend_Mail::createAttachment()`` and ``Zend_Mail::addAttachment()`` methods.

@@ -1,6 +1,6 @@
 .. _zend.navigation.view.helper.sitemap:
 
-View Helper - Sitemap
+视图辅助函数 - Sitemap
 =====================
 
 .. _zend.navigation.view.helpers.sitemap.introduction:

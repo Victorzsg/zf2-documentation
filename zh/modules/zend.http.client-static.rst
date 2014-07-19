@@ -1,6 +1,6 @@
 .. _zend.http.client-static:
 
-HTTP Client - Static Usage
+HTTP 客户端 - 静态运用
 ==========================
 
 .. _zend.http.client-static.intro:

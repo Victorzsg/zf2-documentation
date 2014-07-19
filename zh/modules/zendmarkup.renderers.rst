@@ -1,6 +1,6 @@
 .. _zendmarkup.renderers:
 
-ZendMarkup Renderers
+ZendMarkup 渲染
 ====================
 
 ``ZendMarkup`` is currently shipped with one renderer, the *HTML* renderer.

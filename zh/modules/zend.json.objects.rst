@@ -1,6 +1,6 @@
 .. _zend.json.advanced:
 
-Advanced Usage
+高级用法
 ==============
 
 .. _zend.json.advanced.objects1:

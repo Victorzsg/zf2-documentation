@@ -1,6 +1,6 @@
 .. _zend.feed.consuming-atom-single-entry:
 
-Consuming a Single Atom Entry
+使用单一入口
 =============================
 
 Single Atom ``<entry>`` elements are also valid by themselves. Usually the *URL* for an entry is the feed's *URL*

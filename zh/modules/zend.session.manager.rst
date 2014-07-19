@@ -1,6 +1,6 @@
 .. _zend.session.manager:
 
-Session Manager
+Session 管理
 ===============
 
 The session manager, ``Zend\Session\SessionManager``, is a class that is responsible for all aspects of session

@@ -1,6 +1,6 @@
 .. _zend.mail.smtp-secure:
 
-Securing SMTP Transport
+SMTP 传输安全
 =======================
 
 ``Zend\Mail`` also supports the use of either TLS or *SSL* to secure a SMTP connection. This can be enabled be

@@ -1,6 +1,6 @@
 .. _zend.log.filters:
 
-Filters
+过滤器
 =======
 
 .. _zend.log.filters.overview:

@@ -1,6 +1,6 @@
 .. _zendoauth.introduction:
 
-Introduction to OAuth
+开放授权介绍
 =====================
 
 OAuth allows you to approve access by any application to your private data stored a website without being forced to

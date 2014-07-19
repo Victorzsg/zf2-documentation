@@ -1,6 +1,6 @@
 .. _zend.soap.wsdl:
 
-WSDL Accessor
+WSDL 存取器
 =============
 
 .. note::

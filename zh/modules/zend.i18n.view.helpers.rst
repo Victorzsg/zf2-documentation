@@ -1,6 +1,6 @@
 .. _zend.i18n.view.helpers:
 
-I18n View Helpers
+I18n 视图辅助函数
 =================
 
 .. _zend.i18n.view.helpers.intro:

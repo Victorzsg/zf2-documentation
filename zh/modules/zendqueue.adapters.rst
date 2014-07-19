@@ -1,6 +1,6 @@
 .. _zendqueue.adapters:
 
-Adapters
+适配器
 ========
 
 ``ZendQueue\Queue`` supports all queues implementing the interface ``Zend\Queue\Adapter\AdapterInterface``. The

@@ -1,6 +1,6 @@
 .. _zendsearch.lucene.index-creation:
 
-Building Indexes
+建立索引
 ================
 
 .. _zendsearch.lucene.index-creation.creating:

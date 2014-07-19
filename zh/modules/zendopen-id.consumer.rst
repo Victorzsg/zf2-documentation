@@ -1,6 +1,6 @@
 .. _zendopenid.consumer:
 
-ZendOpenId\Consumer Basics
+ZendOpenId\Consumer 基础
 ==========================
 
 ``ZendOpenId\Consumer`` can be used to implement OpenID authentication for web sites.

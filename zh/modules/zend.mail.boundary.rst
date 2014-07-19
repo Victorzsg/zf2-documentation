@@ -1,6 +1,6 @@
 .. _zend.mail.boundary:
 
-Controlling the MIME Boundary
+MIME 类型控制
 =============================
 
 In a multipart message, a *MIME* boundary for separating the different parts of the message is normally generated

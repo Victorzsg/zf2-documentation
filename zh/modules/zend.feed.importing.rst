@@ -1,6 +1,6 @@
 .. _zend.feed.importing:
 
-Importing Feeds
+引入订阅
 ===============
 
 ``Zend\Feed`` enables developers to retrieve feeds very easily, by using ``Zend\Feader\Reader``.

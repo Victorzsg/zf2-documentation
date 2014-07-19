@@ -1,6 +1,6 @@
 .. _zend.tag.cloud:
 
-Creating tag clouds with Zend\\Tag\\Cloud
+Zend\\Tag\\Cloud 创建标签云
 =========================================
 
 ``Zend\Tag\Cloud`` is the rendering part of ``Zend\Tag``. By default it comes with a set of *HTML* decorators,

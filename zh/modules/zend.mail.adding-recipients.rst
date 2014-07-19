@@ -1,6 +1,6 @@
 .. _zend.mail.adding-recipients:
 
-Adding Recipients
+添加收件人
 =================
 
 Recipients can be added in three ways:

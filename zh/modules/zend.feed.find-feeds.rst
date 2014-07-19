@@ -1,6 +1,6 @@
 .. _zend.feed.findFeeds:
 
-Retrieving Feeds from Web Pages
+网页检索
 ===============================
 
 .. _zend.feed.findFeeds.introduction:

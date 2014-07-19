@@ -1,6 +1,6 @@
 .. _zend.navigation.view.helper.menu:
 
-View Helper - Menu
+视图辅助函数 - Menu
 ==================
 
 .. _zend.navigation.view.helpers.menu.introduction:

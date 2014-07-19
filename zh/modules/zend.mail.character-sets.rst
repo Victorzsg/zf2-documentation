@@ -1,6 +1,6 @@
 .. _zend.mail.character-sets:
 
-Character Sets
+字符集
 ==============
 
 ``Zend\Mail\Message`` does not check for the correct character set of the mail parts. When instantiating ``Zend\Mail\Message``, a

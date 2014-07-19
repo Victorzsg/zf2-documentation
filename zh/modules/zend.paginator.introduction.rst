@@ -1,6 +1,6 @@
 .. _zend.paginator.introduction:
 
-Introduction to Zend\\Paginator
+Zend\\Paginator 介绍
 ===============================
 
 ``Zend\Paginator`` is a flexible component for paginating collections of data and presenting that data to users.

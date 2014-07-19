@@ -1,6 +1,6 @@
 .. _zend.navigation.pages:
 
-Pages
+页面
 =====
 
 ``Zend\Navigation`` ships with two page types:

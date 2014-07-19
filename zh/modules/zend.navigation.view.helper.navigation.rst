@@ -1,6 +1,6 @@
 .. _zend.navigation.view.helper.navigation:
 
-View Helper - Navigation Proxy
+视图辅助函数 - Navigation Proxy
 ==============================
 
 .. _zend.navigation.view.helpers.navigation.introduction:

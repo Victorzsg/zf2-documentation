@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.headstyle:
 
-View Helper - HeadStyle
+视图辅助函数 - HeadStyle
 =======================
 
 .. _zend.view.helpers.initial.headstyle.introduction:

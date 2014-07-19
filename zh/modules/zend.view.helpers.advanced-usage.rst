@@ -1,6 +1,6 @@
 .. _zend.view.helpers.advanced-usage:
 
-Advanced usage of helpers
+辅助函数高级用法
 =========================
 
 .. _zend.view.helpers.register:

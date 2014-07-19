@@ -1,6 +1,6 @@
 .. _zendgdata.introduction:
 
-Introduction
+介绍
 ============
 
 Google Data *API*\ s provide programmatic interface to some of Google's online services. The Google data Protocol

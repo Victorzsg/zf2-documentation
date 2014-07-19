@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.inlinescript:
 
-View Helper - InlineScript
+视图辅助函数 - InlineScript
 ==========================
 
 .. _zend.view.helpers.initial.inlinescript.introduction:

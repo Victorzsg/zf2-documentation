@@ -1,6 +1,6 @@
 .. _zend.navigation.view.helper.links:
 
-View Helper - Links
+视图辅助函数 - Links
 ===================
 
 .. _zend.navigation.view.helpers.links.introduction:
