@@ -10,9 +10,9 @@
 
 **非常感谢所有[贡献者们](https://github.com/shaoyikai/zf2-documentation/graphs/contributors)！**
 
-备注：
+- note:
 
-+ zh目录是copy官方文档en目录里的内容：[zf2-documentation](https://github.com/zendframework/zf2-documentation/tree/master/docs/languages/en)。
-+ 源码为ReST格式。翻译好后，可以使用 [Sphinx](http://sphinx-doc.org/) 制作成html文档
-+ 制作成HTML后效果参考：[Zend Framework 2 中文手册](http://shaoyikai.github.io)
-+ 有任何建议或疑问，欢迎加入zf2中文手册qq群：174303524
+    + zh目录是copy官方文档en目录里的内容：[zf2-documentation](https://github.com/zendframework/zf2-documentation/tree/master/docs/languages/en)。
+    + 源码为ReST格式。翻译好后，可以使用 [Sphinx](http://sphinx-doc.org/) 制作成html文档
+    + 制作成HTML后效果参考：[Zend Framework 2 中文手册](http://shaoyikai.github.io)
+    + 有任何建议或疑问，欢迎加入zf2中文手册qq群：174303524
