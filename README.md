@@ -6,7 +6,7 @@
 1. Zend framework 2 的中文资料相对较少，官方没有中文版的手册。
 2. 对于部分程序员来说，看官方英文手册有困难。
 3. zf框架本身有一定难度，一个有质量的文档毫无疑问可以大大减轻广大猿友们的开发负担。
-4. 如果你愿意完善此文档，非常欢迎FORK！（[猛戳这里~~](https://github.com/shaoyikai/zf2-documentation)）
+4. 如果你愿意完善此文档，非常欢迎FORK！（找不到？瞅瞅右上角~~）
 
 非常感谢所有[贡献者](https://github.com/shaoyikai/zf2-documentation/graphs/contributors)！
 
