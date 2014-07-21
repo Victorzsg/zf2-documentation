@@ -1,6 +1,6 @@
 .. _zend.escaper.theory-of-operation:
 
-Theory of Operation
+操作原理
 ===================
 
 ``Zend\Escaper`` provides methods for escaping output data, dependent on the context in which the data will be used.

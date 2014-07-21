@@ -1,6 +1,6 @@
 .. _zend.escaper.escaping-url:
 
-Escaping URLs
+URLs 转义
 =============
 
 This method is basically an alias for PHP's ``rawurlencode()`` which has applied RFC 3986 since PHP 5.3. It is 

@@ -1,6 +1,6 @@
 .. _zend.exception.using:
 
-Using Exceptions
+异常处理
 ================
 
 ``Zend_Exception`` is simply the base class for all exceptions thrown within Zend Framework.

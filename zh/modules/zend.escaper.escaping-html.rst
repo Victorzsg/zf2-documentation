@@ -1,6 +1,6 @@
 .. _zend.escaper.escaping-html:
 
-Escaping HTML
+HTML 转义
 =============
 
 Probably the most common escaping happens in the **HTML Body context**. There are very few characters with special
