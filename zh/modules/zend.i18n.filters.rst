@@ -1,6 +1,6 @@
 .. _zend.i18n.filters:
 
-I18n 过滤器
+I18n Filters
 ============
 
 Zend Framework comes with a set of filters related to Internationalization.

@@ -1,6 +1,6 @@
 .. _zend.server.introduction:
 
-Zend\\Server 介绍
+Introduction to Zend\\Server
 ============================
 
 The ``Zend\Server`` family of classes provides functionality for the various server classes, including

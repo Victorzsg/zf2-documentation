@@ -1,6 +1,6 @@
 .. _zend.filter.filter_chains:
 
-过滤器链
+Filter Chains
 =============
 
 Often multiple filters should be applied to some value in a particular order. For example, a login form accepts a

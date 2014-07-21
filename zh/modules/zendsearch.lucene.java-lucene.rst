@@ -1,6 +1,6 @@
 .. _zendsearch.lucene.java-lucene:
 
-与Java交互操作
+Interoperating with Java Lucene
 ===============================
 
 .. _zendsearch.lucene.index-creation.file-formats:

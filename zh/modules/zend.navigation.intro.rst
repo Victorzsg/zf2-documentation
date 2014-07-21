@@ -1,6 +1,6 @@
 .. _zend.navigation.introduction:
 
-Zend\\Navigation 介绍
+Introduction to Zend\\Navigation
 ================================
 
 ``Zend\Navigation`` is a component for managing trees of pointers to web pages. Simply put: It can be used for

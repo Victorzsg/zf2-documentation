@@ -1,6 +1,6 @@
 .. _zend.mail.smtp-authentication:
 
-SMTP 认证
+SMTP Authentication
 ===================
 
 ``Zend\Mail`` supports the use of SMTP authentication, which can be enabled be passing the 'auth' parameter to the

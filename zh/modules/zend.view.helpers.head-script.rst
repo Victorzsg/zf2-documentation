@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.headscript:
 
-视图辅助函数 - HeadScript
+View Helper - HeadScript
 ========================
 
 .. _zend.view.helpers.initial.headscript.introduction:

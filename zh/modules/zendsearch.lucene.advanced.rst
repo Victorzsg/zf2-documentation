@@ -1,6 +1,6 @@
 .. _zendsearch.lucene.advanced:
 
-高级
+Advanced
 ========
 
 .. _zendsearch.lucene.advanced.format_migration:

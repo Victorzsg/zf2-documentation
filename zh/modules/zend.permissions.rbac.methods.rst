@@ -1,6 +1,6 @@
 .. _zend.permissions.rbac.methods:
 
-方法
+Methods
 =======
 
 ``Zend\Permissions\Rbac\AbstractIterator``

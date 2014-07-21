@@ -1,6 +1,6 @@
 .. _zendsearch.lucene.query-language:
 
-Query 语言
+Query Language
 ==============
 
 Java Lucene and ``Zend\Search\Lucene`` provide quite powerful query languages.

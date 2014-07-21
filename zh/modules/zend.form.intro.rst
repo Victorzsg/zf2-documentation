@@ -1,6 +1,6 @@
 .. _zend.form.intro:
 
-介绍
+Introduction
 ============
 
 ``Zend\Form`` is intended primarily as a bridge between your domain models and the View Layer. It composes a thin

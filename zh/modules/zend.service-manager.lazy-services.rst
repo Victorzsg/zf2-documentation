@@ -1,6 +1,6 @@
 .. _zend.service-manager.lazy-services:
 
-Lazy 服务
+Lazy Services
 =============
 
 ``Zend\ServiceManager`` can use :ref:`delegator factories <zend.service-manager.delegator-factories>` to

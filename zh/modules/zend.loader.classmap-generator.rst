@@ -1,6 +1,6 @@
 .. _zend.loader.classmap-generator:
 
-类地图生成器使用： bin/classmap_generator.php
+The Class Map Generator utility: bin/classmap_generator.php
 ===========================================================
 
 .. _zend.loader.classmap-generator.intro:

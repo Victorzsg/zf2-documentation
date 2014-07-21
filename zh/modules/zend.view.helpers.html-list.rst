@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.htmllist:
 
-视图辅助函数 - HtmlList
+View Helper - HtmlList
 ======================
 
 .. _zend.view.helpers.initial.htmllist.introduction:

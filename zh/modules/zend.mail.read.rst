@@ -1,6 +1,6 @@
 .. _zend.mail.read:
 
-阅读邮件
+Reading Mail Messages
 =====================
 
 ``Zend\Mail`` can read mail messages from several local or remote mail storages. All of them have the same basic

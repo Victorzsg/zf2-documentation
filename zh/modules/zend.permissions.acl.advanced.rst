@@ -1,6 +1,6 @@
 .. _zend.permissions.acl.advanced:
 
-高级用法
+Advanced Usage
 ==============
 
 .. _zend.permissions.acl.advanced.storing:

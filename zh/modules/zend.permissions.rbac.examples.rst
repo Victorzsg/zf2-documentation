@@ -1,6 +1,6 @@
 .. _zend.permissions.rbac.examples:
 
-示例
+Examples
 ========
 
 The following is a list of common use-case examples for ``Zend\Permission\Rbac``.

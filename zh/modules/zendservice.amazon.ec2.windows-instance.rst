@@ -1,6 +1,6 @@
 .. _zendservice.amazon.ec2.windows-instance:
 
-ZendService\\Amazon\\Ec2: 窗口实例
+ZendService\\Amazon\\Ec2: Windows Instances
 ===========================================
 
 Using Amazon EC2 instances running Windows is similar to using instances running Linux and UNIX. The following are

@@ -1,6 +1,6 @@
 .. _zend.mvc.services:
 
-默认服务
+Default Services
 ================
 
 The default and recommended way to write Zend Framework applications uses a set of services defined

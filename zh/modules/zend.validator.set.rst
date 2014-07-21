@@ -1,6 +1,6 @@
 .. _zend.validator.set:
 
-标准验证类
+Standard Validation Classes
 ===========================
 
 Zend Framework comes with a standard set of validation classes, which are ready for you to use.

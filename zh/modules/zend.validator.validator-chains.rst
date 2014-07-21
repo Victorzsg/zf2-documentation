@@ -1,6 +1,6 @@
 .. _zend.validator.validator_chains:
 
-验证器链
+Validator Chains
 ================
 
 .. _zend.validator.validator_chains.overview:

@@ -1,6 +1,6 @@
 .. _zendpdf.interactive-features:
 
-交互功能
+Interactive Features
 ====================
 
 .. _zendpdf.pages.interactive-features.destinations:

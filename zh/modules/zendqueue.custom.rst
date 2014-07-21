@@ -1,6 +1,6 @@
 .. _zendqueue.custom:
 
-定制 Zend\Queue
+Customizing Zend\Queue
 ======================
 
 .. _zendqueue.custom.adapter:

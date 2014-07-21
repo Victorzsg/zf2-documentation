@@ -1,6 +1,6 @@
 .. _zendservice.strikeiron.bundled-services:
 
-ZendService\\StrikeIron: 捆绑式服务
+ZendService\\StrikeIron: Bundled Services
 =========================================
 
 ``ZendService\StrikeIron\StrikeIron`` comes with wrapper classes for three popular StrikeIron services.

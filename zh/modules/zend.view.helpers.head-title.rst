@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.headtitle:
 
-视图辅助函数 - HeadTitle
+View Helper - HeadTitle
 =======================
 
 .. _zend.view.helpers.initial.headtitle.introduction:

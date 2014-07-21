@@ -1,6 +1,6 @@
 .. _zend.mvc.mvc-event:
 
-Mvc 事件
+The MvcEvent
 ============
 
 The MVC layer of Zend Framework 2 incorporates and utilizes a custom ``Zend\EventManager\Event`` implementation -

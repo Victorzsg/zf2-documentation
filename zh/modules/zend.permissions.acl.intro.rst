@@ -1,6 +1,6 @@
 .. _zend.permissions.acl.introduction:
 
-Zend\\Permissions\\Acl 介绍
+Introduction to Zend\\Permissions\\Acl
 ======================================
 
 The ``Zend\Permissions\Acl`` component provides a lightweight and flexible access control list (*ACL*) implementation for

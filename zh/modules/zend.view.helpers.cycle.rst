@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.cycle:
 
-视图辅助函数 - Cycle
+View Helper - Cycle
 ===================
 
 .. _zend.view.helpers.initial.cycle.introduction:

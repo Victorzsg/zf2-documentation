@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.placeholder:
 
-视图辅助函数 - Placeholder
+View Helper - Placeholder
 =========================
 
 .. _zend.view.helpers.initial.placeholder.introduction:

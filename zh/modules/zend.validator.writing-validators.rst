@@ -1,6 +1,6 @@
 .. _zend.validator.writing_validators:
 
-写验证器
+Writing Validators
 ==================
 
 .. _zend.validator.writing_validators.overview:

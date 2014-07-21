@@ -1,6 +1,6 @@
 .. _zendopenid.introduction:
 
-介绍
+Introduction
 ============
 
 ``ZendOpenId`` is a Zend Framework component that provides a simple *API* for building OpenID-enabled sites and

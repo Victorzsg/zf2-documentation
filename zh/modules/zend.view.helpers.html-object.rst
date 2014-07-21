@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.object:
 
-视图辅助函数 - HTML Object
+View Helper - HTML Object
 =========================
 
 .. _zend.view.helpers.initial.object.introduction:

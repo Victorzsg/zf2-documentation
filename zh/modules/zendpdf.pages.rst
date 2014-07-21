@@ -1,6 +1,6 @@
 .. _zendpdf.pages:
 
-页面操作
+Working with Pages
 ==================
 
 .. _zendpdf.pages.creation:

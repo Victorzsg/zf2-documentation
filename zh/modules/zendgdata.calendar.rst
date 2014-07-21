@@ -1,6 +1,6 @@
 .. _zendgdata.calendar:
 
-使用Google日历
+Using Google Calendar
 =====================
 
 You can use the ``ZendGData\Calendar`` class to view, create, update, and delete events in the online Google

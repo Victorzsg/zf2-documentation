@@ -1,6 +1,6 @@
 .. _zend.test.phpunit:
 
-PHPUnit 单元测试
+Unit testing with PHPUnit
 =========================
 
 ``Zend\Test\PHPUnit`` provides a TestCase for MVC applications that contains assertions for testing against a variety of

@@ -1,6 +1,6 @@
 .. _zendsearch.lucene.extending:
 
-可扩展性
+Extensibility
 =============
 
 .. _zendsearch.lucene.extending.analysis:

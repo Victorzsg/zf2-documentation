@@ -1,6 +1,6 @@
 .. _zendgdata.youtube:
 
-使用 YouTube 数据接口
+Using the YouTube Data API
 ==========================
 
 The YouTube Data *API* offers read and write access to YouTube's content. Users can perform unauthenticated

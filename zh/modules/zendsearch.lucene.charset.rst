@@ -1,6 +1,6 @@
 .. _zendsearch.lucene.charset:
 
-字符设置
+Character Set
 =============
 
 .. _zendsearch.lucene.charset.description:

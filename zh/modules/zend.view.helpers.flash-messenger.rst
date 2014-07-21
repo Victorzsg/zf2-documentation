@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.flashmessenger:
 
-短消息辅助函数
+FlashMessenger Helper
 =====================
 
 .. _zend.view.helpers.initial.flashmessenger.introduction:

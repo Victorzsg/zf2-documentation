@@ -1,6 +1,6 @@
 .. _zend.ldap.tools:
 
-工具
+Tools
 =====
 
 .. _zend.ldap.tools.dn:

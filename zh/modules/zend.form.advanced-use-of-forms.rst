@@ -1,6 +1,6 @@
 .. _zend.form.advanced-use-of-forms:
 
-form高级运用
+Advanced use of forms
 =====================
 
 Beginning with Zend Framework 2.1, forms elements can be registered using a designated plugin manager of

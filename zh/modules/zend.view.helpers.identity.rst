@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.identity:
 
-视图辅助函数 - Identity
+View Helper - Identity
 ======================
 
 .. _zend.view.helpers.initial.identity.introduction:

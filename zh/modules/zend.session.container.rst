@@ -1,6 +1,6 @@
 .. _zend.session.container:
 
-Session 容器
+Session Container
 =================
 
 ``Zend\Session\Container`` instances provide the primary API for manipulating session data in the Zend Framework.

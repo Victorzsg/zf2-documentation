@@ -1,6 +1,6 @@
 .. _zend.form.view.helpers:
 
-表单视图辅助函数
+Form View Helpers
 =================
 
 .. _zend.form.view.helpers.intro:

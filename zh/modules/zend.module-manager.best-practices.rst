@@ -1,6 +1,6 @@
 .. _zend.module-manager.best-practices:
 
-创建模块的最佳实践
+Best Practices when Creating Modules
 ====================================
 
 When creating a ZF2 module, there are some best practices you should keep in mind.

@@ -1,6 +1,6 @@
 .. _zend.serializer:
 
-Zend\\Serializer 介绍
+Introduction to Zend\\Serializer
 ================================
 
 The ``Zend\Serializer`` component provides an adapter based interface to

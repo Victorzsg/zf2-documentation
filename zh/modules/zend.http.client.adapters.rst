@@ -1,6 +1,6 @@
 .. _zend.http.client.adapters:
 
-HTTP 客户端 - 连接适配器
+HTTP Client - Connection Adapters
 =================================
 
 .. _zend.http.client.adapters.overview:

@@ -1,6 +1,6 @@
 .. _zend.mail.multiple-emails:
 
-一个SMTP连接发送多个邮件
+Sending Multiple Mails per SMTP Connection
 ==========================================
 
 By default, a single SMTP transport creates a single connection and re-uses it for the lifetime of the script

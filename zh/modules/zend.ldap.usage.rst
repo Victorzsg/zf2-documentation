@@ -1,6 +1,6 @@
 .. _zend.ldap.usage:
 
-使用场景
+Usage Scenarios
 ===============
 
 .. _zend.ldap.usage.authentication:

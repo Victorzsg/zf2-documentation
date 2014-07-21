@@ -1,6 +1,6 @@
 .. _zend.mail.additional-headers:
 
-附加头
+Additional Headers
 ==================
 
 ``Zend\Mail\Message`` provides several methods to set additional Mail Headers:

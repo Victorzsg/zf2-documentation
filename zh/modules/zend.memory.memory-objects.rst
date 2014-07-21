@@ -1,6 +1,6 @@
 .. _zend.memory.memory-objects:
 
-内存对象
+Memory Objects
 ==============
 
 .. _zend.memory.memory-objects.movable:

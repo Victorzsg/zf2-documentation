@@ -1,6 +1,6 @@
 .. _zend.ldap.server:
 
-从 LDAP 服务获取信息
+Getting information from the LDAP server
 ========================================
 
 .. _zend.ldap.server.rootdse:

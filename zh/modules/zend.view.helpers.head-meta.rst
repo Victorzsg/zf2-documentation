@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.headmeta:
 
-视图辅助函数 - HeadMeta
+View Helper - HeadMeta
 ======================
 
 .. _zend.view.helpers.initial.headmeta.introduction:

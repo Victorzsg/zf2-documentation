@@ -1,6 +1,6 @@
 .. _zend.paginator.configuration:
 
-配置
+Configuration
 =============
 
 ``Zend\Paginator`` has several configuration methods that can be called:

@@ -1,6 +1,6 @@
 .. _zendgdata.analytics:
 
-使用Google分析
+Using Google Analytics
 ======================
 
 The Google Analytics *API* allows client applications to request data, saved in the analytics accounts.

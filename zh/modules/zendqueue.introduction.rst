@@ -1,6 +1,6 @@
 .. _zendqueue.introduction:
 
-介绍
+Introduction
 ============
 
 ``ZendQueue`` provides a factory function to create specific queue client objects.

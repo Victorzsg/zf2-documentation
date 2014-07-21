@@ -1,6 +1,6 @@
 .. _zendgdata.clientlogin:
 
-登陆验证
+Authenticating with ClientLogin
 ===============================
 
 The ClientLogin mechanism enables you to write *PHP* application that acquire authenticated access to Google

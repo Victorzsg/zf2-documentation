@@ -1,6 +1,6 @@
 .. _zendservice.amazon.ec2.securitygroups:
 
-ZendService\\Amazon\\Ec2: 安全群组
+ZendService\\Amazon\\Ec2: Security Groups
 =========================================
 
 A security group is a named collection of access rules. These access rules specify which ingress (i.e., incoming)

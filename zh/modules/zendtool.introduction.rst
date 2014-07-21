@@ -1,6 +1,6 @@
 .. _zendtool.introduction:
 
-Zend Framework 工具 (ZFTool)
+Zend Framework Tool (ZFTool)
 ============================
 
 `ZFTool`_ is a utility module for maintaining modular Zend Framework 2 applications.

@@ -1,6 +1,6 @@
 .. _zend.mail.introduction:
 
-Zend\\Mail 介绍
+Introduction to Zend\\Mail
 ==========================
 
 .. _zend.mail.introduction.getting-started:

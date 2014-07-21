@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.basepath:
 
-视图辅助函数 - BasePath
+View Helper - BasePath
 ======================
 
 .. _zend.view.helpers.initial.basepath.introduction:

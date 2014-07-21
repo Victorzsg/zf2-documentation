@@ -1,6 +1,6 @@
 .. _zendqueue.example:
 
-示例用法
+Example usage
 =============
 
 The below example of ``ZendQueue`` shows a variety of features, including queue creation, queue retrieval, message

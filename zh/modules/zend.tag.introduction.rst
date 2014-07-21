@@ -1,6 +1,6 @@
 .. _zend.tag.introduction:
 
-Zend\\Tag 介绍
+Introduction to Zend\\Tag
 =========================
 
 ``Zend\Tag`` is a component suite which provides a facility to work with taggable Items. As its base, it provides

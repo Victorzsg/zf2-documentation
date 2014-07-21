@@ -1,6 +1,6 @@
 .. _zendgdata.spreadsheets:
 
-使用Google电子表格
+Using Google Spreadsheets
 =========================
 
 The Google Spreadsheets data *API* allows client applications to view and update Spreadsheets content in the form

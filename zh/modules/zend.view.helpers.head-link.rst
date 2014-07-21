@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.headlink:
 
-视图辅助函数 - HeadLink
+View Helper - HeadLink
 ======================
 
 .. _zend.view.helpers.initial.headlink.introduction:

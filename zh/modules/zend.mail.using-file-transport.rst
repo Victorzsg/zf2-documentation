@@ -1,6 +1,6 @@
 .. _zend.mail.file-transport:
 
-使用文件传输
+Using File Transport
 ====================
 
 ``Zend\Mail\Transport\File`` is useful in a development environment or for testing purposes. Instead of sending any

@@ -1,6 +1,6 @@
 .. _zend.soap.autodiscovery:
 
-自动识别
+AutoDiscovery
 =============
 
 .. _zend.soap.autodiscovery.introduction:

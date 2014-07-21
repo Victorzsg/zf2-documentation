@@ -1,6 +1,6 @@
 .. _zendpdf.usage:
 
-ZendPdf 模型使用示例
+ZendPdf module usage example
 ============================
 
 This section provides an example of module usage.

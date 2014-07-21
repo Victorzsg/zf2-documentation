@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.doctype:
 
-视图辅助函数 - Doctype
+View Helper - Doctype
 =====================
 
 .. _zend.view.helpers.initial.doctype.introduction:

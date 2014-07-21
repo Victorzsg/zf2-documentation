@@ -1,6 +1,6 @@
 .. _zend.mail.different-transports:
 
-使用不同的传输
+Using Different Transports
 ==========================
 
 In case you want to send different e-mails through different connections, you can also pass the transport object

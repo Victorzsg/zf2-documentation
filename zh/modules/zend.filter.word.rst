@@ -1,6 +1,6 @@
 .. _zend.filter.word:
 
-词语过滤
+Word Filters
 ============
 
 In addition to the standard set of filters, there are several classes specific

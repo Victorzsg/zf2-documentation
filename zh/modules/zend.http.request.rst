@@ -1,6 +1,6 @@
 .. _zend.http.request:
 
-Request 类
+The Request Class
 =================
 
 .. _zend.http.request.intro:

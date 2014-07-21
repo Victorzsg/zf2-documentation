@@ -1,6 +1,6 @@
 .. _zend.filter.set:
 
-标准过滤类
+Standard Filter Classes
 =======================
 
 Zend Framework comes with a standard set of filters, which are ready for you to use.

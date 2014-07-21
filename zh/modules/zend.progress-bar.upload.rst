@@ -1,6 +1,6 @@
 .. _zend.progress-bar.upload:
 
-文件上传处理
+File Upload Handlers
 ====================
 
 .. _zend.progress-bar.upload.introduction:

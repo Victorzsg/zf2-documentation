@@ -1,6 +1,6 @@
 .. _zend.mvc.examples:
 
-示例
+Examples
 ========
 
 .. _zend.mvc.examples.controllers:

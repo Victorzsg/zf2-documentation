@@ -1,6 +1,6 @@
 .. _zendpdf.introduction:
 
-介绍
+Introduction
 ============
 
 The ``ZendPdf`` component is a *PDF* (Portable Document Format) manipulation engine. It can load, create, modify

@@ -1,6 +1,6 @@
 .. _zendmarkup.parsers:
 
-ZendMarkup 分析
+ZendMarkup Parsers
 ==================
 
 ``ZendMarkup`` is currently shipped with two parsers, a BBCode parser and a Textile parser.

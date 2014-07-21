@@ -1,6 +1,6 @@
 .. _zendservice.amazon.ec2.reserved-instance:
 
-ZendService\\Amazon\\Ec2: 预留案例
+ZendService\\Amazon\\Ec2: Reserved Instances
 ============================================
 
 With Amazon *EC2* Reserved Instances, you can make a low one-time payment for each instance to reserve and receive

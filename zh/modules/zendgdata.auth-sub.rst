@@ -1,6 +1,6 @@
 .. _zendgdata.authsub:
 
-AuthSub 认证
+Authenticating with AuthSub
 ===========================
 
 The AuthSub mechanism enables you to write web applications that acquire authenticated access Google Data services,

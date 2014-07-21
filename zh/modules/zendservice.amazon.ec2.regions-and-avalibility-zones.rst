@@ -1,6 +1,6 @@
 .. _zendservice.amazon.ec2.regions-and-availability-zones:
 
-ZendService\\Amazon\\Ec2: 区域和可用性区域
+ZendService\\Amazon\\Ec2: Regions and Availability Zones
 ========================================================
 
 Amazon EC2 provides the ability to place instances in different regions and Availability Zones. Regions are
