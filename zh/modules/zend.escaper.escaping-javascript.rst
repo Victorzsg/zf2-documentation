@@ -1,6 +1,6 @@
 .. _zend.escaper.escaping-javascript:
 
-Javascript 转义
+Escaping Javascript
 ===================
 
 Javascript string literals in HTML are subject to significant restrictions particularly due to the potential for

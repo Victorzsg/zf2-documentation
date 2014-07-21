@@ -1,6 +1,6 @@
 .. _zend.event-manager.event-manager:
 
-事件管理
+The EventManager
 ================
 
 .. _zend.event-manager.event-manager.intro:

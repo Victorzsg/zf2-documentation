@@ -1,6 +1,6 @@
 .. _zend.escaper.escaping-html-attributes:
 
-HTML 属性转义
+Escaping HTML Attributes
 ========================
 
 Escaping data in the **HTML Attribute context** is most often done incorrectly, if not overlooked completely by

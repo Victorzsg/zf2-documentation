@@ -1,6 +1,6 @@
 .. _zend.escaper.escaping-css:
 
-层叠样式表转义
+Escaping Cascading Style Sheets
 ===============================
 
 CSS is similar to :ref:`Javascript <zend.escaper.escaping-javascript>` for the same reasons. CSS escaping excludes

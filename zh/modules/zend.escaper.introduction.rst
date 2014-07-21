@@ -1,6 +1,6 @@
 .. _zend.escaper.introduction:
 
-Zend\\Escaper 介绍
+Introduction to Zend\\Escaper
 =============================
 
 The `OWASP Top 10 web security risks`_ study lists Cross-Site Scripting (XSS) in second place. PHP's sole functionality
