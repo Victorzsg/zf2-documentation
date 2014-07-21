@@ -1,6 +1,6 @@
 ﻿.. _zend.config.factory:
 
-Factory
+The Factory
 ===========
 
 The factory gives you the ability to load a configuration file to an array or to ``Zend\Config\Config`` object.

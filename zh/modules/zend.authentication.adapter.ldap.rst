@@ -1,6 +1,6 @@
 .. _zend.authentication.adapter.ldap:
 
-LDAP（轻型目录访问协议）验证
+LDAP Authentication
 ===================
 
 .. _zend.authentication.adapter.ldap.introduction:

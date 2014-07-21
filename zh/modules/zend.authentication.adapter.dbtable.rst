@@ -1,6 +1,6 @@
 .. _zend.authentication.adapter.dbtable:
 
-数据库表身份验证
+Database Table Authentication
 =============================
 
 .. _zend.authentication.adapter.dbtable.introduction:

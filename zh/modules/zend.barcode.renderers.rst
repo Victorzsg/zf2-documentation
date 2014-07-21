@@ -1,6 +1,6 @@
 .. _zend.barcode.renderers:
 
-Zend\\Barcode 渲染类
+Zend\\Barcode Renderers
 =======================
 
 Renderers have some common options. These options can be set in three ways:

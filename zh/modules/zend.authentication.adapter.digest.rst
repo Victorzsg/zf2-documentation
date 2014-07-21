@@ -1,6 +1,6 @@
 .. _zend.authentication.adapter.digest:
 
-摘要验证
+Digest Authentication
 =====================
 
 .. _zend.authentication.adapter.digest.introduction:
