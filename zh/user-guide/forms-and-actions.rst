@@ -217,7 +217,10 @@ a different label.
         $form->setData($request->getPost());
         if ($form->isValid()) {
 
-如果 ``Request`` 对象的 ``isPost()`` 返回TRUE，表单将被提交，我们在唱片实例中给表单设置的过滤器也将被提交。然后，我们设置提交到表单的数据，使用表单的成员函数 ``isValid()`` 来检查数据是否合法。
+If the ``Request`` object’s ``isPost()`` method is true, then the form has been
+submitted and so we set the form’s input filter from an album instance. We then
+set the posted data to the form and check to see if it is valid using the
+``isValid()`` member function of the form.
 
 .. code-block:: php
    :linenos:
@@ -225,7 +228,8 @@ a different label.
     $album->exchangeArray($form->getData());
     $this->getAlbumTable()->saveAlbum($album);
 
-如果该表单是有效的，就用 ``saveAlbum()`` 把提取出来的数据存入模型中。
+If the form is valid, then we  grab the data from the form and store to the
+model using ``saveAlbum()``.
 
 .. code-block:: php
    :linenos:
@@ -233,16 +237,20 @@ a different label.
     // Redirect to list of albums
     return $this->redirect()->toRoute('album');
 
-存入新唱片信息后，我们使用控制器插件 ``Redirect`` 重定向到唱片列表页。
+After we have saved the new album row, we redirect back to the list of albums
+using the ``Redirect`` controller plugin.
 
 .. code-block:: php
    :linenos:
 
     return array('form' => $form);
 
-最后，我们返回想要传递给视图的变量，在这里，只是表单对象。注意zf2允许你返回一个即将传递给视图的变量的数组，并且在暗中为你创建一个 ``ViewModel``。这样就省去了一些代码的编写。
+Finally, we return the variables that we want assigned to the view. In this
+case, just the form object. Note that Zend Framework 2 also allows you to simply
+return an array containing the variables to be assigned to the view and it will
+create a ``ViewModel`` behind the scenes for you. This saves a little typing.
 
-现在我们在add.phtml视图中渲染这个表单：
+We now need to render the form in the add.phtml view script:
 
 .. code-block:: php
    :linenos:
@@ -265,29 +273,41 @@ a different label.
     echo $this->formSubmit($form->get('submit'));
     echo $this->form()->closeTag();
 
-同样，我们像之前一样显示一个标题，然后渲染表单。zf提供了一些视图辅助函数，使这个操作更加简单。 ``form()`` 视图辅助函数有 ``openTag()`` 和 ``closeTag()`` 两个方法来打开和关闭表单。对于每个有label的元素，我们使用 ``formRow()``，但是对于两个独立的元素，我们使用 ``formHidden()`` 和
-``formSubmit()``。
+Again, we display a title as before and then we render the form. Zend Framework
+provides some view helpers to make this a little easier. The ``form()`` view
+helper has an ``openTag()`` and ``closeTag()`` method which we use to open and
+close the form.  Then for each element with a label, we can use ``formRow()``,
+but for the two elements that are standalone, we use ``formHidden()`` and
+``formSubmit()``.
 
 .. image:: ../images/user-guide.forms-and-actions.add-album-form.png
     :width: 940 px
 
-另外，渲染表单的过程仅仅用绑定的 ``formCollection`` 视图辅助函数就行了。例如，在上面的视图中，把所有表单-渲染输出语句都替换成：
+Alternatively, the process of rendering the form can be simplified by using the
+bundled ``formCollection`` view helper.  For example, in the view script above replace
+all the form-rendering echo statements with:
 
 .. code-block:: php
    :linenos:
 
     echo $this->formCollection($form);
 
-Note: 你仍需调用表单的 ``openTag`` 和 ``closeTag`` 方法。上面的代码中，你把其他的输出语句用调用 ``formCollection`` 方法代替。
+Note: You still need to call the ``openTag`` and ``closeTag`` methods of the form.  You replace 
+the other echo statements with the call to ``formCollection``, above.
 
-这会遍历表单结构，给每一个元素调用合适的标签，元素和错误的视图辅助函数，但是你还是得把formCollection($form)元素放在打开和关闭的表单标签里面。这些辅助函数减少了视图脚本的复杂性，默认渲染的HTML表单是可以接受的。
+This will iterate over the form structure, calling the appropriate label, element
+and error view helpers for each element, but you still have to wrap formCollection($form) with the open and close form tags.
+This helps reduce the complexity of your view script in situations where the default
+HTML rendering of the form is acceptable.
 
-现在，你应该可以在应用首页使用“Add new album”来添加一条唱片记录。
+You should now be able to use the “Add new album” link on the home page of the
+application to add a new album record.
 
-编辑唱片
+Editing an album
 ----------------
 
-编辑唱片差不多和添加一样，所以代码非常相似。这次，我们使用 ``AlbumController`` 中的 ``editAction()`` 方法：
+Editing an album is almost identical to adding one, so the code is very similar.
+This time we use ``editAction()`` in the ``AlbumController``:
 
 .. code-block:: php
    :linenos:
@@ -340,7 +360,9 @@ Note: 你仍需调用表单的 ``openTag`` 和 ``closeTag`` 方法。上面的�
         }
     //...
 
-这些代码应该驾轻就熟。让我们看看和添加唱片有什么不同。首先，我们找到匹配路由中的 ``id``，使用它来加载要编辑的唱片：
+This code should look comfortably familiar. Let’s look at the differences from
+adding an album. Firstly, we look for the ``id`` that is in the matched route
+and use it to load the album to be edited:
 
 .. code-block:: php
    :linenos:
@@ -363,9 +385,15 @@ Note: 你仍需调用表单的 ``openTag`` 和 ``closeTag`` 方法。上面的�
         ));
     }
 
-"params"是一个控制器插件，提供了一种方便的方法从匹配路由中来检索参数。我们用它来检索 ``module.config.php`` 创建的路由中的 ``id``。如果 ``id`` 是0，重定向到添加方法，否则，我们继续从数据库获取这张专辑信息。
+``params`` is a controller plugin that provides a convenient way to retrieve
+parameters from the matched route.  We use it to retrieve the ``id`` from the
+route we created in the modules’ ``module.config.php``. If the ``id`` is zero,
+then we redirect to the add action, otherwise, we continue by getting the album
+entity from the database.
 
-我们必须检查并确保指定 ``id`` 的唱片真的能够找到。如果不能，数据访问方法就会抛出异常。我们获取这个异常并把用户重定向到首页。
+We have to check to make sure that the Album with the specified ``id`` can actually be found.
+If it cannot, then the data access method throws an exception.  We catch that exception and re-route the user
+to the index page.
 
 .. code-block:: php
    :linenos:
@@ -374,15 +402,19 @@ Note: 你仍需调用表单的 ``openTag`` 和 ``closeTag`` 方法。上面的�
     $form->bind($album);
     $form->get('submit')->setAttribute('value', 'Edit');
 
-表单的 ``bind()`` 方法把模型附加上去。有两种方法：
+The form’s ``bind()`` method attaches the model to the form. This is used in two
+ways:
 
-* 显示表单时，每个元素的初始值被提取出来。
-* 用isValid()验证成功之后，表单的数据被放回模型。
+* When displaying the form, the initial values for each element are extracted
+  from the model.
+* After successful validation in isValid(), the data from the form is put back
+  into the model.
 
-
-
-这些方法通过hydrator对象完成。有很多hydrators，默认的是 ``Zend\Stdlib\Hydrator\ArraySerializable``，它会找到模型中的两个方法 ``getArrayCopy()`` 和
-``exchangeArray()``。在 ``Album`` 实体中，我们已经编写了 ``exchangeArray()``，所以只用编写 ``getArrayCopy()``：
+These operations are done using a hydrator object. There are a number of
+hydrators, but the default one is ``Zend\Stdlib\Hydrator\ArraySerializable``
+which expects to find two methods in the model: ``getArrayCopy()`` and
+``exchangeArray()``. We have already written ``exchangeArray()`` in our
+``Album`` entity, so just need to write ``getArrayCopy()``:
 
 .. code-block:: php
    :linenos:
@@ -404,9 +436,12 @@ Note: 你仍需调用表单的 ``openTag`` 和 ``closeTag`` 方法。上面的�
         }
     // ...
 
-由于使用"bind()"以其hydrator，我们不必把表单的数据放进 ``$album``，因为那已经被做了，我们只用调用映射器的 ``saveAlbum()`` 方法把改动存入数据库。
+As a result of using ``bind()`` with its hydrator, we do not need to populate the
+form’s data back into the ``$album`` as that’s already been done, so we can just
+call the mappers’ ``saveAlbum()`` to store the changes back to the database.
 
-编辑视图模板看起来和添加唱片的非常像：
+The view template, ``edit.phtml``, looks very similar to the one for adding an
+album:
 
 .. code-block:: php
    :linenos:
@@ -437,18 +472,25 @@ Note: 你仍需调用表单的 ``openTag`` 和 ``closeTag`` 方法。上面的�
     echo $this->formSubmit($form->get('submit'));
     echo $this->form()->closeTag();
 
-仅有的变化时使用 ‘Edit Album’ 标题并设置为提交到 ‘edit’ 方法。
+The only changes are to use the ‘Edit Album’ title and set the form’s action to
+the ‘edit’ action too.
 
-现在你应该可以编辑唱片了。
+You should now be able to edit albums.
 
-删除唱片
+Deleting an album
 -----------------
 
-未完善我们的应用，我们要添加删除操作。在列表页，每个唱片有一个删除链接，点击删除的时候，唱片会被删除。这是错的。注意HTTP规范，我们回忆一下，不要用GET进行一个不可逆转的操作，你应该用POST代替。
+To round out our application, we need to add deletion. We have a Delete link
+next to each album on our list page and the naive approach would be to do a
+delete when it’s clicked. This would be wrong. Remembering our HTTP spec, we
+recall that you shouldn’t do an irreversible action using GET and should use
+POST instead.
 
-当用户点击删除的时候，应该有个确认表单，如果他们选择的是“yes”，我们才执行删除操作。形式不重要，我们直接来辩解视图（毕竟，``Zend\Form`` 是可选的）。
+We shall show a confirmation form when the user clicks delete and if they then
+click “yes”, we will do the deletion. As the form is trivial, we’ll code it
+directly into our view (``Zend\Form`` is, after all, optional!).
 
-开始编辑 ``AlbumController::deleteAction()``：
+Let’s start with the action code in ``AlbumController::deleteAction()``:
 
 .. code-block:: php
    :linenos:
@@ -483,9 +525,14 @@ Note: 你仍需调用表单的 ``openTag`` 和 ``closeTag`` 方法。上面的�
         }
     //...
 
-和之前一样，从匹配的路由中获取 ``id``，检查请求对象的 ``isPost()`` 来决定是否展示确认页面或者删除唱片。我们使用表格对象的 ``deleteAlbum()`` 方法来删除唱片，然后返回到唱片列表页。如果请求不是POST，我们根据 ``id`` 去数据库获取正确的数据，传递给视图。
+As before, we get the ``id`` from the matched route, and check the request
+object’s ``isPost()`` to determine whether to show the confirmation page or to
+delete the album. We use the table object to delete the row using the
+``deleteAlbum()`` method and then redirect back the list of albums. If the
+request is not a POST, then we retrieve the correct database record and assign
+to the view, along with the ``id``.
 
-视图脚本是一个简单的表单：
+The view script is a simple form:
 
 .. code-block:: php
    :linenos:
@@ -516,15 +563,19 @@ Note: 你仍需调用表单的 ``openTag`` 和 ``closeTag`` 方法。上面的�
     </div>
     </form>
 
-在此脚本中，我们像用户展示了一个带有“yes”和“no”按钮的确认提示。操作中，删除时，我们特别检查了“yes”值。
+In this script, we display a confirmation message to the user and then a form
+with "Yes" and "No" buttons. In the action, we checked specifically for the “Yes”
+value when doing the deletion.
 
-确保主页显示唱片列表
+Ensuring that the home page displays the list of albums
 -------------------------------------------------------
 
-最后一点，此刻，主页 ``http://zf2-tutorial.localhost/`` 没有显示唱片列表。
+One final point. At the moment, the home page, ``http://zf2-tutorial.localhost/``
+doesn’t display the list of albums.
 
-这是由于 ``Application`` 模型中的 ``module.config.php`` 没有设置路由。改变它，可以打开
-``module/Application/config/module.config.php`` ，找到home路由：
+This is due to a route set up in the ``Application`` module’s
+``module.config.php``. To change it, open
+``module/Application/config/module.config.php`` and find the home route:
 
 .. code-block:: php
    :linenos:
@@ -558,4 +609,4 @@ Change the ``controller`` from ``Application\Controller\Index`` to
         ),
     ),
 
-就是这样——你现在拥有一个完全可用的应用程序！
+That’s it - you now have a fully working application!
