@@ -4,19 +4,28 @@
 概述
 ********
 
-Zend Framework 2 是用来开发web应用和服务的开源软件，基于PHP5.3+版本。Zend Framework 2 使用100% `面向对象`_ 编程，使用了PHP5.3的大部分新特性，例如 `命名空间`_, `延迟静态绑定`_, `lambda函数和闭包`_。
+Zend Framework 2 is an open source framework for developing web applications and services using *PHP* 5.3+. Zend 
+Framework 2 uses 100% `object-oriented`_ code and utilises most of the new features of PHP 5.3, namely 
+`namespaces`_, `late static binding`_, `lambda functions and closures`_.
 
-Zend Framework 2 从Zend Framework 1 进化而来，它是一款超过1500万下载量的成功的PHP框架。
+Zend Framework 2 evolved from Zend Framework 1, a successful PHP framework with over 15 million 
+downloads. 
 
 .. note::
 
-    *ZF2* 并不乡下兼容 *ZF1*，这是由于使用了PHP5.3+的新特性，并重写了它的主要组件。
+    *ZF2* is not backward compatible with *ZF1*, because of the new features in PHP 5.3+ implemented by 
+    the framework, and due to major rewrites of many components.
 
-Zend framework 2组件结构是独特的；每个组件被设计的很少依赖其他组件。zf2遵循 `SOLID`_ 面向对象设计原则。这个松散耦合的体系结构允许开发人员使用他们想要的任何组件。我们称此为“松耦合”设计。对于整个框架和每一个组件，我们支持 `Pyrus`_ 和 `Composer`_ 安装以及依赖跟踪机制，更加增强了这种设计。
+The component structure of Zend Framework 2 is unique; each component is designed with few
+dependencies on other components. ZF2 follows the `SOLID`_ object-oriented design principle. This loosely coupled 
+architecture allows developers to use whichever components they want. We call this a "use-at-will" design. 
+We support `Pyrus`_ and `Composer`_ as installation  and dependency tracking mechanisms for the framework as a whole and 
+for each component, further enhancing this design.
 
-我们用 `PHP单元测试`_ 来检测我们的代码，用 `Travis CI`_ 作为持续集成服务。
+We use `PHPUnit`_ to test our code and `Travis CI`_ as a Continuous Integration service.
 
-尽管它们可以分开使用，但是相结合时，Zend Framework 2 标准库中的组件形成一个强大的、可扩展的web应用程序框架。 Also, it offers a robust, high performance `MVC`_ implementation, a
+While they can be used separately, Zend Framework 2 components in the standard library form a powerful and extensible
+web application framework when combined. Also, it offers a robust, high performance `MVC`_ implementation, a
 database abstraction that is simple to use, and a forms component that implements `HTML5 form rendering`_,
 validation, and filtering so that developers can consolidate all of these operations using one easy-to-use, object
 oriented interface. Other components, such as :doc:`Zend\\Authentication <zend.authentication.introduction>` and
