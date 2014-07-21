@@ -1,6 +1,6 @@
 .. _zend.crypt.key.derivation:
 
-秘钥导出函数
+Key derivation function
 =======================
 
 In cryptography, a key derivation function (or KDF) derives one or more secret keys from a secret value such as a

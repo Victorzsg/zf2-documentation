@@ -1,6 +1,6 @@
 .. _zend.dom.introduction:
 
-Zend\\Dom 介绍
+Introduction to Zend\\Dom
 =========================
 
 The ``Zend\Dom`` component provides tools for working with *DOM* documents and structures. Currently, we offer

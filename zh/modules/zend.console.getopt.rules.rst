@@ -1,6 +1,6 @@
 .. _zend.console.getopt.rules:
 
-分析命令行参数规则声明
+Declaring Getopt Rules
 ======================
 
 The constructor for the ``Zend\Console\Getopt`` class takes from one to three arguments. The first argument

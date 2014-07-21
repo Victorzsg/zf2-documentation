@@ -1,6 +1,6 @@
 .. _zend.console.routes:
 
-台路由和路由
+Console routes and routing
 ==========================
 
 Zend Framework 2 has :doc:`native MVC integration with console<zend.console.introduction>`,

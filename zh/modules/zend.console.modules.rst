@@ -1,6 +1,6 @@
 .. _zend.console.modules:
 
-Console-aware 模型
+Console-aware modules
 =====================
 
 Zend Framework 2 has :doc:`native MVC integration with console<zend.console.introduction>`. The integration also

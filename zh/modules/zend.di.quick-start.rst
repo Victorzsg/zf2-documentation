@@ -1,6 +1,6 @@
 .. _zend.di.quick-start:
 
-Zend\\Di 快速入门
+Zend\\Di Quickstart
 ===================
 
 This QuickStart is intended to get developers familiar with the concepts of the Zend\\Di DiC. Generally speaking,

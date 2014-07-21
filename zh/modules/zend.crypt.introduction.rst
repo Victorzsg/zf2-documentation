@@ -1,6 +1,6 @@
 .. _zend.crypt.introduction:
 
-Zend\\Crypt 介绍
+Introduction to Zend\\Crypt
 ===========================
 
 Zend\\Crypt provides support of some cryptographic tools. The available features are:

@@ -1,6 +1,6 @@
 .. _zend.debug.dumping:
 
-打印变量
+Dumping Variables
 =================
 
 The static method ``Zend\Debug\Debug::dump()`` prints or returns information about an expression. This simple technique

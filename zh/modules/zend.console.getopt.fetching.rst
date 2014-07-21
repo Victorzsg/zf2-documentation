@@ -1,6 +1,6 @@
 .. _zend.console.getopt.fetching:
 
-获取选项和参数
+Fetching Options and Arguments
 ==============================
 
 After you have declared the options that the ``Zend\Console\Getopt`` object should recognize, and supply arguments
