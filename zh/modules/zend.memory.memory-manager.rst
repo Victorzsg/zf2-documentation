@@ -1,6 +1,6 @@
 .. _zend.memory.memory-manager:
 
-Memory Manager
+内存管理
 ==============
 
 .. _zend.memory.memory-manager.creation:

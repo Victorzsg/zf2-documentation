@@ -1,6 +1,6 @@
 .. _zend.form.file-upload:
 
-File Uploading
+文件上传
 ==============
 
 Zend Framework provides support for file uploading by using features in ``Zend\Form``,

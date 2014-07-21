@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.partial:
 
-View Helper - Partial
+视图辅助函数 - Partial
 =====================
 
 .. _zend.view.helpers.initial.partial.introduction:

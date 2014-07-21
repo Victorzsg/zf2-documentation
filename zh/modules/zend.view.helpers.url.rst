@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.url:
 
-View Helper - URL
+视图辅助函数 - URL
 =================
 
 The URL view helper is used to create a string representation of the routes that you define within

@@ -1,6 +1,6 @@
 .. _zend.json.server:
 
-Zend\\Json\\Server - JSON-RPC server
+Zend\\Json\\Server - JSON-RPC 服务
 ====================================
 
 .. _zend.json.server.introduction:

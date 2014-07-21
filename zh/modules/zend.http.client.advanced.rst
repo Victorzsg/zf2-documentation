@@ -1,6 +1,6 @@
 .. _zend.http.client.advanced:
 
-HTTP Client - Advanced Usage
+HTTP 客户端 - 高级用法
 ============================
 
 .. _zend.http.client.redirections:

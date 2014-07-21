@@ -1,6 +1,6 @@
 .. _zend.view.php-renderer.scripts:
 
-PhpRenderer View Scripts
+PHP渲染视图脚本
 ========================
 
 Once you call ``render()``, ``Zend\View\Renderer\PhpRenderer`` then ``include()``\ s the requested view script and

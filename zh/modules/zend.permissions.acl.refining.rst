@@ -1,6 +1,6 @@
 .. _zend.permissions.acl.refining:
 
-Refining Access Controls
+精细访问控制
 ========================
 
 .. _zend.permissions.acl.refining.precise:

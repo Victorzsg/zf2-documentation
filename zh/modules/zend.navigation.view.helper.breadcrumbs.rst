@@ -1,6 +1,6 @@
 .. _zend.navigation.view.helper.breadcrumbs:
 
-View Helper - Breadcrumbs
+视图辅助函数 - Breadcrumbs
 =========================
 
 .. _zend.navigation.view.helpers.breadcrumbs.introduction:

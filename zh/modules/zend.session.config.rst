@@ -1,6 +1,6 @@
 .. _zend.session.config:
 
-Session Config
+Session 配置
 ==============
 
 Zend Framework comes with a standard set of config classes which are ready for you to use.  Config handles setting

@@ -1,6 +1,6 @@
 .. _zend.http.client:
 
-HTTP Client
+HTTP 客户端
 ===========
 
 .. _zend.http.client.intro:

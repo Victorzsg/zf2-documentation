@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.json:
 
-View Helper - JSON
+视图辅助函数 - JSON
 ==================
 
 .. _zend.view.helpers.initial.json.introduction:

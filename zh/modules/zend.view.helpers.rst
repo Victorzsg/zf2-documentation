@@ -1,6 +1,6 @@
 .. _zend.view.helpers:
 
-View Helpers
+视图辅助函数
 ============
 
 .. _zend.view.helpers.introduction:

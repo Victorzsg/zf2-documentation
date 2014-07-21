@@ -1,6 +1,6 @@
 .. _zend.json.xml2json:
 
-XML to JSON conversion
+XML 到 JSON 转换
 ======================
 
 ``Zend\Json`` provides a convenience method for transforming *XML* formatted data into *JSON* format. This feature

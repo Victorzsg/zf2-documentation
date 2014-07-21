@@ -1,6 +1,6 @@
 .. _zend.feed.security:
 
-Zend\\Feed and Security
+Zend\\Feed 和安全
 =======================
 
 .. _zend.feed.security.introduction:

@@ -1,6 +1,6 @@
 .. _zendsearch.lucene.best-practice:
 
-Best Practices
+最佳实践
 ==============
 
 .. _zendsearch.lucene.best-practice.field-names:

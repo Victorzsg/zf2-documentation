@@ -1,6 +1,6 @@
 .. _zendsearch.lucene.searching:
 
-Searching an Index
+搜索索引
 ==================
 
 .. _zendsearch.lucene.searching.query_building:

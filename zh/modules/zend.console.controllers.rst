@@ -1,6 +1,6 @@
 .. _zend.console.controllers:
 
-Console-aware action controllers
+控制器方法-命令行教程
 ================================
 
 Zend Framework 2 has built-in :doc:`MVC integration with the console<zend.console.introduction>`. When the user runs

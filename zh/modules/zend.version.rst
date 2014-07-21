@@ -1,6 +1,6 @@
 .. _zend.version.reading:
 
-Getting the Zend Framework Version
+获取 Zend Framework 版本
 ==================================
 
 .. _zend.version.reading.overview:

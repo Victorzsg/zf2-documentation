@@ -1,4 +1,4 @@
-Progress Bars
+进度条
 =============
 
 .. _zend.progress-bar.introduction:

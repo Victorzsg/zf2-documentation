@@ -1,6 +1,6 @@
 .. _zendpdf.info:
 
-Document Info and Metadata
+文档信息和元数据
 ==========================
 
 A *PDF* document may include general information such as the document's title, author, and creation and

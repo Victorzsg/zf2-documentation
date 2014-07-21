@@ -1,6 +1,6 @@
 .. _zend.math.introduction:
 
-Introduction to Zend\\Math
+Zend\\Math 介绍
 ==========================
 
 ``Zend\Math`` namespace provides general mathematical functions. So far the supported functionalities are:

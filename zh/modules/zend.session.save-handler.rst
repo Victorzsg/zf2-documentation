@@ -1,6 +1,6 @@
 .. _zend.session.save-handler:
 
-Session Save Handlers
+Session 保存处理
 =====================
 
 Zend Framework comes with a standard set of save handler classes which are ready for you to use.  Save Handlers

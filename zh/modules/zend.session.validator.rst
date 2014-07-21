@@ -1,6 +1,6 @@
 .. _zend.session.validator:
 
-Session Validators
+Session 验证
 ==================
 
 Session validators provide various protection against session hijacking.  Session hijacking in particular has

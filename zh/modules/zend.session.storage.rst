@@ -1,6 +1,6 @@
 .. _zend.session.storage:
 
-Session Storage
+Session 储存
 ===============
 
 Zend Framework comes with a standard set of storage classes which are ready for you to use.  Storage handlers is

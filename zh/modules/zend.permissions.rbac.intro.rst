@@ -1,6 +1,6 @@
 .. _zend.permissions.rbac.introduction:
 
-Introduction to Zend\\Permissions\\Rbac
+Zend\\Permissions\\Rbac 介绍
 =======================================
 
 The ``Zend\Permissions\Rbac`` component provides a lightweight role-based access control implementation based around

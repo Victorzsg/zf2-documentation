@@ -1,6 +1,6 @@
 .. _zend.paginator.usage:
 
-Usage
+使用
 =====
 
 .. _zend.paginator.usage.paginating:

@@ -1,6 +1,6 @@
 .. _zendservice.amazon.ec2.instance:
 
-ZendService\\Amazon\\Ec2: Instances
+ZendService\\Amazon\\Ec2: 实例
 ===================================
 
 .. _zendservice.amazon.ec2.instance.types:

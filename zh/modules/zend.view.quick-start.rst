@@ -1,6 +1,6 @@
 .. _zend.view.quick-start:
 
-Zend\\View Quick Start
+Zend\\View 快速入门
 ======================
 
 .. _zend.view.quick-start.intro:

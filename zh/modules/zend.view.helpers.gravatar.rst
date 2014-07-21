@@ -1,6 +1,6 @@
 .. _zend.view.helpers.initial.gravatar:
 
-Gravatar Helper
+图像辅助函数
 ===============
 
 .. _zend.view.helpers.initial.gravatar.introduction:

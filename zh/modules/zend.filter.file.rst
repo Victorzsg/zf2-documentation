@@ -1,6 +1,6 @@
 .. _zend.filter.file:
 
-File Filter Classes
+文件过滤类
 ===================
 
 Zend Framework comes with a set of classes for filtering file contents as well as performing other actions, such
