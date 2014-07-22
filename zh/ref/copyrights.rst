@@ -4,7 +4,7 @@
 版权信息
 *********************
 
-The following copyrights are applicable to portions of Zend Framework.
+适用于 Zend Framework 的版权信息如下：
 
 Copyright © 2005-2014 Zend Technologies Inc. (http://www.zend.com)
 

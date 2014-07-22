@@ -10,32 +10,20 @@ Zend Framework 2 从Zend Framework 1 进化而来，它是一款超过1500万下
 
 .. note::
 
-    *ZF2* 并不乡下兼容 *ZF1*，这是由于使用了PHP5.3+的新特性，并重写了它的主要组件。
+    由于使用了PHP5.3+的新特性，并重写了主要组件，*ZF2* 并不向下兼容 *ZF1*。
 
-Zend framework 2组件结构是独特的；每个组件被设计的很少依赖其他组件。zf2遵循 `SOLID`_ 面向对象设计原则。这个松散耦合的体系结构允许开发人员使用他们想要的任何组件。我们称此为“松耦合”设计。对于整个框架和每一个组件，我们支持 `Pyrus`_ 和 `Composer`_ 安装以及依赖跟踪机制，更加增强了这种设计。
+Zend framework 2组件结构是独特的；每个组件很少依赖其他组件。zf2遵循 `SOLID`_ 面向对象设计原则。这种松散耦合结构允许开发人员使用他们想要的任何组件。我们称此为“松耦合”设计。整个框架和每一个组件都支持 `Pyrus`_ 和 `Composer`_ 安装以及依赖跟踪机制，这更加增强了这种理念。
 
 我们用 `PHP单元测试`_ 来检测我们的代码，用 `Travis CI`_ 作为持续集成服务。
 
-尽管它们可以分开使用，但是相结合时，Zend Framework 2 标准库中的组件形成一个强大的、可扩展的web应用程序框架。 Also, it offers a robust, high performance `MVC`_ implementation, a
-database abstraction that is simple to use, and a forms component that implements `HTML5 form rendering`_,
-validation, and filtering so that developers can consolidate all of these operations using one easy-to-use, object
-oriented interface. Other components, such as :doc:`Zend\\Authentication <zend.authentication.introduction>` and
-:doc:`Zend\\Permissions\\Acl <zend.permissions.acl.introduction>`, provide user authentication and authorization against
-all common credential stores. 
+尽管它们可以分开使用，但相结合时，Zend Framework 2 标准库中的组件形成一个强大的、可扩展的web应用程序框架。它提供了健壮的、性能高效的 `MVC`_ 方案，数据库抽象简单易用，表单组件使用 `HTML5表单渲染`_，验证并过滤。因此，开发人员使用一个易于使用的、面向对象的接口整合所有这些操作。其它组件，例如 :doc:`Zend\\Authentication <zend.authentication.introduction>` 和
+:doc:`Zend\\Permissions\\Acl <zend.permissions.acl.introduction>`，提供用户身份验证和所有公共凭据存储的授权。
 
-Still others, with the ``ZendService`` namespace, implement client libraries to simply access the most
-popular web services available. Whatever your application needs are, you're likely to find a Zend Framework 2
-component that can be used to dramatically reduce development time with a thoroughly tested foundation.
+另外，有了 ``ZendService`` 命名空间，客户端库可以直接访问最流行的web服务。无论您的应用程序需要什么，都可能找到一个经过彻底测试的Zf2组件，大大减少开发时间。
+
+`Zend Technologies`_ 是 'Zend Framework 2' 的主要赞助者，但是许多公司为框架的组件或特性作出了贡献。例如谷歌、微软和StrikeIron与Zend一道，提供了zf2开发者们希望使用的接口、web服务以及其他技术。
  
-The principal sponsor of the project 'Zend Framework 2' is `Zend Technologies`_, but many companies have contributed 
-components or significant features to the framework. Companies such as Google, Microsoft, and StrikeIron have 
-partnered with Zend to provide interfaces to web services and other technologies they wish to make available 
-to Zend Framework 2 developers.
-
-Zend Framework 2 could not deliver and support all of these features without the help of the vibrant Zend Framework 2
-community. Community members, including contributors, make themselves available on `mailing lists`_, 
-`IRC channels`_ and other forums. Whatever question you have about Zend Framework 2, the community is always 
-available to address it.
+没有Zend Framework 2社区的帮助，zf2无法交付和支持所有这些功能。社区成员以及贡献者们，可以通过 `mailing lists`_，`IRC channels`_ 和别的论坛找到。有什么关于zf2的问题，可以去下面这些社区。
 
 .. _`object-oriented`: http://en.wikipedia.org/wiki/Object-oriented_programming
 .. _`namespaces`: http://php.net/manual/en/language.namespaces.php

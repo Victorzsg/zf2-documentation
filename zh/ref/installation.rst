@@ -6,30 +6,23 @@
 
 .. See the :ref:`requirements appendix <requirements>` for a detailed list of requirements for Zend Framework.
 
-- **New to Zend Framework?** 
-  `Download the latest stable release.`_ Available in ``.zip`` and ``.tar.gz`` formats.
+- **不了解Zend Framework？** 
+  `下载最新的稳定版本`_。有 ``.zip`` 和 ``.tar.gz`` 格式可供下载。
 
-- **Brave, cutting edge?**
-  Download `Zend Framework's Git repository`_ using a `Git`_ client. Zend Framework is open source software, 
-  and the Git repository used for its development is publicly available on `GitHub`_. Consider using Git to get 
-  Zend Framework if you want to contribute back to the framework, or need to upgrade your framework version more 
-  often than releases occur.
+- **体验最新尖端特性？**
+  使用 `Git`_ 客户端下载 `Zend Framework的Git代码库`_。Zend Framework是开源软件，在 `GitHub`_ 上Git仓库对开发者是公开的。如果你想给zf框架做贡献，或者相对于发布版经常需要修改您的框架，可以考虑使用Git来获取框架。
 
-Once you have a copy of Zend Framework available, your application needs to be able to access the framework classes 
-found in the library folder. There are `several ways to achieve this`_.
+一旦有了复制了zf框架，你的应用需要能够访问到放在library目录的zf的类。有 `几种方法`_。
 
-Failing to find a Zend Framework 2 installation, the following error occurs::
+找不到zf2的安装在哪里，会发生以下错误::
 
  Fatal error: Uncaught exception 'RuntimeException' with message
  'Unable to load ZF2. Run `php composer.phar install` or define 
  a ZF2_PATH environment variable.'
 
-To fix that, you can add the Zend Framework's library path to the *PHP* `include_path`_.
-Also, you should set an environment path named 'ZF2_PATH' in httpd.conf (or equivalent).
-i.e.  ``SetEnv ZF2_PATH /var/ZF2`` running Linux.
+解决这个问题，你可以把zf的类文件路径添加到 *PHP* 的 `include_path`_。还有，要在httpd.conf（或同类）中设置一个 'ZF2_PATH' 环境变量，例如在Linux下 ``SetEnv ZF2_PATH /var/ZF2``。
 
-`Rob Allen`_ has kindly provided the community with an introductory tutorial, `Getting Started with Zend Framework 2`_. 
-Other Zend Framework community members are actively working on `expanding the tutorial`_.
+友善的 `Rob Allen`_ 已经给社区提供了一个入门教程，`Getting Started with Zend Framework 2`_。其他的zf社区成员也在  `积极的扩展这个教程`_。
 
 
 
