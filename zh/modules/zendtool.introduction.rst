@@ -3,144 +3,128 @@
 Zend Framework Tool (ZFTool)
 ============================
 
-`ZFTool`_ is a utility module for maintaining modular Zend Framework 2 applications.
-It runs from the command line and can be installed as ZF2 module or as PHAR (see below).
-This tool gives you the ability to:
+`ZFTool`_ 是一个维护模块化zf2应用的实用工具模块。运行在命令行，可以通过zf2模型或者PHAR（看下面）安装。此工具有以下功能：
 
-   - create a ZF2 project, installing a skeleton application;
+   - 创建zf2项目，安装一个框架应用；
 
-   - create a new module inside an existing ZF2 application;
+   - 在已经存在的zf应用中创建新的模型；
 
-   - get the list of all the modules installed inside an application;
+   - 列出安装在应用中的所有模块；
 
-   - get the configuration file of a ZF2 application;
+   - 获取zf2应用的配置文件；
 
-   - install the ZF2 library choosing a specific version.
+   - 安装特定版本的zf2类库。
 
-To install the ZFTool you can use one of the following methods or you can just download
-the PHAR package and use it.
+安装ZFTool，只需用下列方法中的一个或者你只用下载并使用PHAR包。
 
-Installation using `Composer`_
+使用 `Composer`_ 安装
 ------------------------------
 
-    1. Open console (command prompt)
-    2. Go to your application's directory
-    3. Run `composer require zendframework/zftool:dev-master`
+    1. 打开控制台 （命令行）
+    2. 切换到应用目录
+    3. 运行 `composer require zendframework/zftool:dev-master`
 
-Manual installation
+手动安装
 -------------------
 
-    1. Clone using `git` or `download zipball`_
-    2. Extract to `vendor/ZFTool` in your ZF2 application
-    3. Enter the `vendor/ZFTool` folder and execute `zf.php` as reported below.
+    1. 用 `git` clone或者 `下载zip包`_
+    2. 解压到zf应用的 `vendor/ZFTool` 目录
+    3. 进入 `vendor/ZFTool` 目录执行 `zf.php` 得到如下结果
 
-Without installation, using the PHAR file
+无需安装，使用PHAR文件
 -----------------------------------------
 
     1. You don't need to install ZFTool if you want just use it as a shell command.
        You can `download zftool.phar`_ and use it.
+       你不必安装ZFTool，如果你只是把它用作一个shell命令，你可以 `下载 zftool.phar`_ 并使用它。
 
-Usage
+用法
 -----
 
-From Composer or Manual install:
+用 Composer 或手动安装：
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The `zf.php` should be installed into the `vendor/ZFTool` directory (relative to
-your project root) - however, the command needs to be run from your project root
-in order for it to work correctly. You can symlink `vendor/ZFTool/zf.php` to
-your project root, or alternatively substitute `zf.php` for
-`vendor/ZFTool/zf.php` in the examples below.
+`zf.php` 文件应该安装到 `vendor/ZFTool` 目录（相对于项目根目录）—— 但是，命令需要在项目根目录运行才行。你可以链接 `vendor/ZFTool/zf.php` 到你的项目根目录，或者像下面的例子一样，用 `vendor/ZFTool/zf.php` 替代 `zf.php`。
 
-Using the PHAR:
+使用 PHAR:
 ^^^^^^^^^^^^^^^
 
-Simply substitute `zftool.phar` for `zf.php` in the below examples.
+在下面的例子中，简单替换 `zftool.phar` 为 `zf.php`。
 
 
-Basic information
+基本信息
 ^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
-    > zf.php modules [list]           show loaded modules
+    > zf.php modules [list]           显示加载的模块
 
-The *modules* option gives you the list of all the modules installed in a ZF2 application.
+*modules* 项列出了zf2应用安装的所有模块。
 
 .. code-block:: bash
 
-    > zf.php version | --version      display current Zend Framework version
+    > zf.php version | --version      显示当前 Zend Framework 版本
 
-The *version* option gives you the version number of ZFTool and, if executed from the root
-folder of a ZF2 application, the version number of the Zend Framework library used by the application.
+*version* 项给出了ZFTool的版本，如果从zf2应用的根目录执行，还有应用使用的zf类库版本号。
 
-Project creation
+项目创建
 ^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
     > zf.php create project <path>
 
-    <path>              The path of the project to be created
+    <path>              项目路径
 
-This command installs the `ZendSkeletonApplication`_ in the specified path.
+此命令把 `ZendSkeletonApplication`_ 安装到指定目录。
 
-Module creation
+模块创建
 ^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
     > zf.php create module <name> [<path>]
 
-    <name>              The name of the module to be created
-    <path>              The path to the root folder of the ZF2 application (optional)
+    <name>              要创建的模块名
+    <path>              到zf2应用根目录的路径（可选）
 
-This command can be used to create a new module inside an existing ZF2 application.
-If the path is not provided the ZFTool try to create a new module in the local directory
-(only if the local folder contains a ZF2 application).
+此命令可用于在现有的ZF2应用程序内创建一个新模块。如果没有提供路径，ZFTool会尝试在当前目录创建一个模块（除非本地文件夹包含一个zf2应用）。
 
-Classmap generator
+Classmap 生成器
 ^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
     > zf.php classmap generate <directory> <classmap file> [--append|-a] [--overwrite|-w]
 
-    <directory>         The directory to scan for PHP classes (use "." to use current directory)
-    <classmap file>     File name for generated class map file  or - for standard output. If not supplied, defaults to
-                        autoload_classmap.php inside <directory>.
-    --append | -a       Append to classmap file if it exists
-    --overwrite | -w    Whether or not to overwrite existing classmap file
+    <directory>         PHP 类要扫描的目录 （使用 "." 代表当前目录）
+    <classmap file>     生成类映射文件或者标准输出文件的文件名，如果没有提供，默认为<directory>里的autoload_classmap.php 
+    --append | -a       如果存在添加到类映射文件
+    --overwrite | -w    是否要覆盖现有classmap文件
 
-ZF library installation
+ZF 类库安装
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
     > zf.php install zf <path> [<version>]
 
-    <path>              The directory where to install the ZF2 library
-    <version>           The version to install, if not specified uses the last available
+    <path>              ZF2 类库安装目录
+    <version>           要安装的版本，如果未指定使用最新的
 
-This command install the specified version of the ZF2 library in a path. If the version is omitted it
-will be used the last stable available. Using this command you can install all the tag version specified
-in the `ZF2 github`_ repository (the name used for the version is obtained removing the *'release-'* string
-from the tag name; for instance, the tag *'release-2.0.0'* is equivalent to the version number *2.0.0*).
+此命令安装指定版本的ZF2库到某一路径中。如果版本没有指定，它将使用最新稳定版本。使用此命令你可以安装 `ZF2 github`_ 的所有tag版本（版本名称是去掉tag名称的 *'release-'* 字符串；例如，标记'release-2.0.0'相当于版本号2.0.0）。
 
-Compile the PHAR file
+编译 PHAR 文件
 ^^^^^^^^^^^^^^^^^^^^^
 
-You can create a .phar file containing the ZFTool project. In order to compile ZFTool in a .phar file you need
-to execute the following command:
+你可以创建一个包含ZFTool项目的 .phar 文件，创建此文件，你需要运行下面的命令：
 
 .. code-block:: bash
 
     > bin/create-phar
 
-This command will create a *zftool.phar* file in the bin folder.
-You can use and ship only this file to execute all the ZFTool functionalities.
-After the *zftool.phar* creation, we suggest to add the folder bin of ZFTool in your PATH environment. In this
-way you can execute the *zftool.phar* script wherever you are.
+此命令将会在bin目录创建一个 *zftool.phar* 文件。你可以使用此文件执行所有ZFTool功能。
+创建 *zftool.phar* 之后，我们建议把ZFTool的bin目录添加在您的环境变量。这样，不管你在那个目录，都可以执行 *zftool.phar* 脚本了。
 
 .. _`ZFTool`: https://github.com/zendframework/ZFTool
 .. _`Composer`: http://getcomposer.org
