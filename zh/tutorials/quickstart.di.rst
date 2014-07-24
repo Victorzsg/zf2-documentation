@@ -6,29 +6,26 @@
 
 .. _learning.di.very-brief-introduction-to-di:
 
-Very brief introduction to Di.
+Di简介
 ------------------------------
 
-**Dependency Injection** is a concept that has been talked about in numerous places over the web. For the purposes
-of this quickstart, we'll explain the act of injecting dependencies simply with this below code:
+**依赖注入** 是一个网上经常讨论的概念。为了快速入门，我们用下面的代码解释依赖注入操作：
 
 .. code-block:: php
    :linenos:
 
    $b = new B(new A());
 
-Above, A is a dependency of B, and A was **injected** into B. If you are not familiar with the concept of dependency
-injection, here are a couple of great reads: Matthew Weier O'Phinney's `Analogy`_, Ralph Schindler's `Learning
-DI`_, or Fabien Potencier's `Series on DI`_.
+上面的A是B的依赖，A **被注入** 到B。如果你不了解依赖注入的观念，可以参考： Matthew Weier O'Phinney的 `Analogy`_， Ralph Schindler的 `Learning DI`_，或者 Fabien Potencier的 `Series on DI`_。
+
+
 
 .. _learning.di.simplest-usage-case-2-classes-one-consumes-the-other:
 
-Simplest usage case (2 classes, one consumes the other)
+简单用例 （2个类，一个引入另一个）
 -------------------------------------------------------
 
-In the simplest use case, a developer might have one class (``A``) that is consumed by another class (``B``)
-through the constructor. By having the dependency injected through the constructor, this requires an object of type
-``A`` be instantiated before an object of type ``B`` so that ``A`` can be injected into ``B``.
+在这个最简单的用例中，开发者可能有一个被（``B``）类通过构造函数引用的（``A``）类。通过构造函数注入，需要对象 ``A`` 比 ``B`` 先实例化，以使 ``A`` 可以被注入到 ``B``。
 
 .. code-block:: php
    :linenos:
@@ -50,18 +47,14 @@ through the constructor. By having the dependency injected through the construct
        }
    }
 
-To create ``B`` by hand, a developer would follow this work flow, or a similar workflow to this:
+手工创建 ``B`` 类，开发者会按照这个工作流，或与此类似：
 
 .. code-block:: php
    :linenos:
 
    $b = new B(new A());
 
-If this workflow becomes repeated throughout your application multiple times, this creates an opportunity where one
-might want to `DRY`_ up the code. While there are several ways to do this, using a dependency injection container is
-one of these solutions. With Zend's dependency injection container ``Zend\Di\Di``, the above use
-case can be taken care of with no configuration (provided all of your autoloading is already configured properly)
-with the following usage:
+如果此工作流在整个应用程序中重复多次，你可能需要`DRY`_ 你的代码了。有几种方法，使用依赖注入就是其中之一。使用zend的依赖注入容器 ``Zend\Di\Di``，不需多余的配置就可以解决此种情况（前提是所有的自动加载都已正确配置）：
 
 .. code-block:: php
    :linenos:
