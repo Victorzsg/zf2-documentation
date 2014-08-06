@@ -60,11 +60,9 @@ Di简介
    :linenos:
 
    $di = new Zend\Di\Di;
-   $b = $di->get('My\B'); // will produce a B object that is consuming an A object
+   $b = $di->get('My\B'); // 创建一个依赖于A对象的B对象
 
-Moreover, by using the ``Di::get()`` method, you are ensuring that the same exact object is
-returned on subsequent calls. To force new objects to be created on each and every request, one would use the
-``Di::newInstance()`` method:
+此外，通过使用 ``Di::get()`` 方法，可以保证请求返回的是确定的对象。为了强制每次请求都能创建新对象，需要使用 ``Di::newInstance()`` 方法：
 
 .. code-block:: php
    :linenos:
