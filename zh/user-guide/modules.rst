@@ -3,9 +3,9 @@
 模型
 =======
 
-Zend Framework 2使用module系统的每一个module来组织应用的每一个功能。骨架应用的module为整个应用提供引导，错误和路由配置。module通常用来给应用级的控制器提供功能，比如，一个应用的主页，但是这里我们不打算使用教程默认的module，我们希望使用自己的module使我们的列表页作为首页。
+Zend Framework 2使用模型系统的每一个module来组织应用的每一个功能。骨架应用的module为整个应用提供引导，错误和路由配置。module通常用来给应用级的控制器提供功能，比如，一个应用的主页，但是这里我们不打算使用教程默认的module，我们希望使用自己的module使我们的列表页作为首页。
 
-我们打算把代码放在Album模型，它包含我们的controllers，modules，和configuration。我们可以根据需要调整这个模型。
+我们打算把代码放在Album模型，它包含controllers，modules，和configuration。我们可以根据需要调整这个模型。
 
 现在开始创建需要的目录。
 
@@ -72,9 +72,9 @@ zf2用 ``ModuleManager`` 来加载和配置一个module。它们会去模型目�
 自动加载文件
 ^^^^^^^^^^^^^^^^^
 
-``getAutoloaderConfig()`` 方法返回一个ZF2的 ``AutoloaderFactory`` 数组。配置它以使我们添加一个 ``ClassMapAutoloader`` 类映射文件，另外，把这个模型的命名空间也添加到 ``StandardAutoloader``。标准的自动加载需要一个命名空间和找到命名空间文件的路径。这符合 `PSR-0 <https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md>`_ 命名标准，通过该标准，类直接映射到文件。
+``getAutoloaderConfig()`` 方法返回一个ZF2的 ``AutoloaderFactory`` 数组。配置它以添加一个 ``ClassMapAutoloader`` 类映射文件，另外，把这个模型的命名空间也添加到 ``StandardAutoloader``。标准的自动加载需要一个命名空间和找到命名空间文件的路径。这符合 `PSR-0 <https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md>`_ 命名标准，通过该标准，类直接映射到文件。
 
-由于在开发中，我们不需要通过映射类加载文件，所以我们给自动加载映射类提供了一个空数组。在 ``zf2-tutorial/module/Album`` 中创建一个  ``autoload_classmap.php`` 文件：
+由于在开发中，不需要通过映射类加载文件，所以我们给自动加载映射类提供了一个空数组。在 ``zf2-tutorial/module/Album`` 中创建一个  ``autoload_classmap.php`` 文件：
 
 .. code-block:: php
    :linenos:
@@ -120,14 +120,14 @@ zf2用 ``ModuleManager`` 来加载和配置一个module。它们会去模型目�
         ),
     );
 
-``ServiceManager`` 会把配置信息传递给相关组件。我们需要 ``controllers`` 和 ``view_manager`` 两个初始化部分。控制器部分提供了模块的控制器列表。我们需要一个控制器  ``AlbumController`` 放在 ``Album\Controller\Album`` ，这个控制器的键在所有模型中必须是唯一的，所以我们以我们的模型名作为它的前缀。
+``ServiceManager`` 会把配置信息传递给相关组件。我们需要 ``controllers`` 和 ``view_manager`` 两个初始化部分。控制器部分提供了模块的控制器列表。控制器  ``AlbumController`` 放在 ``Album\Controller\Album`` ，这个控制器的键在所有模型中必须是唯一的，所以我们以我们的模型名作为它的前缀。
 
-在 ``view_manager`` 部分，我们把视图目录添加到 ``TemplatePathStack`` 配置，这样它就会找到放在 ``view/`` 目录的模块视图脚本。
+在 ``view_manager`` 部分，把视图目录添加到 ``TemplatePathStack`` 配置，这样它就会找到放在 ``view/`` 目录的模块视图脚本。
 
-把我们的新模块告诉给应用程序
+把新模块告诉给应用程序
 ----------------------------------------------
 
-我们现在得告诉 ``ModuleManager`` 新模块的存在。这是通过骨架应用的 ``config/application.config.php`` 配置文件实现的。修改这个文件，使它的 ``modules`` 部分也包含 ``Album`` ，这样，文件看起来应该是这样的：
+现在得告诉 ``ModuleManager`` 新模块的存在。这是通过骨架应用的 ``config/application.config.php`` 配置文件实现的。修改这个文件，使它的 ``modules`` 部分也包含 ``Album`` ，这样，文件看起来应该是这样的：
 
 （修改高亮显示的注释部分）
 

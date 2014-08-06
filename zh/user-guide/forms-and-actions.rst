@@ -11,7 +11,7 @@
 * 展示一个用户提交信息的表单
 * 处理提交的表单数据并保存到数据库
 
-我们用 ``Zend\Form`` 来做这个。``Zend\Form`` 组件管理表单和表单验证，我们添加一个 ``Zend\InputFilter`` 到我们的 ``唱片`` 对象。我们创建一个扩展自 ``Zend\Form\Form`` 的 ``Album\Form\AlbumForm`` 新类来定义我们的表单。在 ``module/Album/src/Album/Form`` 中创建一个 ``AlbumForm.php`` 文件：
+用 ``Zend\Form`` 来做这个。``Zend\Form`` 组件管理表单和表单验证，添加 ``Zend\InputFilter`` 到我们的 ``唱片`` 对象。创建一个扩展自 ``Zend\Form\Form`` 的 ``Album\Form\AlbumForm`` 新类来定义我们的表单。在 ``module/Album/src/Album/Form`` 中创建一个 ``AlbumForm.php`` 文件：
 
 .. code-block:: php
    :linenos:
@@ -56,9 +56,9 @@
         }
     }
 
-在 ``AlbumForm``构造函数中，我们做了以下几件事情。首先，我们给这个表单设置名称，因为我们调用父类的构造函数。我们创建4个表单元素：id，title，artist和提交按钮。对每一项，我们都设置多个属性和选项，包括要被展示的标签。
+在 ``AlbumForm``构造函数中，做了以下事情。首先，给这个表单设置名称，调用父类的构造函数。创建4个表单元素：id，title，artist和提交按钮。对每一项，我们都设置多个属性和选项，包括要被展示的标签。
 
-我们也需要进行表单验证。在zf2中，这是通过输入过滤实现的，它既可以单独使用，也可以在继承自 ``InputFilterAwareInterface`` 接口的任何类定义，比如一个模型实例。在这里，我们打算给唱片类添加一个输入过滤器，它放在 ``module/Album/src/Album/Model` 中的 ``Album.php`` 文件里：
+表单验证。在zf2中，这是通过输入过滤实现的，它既可以单独使用，也可以在继承自 ``InputFilterAwareInterface`` 接口的任何类中定义，比如一个模型实例。在这里，我们打算给唱片类添加一个输入过滤器，它放在 ``module/Album/src/Album/Model` 中的 ``Album.php`` 文件里：
 
 .. code-block:: php
    :linenos:
@@ -152,10 +152,10 @@
 输入过滤感知接口 ``InputFilterAwareInterface`` 定义了两个方法：``setInputFilter()`` 和
 ``getInputFilter()``。我们只用实例化 ``getInputFilter()``，所以我们仅仅在 ``setInputFilter()`` 中抛出一个异常。
 
-在 ``getInputFilter()`` 中，我们实例化了 ``InputFilter``，然后添加上我们需要的输入项。我们为每一个需要过滤和验证的属性添加一个表单。在 ``id`` 列，我们添加一个 ``Int`` 过滤器，因为我们只需要整型数字。文本域中，我们添加了两个过滤器，``StripTags`` 和
-``StringTrim`` 用来去除不需要的HTML代码和空格。我们还把它们设置为 *required* 并添加了一个 ``StringLength`` 来确保输入的字符长度不会超出我们的数据库允许存储的长度。
+在 ``getInputFilter()`` 中，实例化了 ``InputFilter``，然后添加上需要的输入项。我们为每一个需要过滤和验证的属性添加一个表单。在 ``id`` 列，添加一个 ``Int`` 过滤器，因为只需要整型数字。文本域中，添加了两个过滤器，``StripTags`` 和
+``StringTrim`` 用来去除不需要的HTML代码和空格。我们还把它们设置为 *required* 并添加了一个 ``StringLength`` 来确保输入的字符长度不会超出数据库允许存储的长度。
 
-现在我们需要先显示表格，提交的时候再处理它们。下面是 ``AlbumController`` 控制器的 ``addAction()`` 方法：
+现在先显示表格，提交的时候再处理它们。下面是 ``AlbumController`` 控制器的 ``addAction()`` 方法：
 
 .. code-block:: php
    :linenos:
@@ -194,8 +194,7 @@
         }
     //...
 
-After adding the ``AlbumForm`` to the use list, we implement ``addAction()``.
-Let’s look at the ``addAction()`` code in a little more detail:
+把 ``AlbumForm`` 添加use列表后，完善一下 ``addAction()`` 方法：
 
 .. code-block:: php
    :linenos:
@@ -203,9 +202,7 @@ Let’s look at the ``addAction()`` code in a little more detail:
     $form = new AlbumForm();
     $form->get('submit')->setValue('Add');
 
-We instantiate ``AlbumForm`` and set the label on the submit button to “Add”. We
-do this here as we’ll want to re-use the form when editing an album and will use
-a different label.
+实例化 ``AlbumForm`` ，给“Add”提交按钮添加label。这样做是因为我们想编辑唱片的时候，使用不同的label重用表单。
 
 .. code-block:: php
    :linenos:
@@ -217,7 +214,7 @@ a different label.
         $form->setData($request->getPost());
         if ($form->isValid()) {
 
-如果 ``Request`` 对象的 ``isPost()`` 返回TRUE，表单将被提交，我们在唱片实例中给表单设置的过滤器也将被提交。然后，我们设置提交到表单的数据，使用表单的成员函数 ``isValid()`` 来检查数据是否合法。
+如果 ``Request`` 对象的 ``isPost()`` 返回TRUE，表单将被提交，在唱片实例中给表单设置的过滤器也将被提交。然后，设置提交到表单的数据，使用表单的成员函数 ``isValid()`` 来检查数据是否合法。
 
 .. code-block:: php
    :linenos:
@@ -240,7 +237,7 @@ a different label.
 
     return array('form' => $form);
 
-最后，我们返回想要传递给视图的变量，在这里，只是表单对象。注意zf2允许你返回一个即将传递给视图的变量的数组，并且在暗中为你创建一个 ``ViewModel``。这样就省去了一些代码的编写。
+最后，返回想要传递给视图的变量，在这里，只是表单对象。注意zf2允许你返回一个即将传递给视图的变量的数组，并且在暗中为你创建一个 ``ViewModel``。这样就省去了一些代码的编写。
 
 现在我们在add.phtml视图中渲染这个表单：
 
@@ -265,7 +262,7 @@ a different label.
     echo $this->formSubmit($form->get('submit'));
     echo $this->form()->closeTag();
 
-同样，我们像之前一样显示一个标题，然后渲染表单。zf提供了一些视图辅助函数，使这个操作更加简单。 ``form()`` 视图辅助函数有 ``openTag()`` 和 ``closeTag()`` 两个方法来打开和关闭表单。对于每个有label的元素，我们使用 ``formRow()``，但是对于两个独立的元素，我们使用 ``formHidden()`` 和
+同样，我们像之前一样显示一个标题，然后渲染表单。zf提供了一些视图辅助函数，使这个操作更加简单。 ``form()`` 视图辅助函数有 ``openTag()`` 和 ``closeTag()`` 两个方法来打开和关闭表单。对于每个有label的元素，使用 ``formRow()``，但是对于两个独立的元素，使用 ``formHidden()`` 和
 ``formSubmit()``。
 
 .. image:: ../images/user-guide.forms-and-actions.add-album-form.png
@@ -278,7 +275,7 @@ a different label.
 
     echo $this->formCollection($form);
 
-Note: 你仍需调用表单的 ``openTag`` 和 ``closeTag`` 方法。上面的代码中，你把其他的输出语句用调用 ``formCollection`` 方法代替。
+Note: 仍需调用表单的 ``openTag`` 和 ``closeTag`` 方法。上面的代码中，把其他的输出语句用调用 ``formCollection`` 方法代替。
 
 这会遍历表单结构，给每一个元素调用合适的标签，元素和错误的视图辅助函数，但是你还是得把formCollection($form)元素放在打开和关闭的表单标签里面。这些辅助函数减少了视图脚本的复杂性，默认渲染的HTML表单是可以接受的。
 
@@ -444,7 +441,7 @@ Note: 你仍需调用表单的 ``openTag`` 和 ``closeTag`` 方法。上面的�
 删除唱片
 -----------------
 
-未完善我们的应用，我们要添加删除操作。在列表页，每个唱片有一个删除链接，点击删除的时候，唱片会被删除。这是错的。注意HTTP规范，我们回忆一下，不要用GET进行一个不可逆转的操作，你应该用POST代替。
+为了完善应用，我们添加删除操作。在列表页，每个唱片有一个删除链接，点击删除的时候，唱片会被删除。这是错的。注意HTTP规范，我们回忆一下，不要用GET进行一个不可逆转的操作，你应该用POST代替。
 
 当用户点击删除的时候，应该有个确认表单，如果他们选择的是“yes”，我们才执行删除操作。形式不重要，我们直接来辩解视图（毕竟，``Zend\Form`` 是可选的）。
 
@@ -516,7 +513,7 @@ Note: 你仍需调用表单的 ``openTag`` 和 ``closeTag`` 方法。上面的�
     </div>
     </form>
 
-在此脚本中，我们像用户展示了一个带有“yes”和“no”按钮的确认提示。操作中，删除时，我们特别检查了“yes”值。
+在此脚本中，我们向用户展示了一个带有“yes”和“no”按钮的确认提示。操作中，删除的时候，我们特别检查了“yes”值。
 
 确保主页显示唱片列表
 -------------------------------------------------------
@@ -540,7 +537,7 @@ Note: 你仍需调用表单的 ``openTag`` 和 ``closeTag`` 方法。上面的�
         ),
     ),
 
-Change the ``controller`` from ``Application\Controller\Index`` to
+把 ``controller`` 从 ``Application\Controller\Index`` 改为
 ``Album\Controller\Album``:
 
 .. code-block:: php
@@ -558,4 +555,4 @@ Change the ``controller`` from ``Application\Controller\Index`` to
         ),
     ),
 
-就是这样——你现在拥有一个完全可用的应用程序！
+就是这样 —— 现在你拥有了一个完全可用的应用程序！

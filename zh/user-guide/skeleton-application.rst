@@ -3,7 +3,7 @@
 开始：骨架应用
 =======================================
 
-为创建我们的应用，我们以 `ZendSkeletonApplication <https://github.com/zendframework/ZendSkeletonApplication>`_ （通过 `github <https://github.com/>`_ 获得）开始。
+为创建应用，我们以 `ZendSkeletonApplication <https://github.com/zendframework/ZendSkeletonApplication>`_ （通过 `github <https://github.com/>`_ 获得）开始。
 使用 composer(http://getcomposer.org)来创建一个新zend framework应用。
 
 .. code-block:: bash
@@ -20,8 +20,7 @@
 
     ZendSkeletonApplication使用Composer (http://getcomposer.org)来解决它的依赖性，在这里，依赖指的是zf2自己。
 
-    To install Zend Framework 2 into our application we simply type:
-    安装zf2到我们的应用，我们只用输入：
+    安装zf2到应用中，只用输入：
 
     .. code-block:: bash
        :linenos:
@@ -30,7 +29,7 @@
         php composer.phar install
         php composer.phar update
 
-    从 ``zf2-tutorial`` 目录。等一会，我们会看到类似下面的输出：
+    从 ``zf2-tutorial`` 目录。过一会，会看到类似下面的输出：
 
     .. code-block:: bash
        :linenos:
@@ -134,7 +133,7 @@
 
 重启Apache。
 
-如果你已经正确地做了以上这些，你应该能够看到如下内容：
+如果已经正确地做了以上这些，你应该能够看到如下内容：
 
 .. image:: ../images/user-guide.skeleton-application.hello-world.png
     :width: 940 px
@@ -158,7 +157,7 @@
 使用内置的PHP CLI服务
 ---------------------------------
 
-另外 —— 如果你使用版本5.4以上的PHP —— 你可以使用内置的CLI服务（cli-server）。你只用在根目录开启服务就可以使用它了：
+另外 —— 如果使用5.4以上版本的PHP —— 你可以使用内置的CLI服务（cli-server）。只用在根目录开启服务就可以使用它了：
 
 .. code-block:: bash
     :linenos:
@@ -168,7 +167,7 @@
 这样，通过所有网络接口的8080端口就可以访问此网站了，用 ``public/index.php`` 来控制路由。
 这意味着通过 http://localhost:8080 或者 http://your-local-IP:8080 来访问网站。
 
-如果你做的都正确，你应该能够看到和上面的Apache一样的结果。
+如果做的都正确，你应该能够看到和上面的Apache一样的结果。
 
 为了测试你的路由是正确的，访问http://localhost:8080/1234 ，你会看到和上面的Apache一样的错误页面。
 

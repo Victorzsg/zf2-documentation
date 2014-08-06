@@ -3,7 +3,7 @@
 样式和翻译
 ========================
 
-我们已经看到了骨架应用的样式，挺漂亮的，但是我们需要改变它的标题并移除版权信息。骨架应用使用 ``Zend\I18n`` 的翻译功能来翻译所有文本。它使用``module/Application/language`` 中的 ``.po`` 文件，你需要 `poedit
+我们已经看到了骨架应用的样式，挺漂亮的，但是需要改变它的标题并移除版权信息。骨架应用使用 ``Zend\I18n`` 的翻译功能来翻译所有文本。它使用``module/Application/language`` 中的 ``.po`` 文件，你需要 `poedit
 <http://www.poedit.net/download.php>`_ 来改变文本。用poedit打开 ``module/Application/language/en_US.po``，点击 ``Original`` 字符串清单里的“Skeleton Application”，输入“Tutorial”作为翻译。
 
 .. image:: ../images/user-guide.styling-and-translations.poedit.png
