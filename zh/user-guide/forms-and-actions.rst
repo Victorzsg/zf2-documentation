@@ -56,9 +56,9 @@
         }
     }
 
-在 ``AlbumForm``构造函数中，做了以下事情。首先，给这个表单设置名称，调用父类的构造函数。创建4个表单元素：id，title，artist和提交按钮。对每一项，我们都设置多个属性和选项，包括要被展示的标签。
+在 ``AlbumForm`` 构造函数中，做了以下事情。首先，给这个表单设置名称，调用父类的构造函数。创建4个表单元素：id，title，artist和提交按钮。对每一项，我们都设置多个属性和选项，包括要被展示的标签。
 
-表单验证。在zf2中，这是通过输入过滤实现的，它既可以单独使用，也可以在继承自 ``InputFilterAwareInterface`` 接口的任何类中定义，比如一个模型实例。在这里，我们打算给唱片类添加一个输入过滤器，它放在 ``module/Album/src/Album/Model` 中的 ``Album.php`` 文件里：
+表单验证。在zf2中，这是通过输入过滤实现的，它既可以单独使用，也可以在继承自 ``InputFilterAwareInterface`` 接口的任何类中定义，比如一个模型实例。在这里，我们打算给唱片类添加一个输入过滤器，它放在 ``module/Album/src/Album/Model`` 中的 ``Album.php`` 文件里：
 
 .. code-block:: php
    :linenos:
