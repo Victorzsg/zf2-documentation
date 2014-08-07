@@ -13,7 +13,7 @@
 ##备注
 
 + zh目录是copy官方文档en目录里的内容：[zf2-documentation](https://github.com/zendframework/zf2-documentation/tree/master/docs/languages/en)。
-+ 源码为ReST格式，这是一种非常简单优秀的编写格式（介于HTML和txt之间），方便阅读和写作，还能转换成HTML格式。
++ 源码为[reStructuredText格式](http://sphinx-doc.org/rest.html#rst-primer)，这是一种非常简单优秀的编写格式（介于HTML和txt之间），方便阅读和写作，还能转换成HTML格式。
 + 翻译好后，可以使用 [Sphinx](http://sphinx-doc.org/) 制作成html文档。
 + 制作成HTML后效果参考：[Zend Framework 2 中文手册](http://shaoyikai.github.io)。
 + 有任何建议或疑问，欢迎加入zf2中文手册qq群：174303524。
