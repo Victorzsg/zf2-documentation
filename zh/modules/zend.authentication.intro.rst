@@ -1,14 +1,12 @@
 .. _zend.authentication.introduction:
 
-Introduction to Zend\\Authentication
+Zend\\Authentication 介绍
 ====================================
 
-The ``Zend\Authentication`` component provides an *API* for authentication and includes concrete authentication
-adapters for common use case scenarios.
+``Zend\Authentication`` 组件提供身份验证 *API* 和常用的身份验证适配器。
 
-``Zend\Authentication`` is concerned only with **authentication** and not with **authorization**. Authentication is
-loosely defined as determining whether an entity actually is what it purports to be (i.e., identification), based
-on some set of credentials. Authorization, the process of deciding whether to allow an entity access to, or to
+``Zend\Authentication`` 只负责 **身份验证** ，不负责 **权限** 。``Zend\Authentication`` 被定义的比较松散，它能根据设置的凭据判断实体身份的合法性。
+Authorization, the process of deciding whether to allow an entity access to, or to
 perform operations upon, other entities is outside the scope of ``Zend\Authentication``. For more information about
 authorization and access control with Zend Framework, please see the :ref:`Zend\\Permissions\\Acl <zend.permissions.acl>` or :ref:`Zend\\Permissions\\Rbac <zend.permissions.rbac>` component.
 
