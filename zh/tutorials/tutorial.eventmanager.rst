@@ -3,36 +3,31 @@
 使用事件管理
 ======================
 
-This tutorial explores the various features of ``Zend\EventManager``.
+本教程探讨了 ``Zend\EventManager`` 的若干特性。
 
 .. _terminology:
 
-Terminology
+专门用语
 -----------
 
-* An **Event** is a named action.
-* A **Listener** is any PHP callback that reacts to an *event*.
-* An **EventManager** *aggregates* listeners for one or more named events, and
-  *triggers* events.
+* **Event** 即动作。
+* **Listener** 即PHP对 *event* 反应的回调处理。
+* **EventManager** *集中* 监听了一个或多个 *定义的* 事件和 *触发的* 事件。
 
-Typically, an *event* will be modeled as an object, containing metadata
-surrounding when and how it was triggered, including the event name, what object
-triggered the event (the "target"), and what parameters were provided. Events
-are *named*, which allows a single *listener* to branch logic based on the
-event.
+典型的，一个 *事件* 被模仿成一个对象，包括相关元数据何时及如何被触发，事件名是什么，哪个对象（“目标”）被触发，提供哪些参数。事件被 *定义后* ，允许单个 *监听者* 根据它来跳转逻辑。
 
 .. _getting-started:
 
-Getting started
+开始
 ---------------
 
-The minimal things necessary to start using events are:
+使用事件的最起码条件是：
 
-* An ``EventManager`` instance
-* One or more listeners on one or more events
-* A call to ``trigger()`` an event
+* 一个 ``EventManager`` 实例
+* 对一个或多个事件的一个或多个监听者
+* ``trigger()`` 事件的一个请求
 
-The simplest example looks something like this:
+下面是最简单的例子：
 
 .. code-block:: php
     :linenos:
@@ -53,19 +48,15 @@ The simplest example looks something like this:
     $params = array('foo' => 'bar', 'baz' => 'bat');
     $events->trigger('do', null, $params);
 
-The above will result in the following::
+上面的代码会输出::
 
     Handled event "do", with parameters {"foo":"bar","baz":"bat"}
 
 .. note::
+	
+	本教程中，使用闭包作为监听器。事实上，任何有效的PHP回调都可以作为一个监听器：PHP函数名称，静态类的方法、对象实例方法，函数，或者闭包。在这里使用闭包仅仅是为了简单的说明一下。
 
-    Throughout this tutorial, we use closures as listeners. However, any valid
-    PHP callback can be attached as a listeners: PHP function names, static
-    class methods, object instance methods, functors, or closures. We use
-    closures within this post simply for illustration and simplicity.
-
-If you were paying attention to the example, you will have noted the ``null``
-argument. Why is it there?
+如果你比较细心，会注意到 ``null`` 参数。这是为什么呢？
 
 Typically, you will compose an ``EventManager`` within a class, to allow
 triggering actions within methods. The middle argument to ``trigger()`` is the
