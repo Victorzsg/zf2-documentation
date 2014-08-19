@@ -11,8 +11,8 @@
 -----------
 
 * **Event** 即动作。
-* **Listener** 即PHP对 *event* 反应的回调处理。
-* **EventManager** *集中* 监听了一个或多个 *定义的* 事件和 *触发的* 事件。
+* **Listener** 即PHP对 *event* 做出反应的回调函数。
+* **EventManager** *集中* 监听了一个或多个 *定义的* 和 *触发的* 事件。
 
 典型的，一个 *事件* 被模仿成一个对象，包括相关元数据何时及如何被触发，事件名是什么，哪个对象（“目标”）被触发，提供哪些参数。事件被 *定义后* ，允许单个 *监听者* 根据它来跳转逻辑。
 
@@ -23,8 +23,8 @@
 
 使用事件的最起码条件是：
 
-* 一个 ``EventManager`` 实例
-* 对一个或多个事件的一个或多个监听者
+* 实例化一个 ``EventManager`` 对象
+* 对一个或多个事件的一个或多个监听器
 * ``trigger()`` 事件的一个请求
 
 下面是最简单的例子：
@@ -56,12 +56,9 @@
 	
 	本教程中，使用闭包作为监听器。事实上，任何有效的PHP回调都可以作为一个监听器：PHP函数名称，静态类的方法、对象实例方法，函数，或者闭包。在这里使用闭包仅仅是为了简单的说明一下。
 
-如果你比较细心，会注意到 ``null`` 参数。这是为什么呢？
+如果你比较细心，会注意到 ``null`` 参数。这如何理解呢？
 
-Typically, you will compose an ``EventManager`` within a class, to allow
-triggering actions within methods. The middle argument to ``trigger()`` is the
-"target", and in the case described, would be the current object instance. This
-gives event listeners access to the calling object, which can often be useful.
+通常，在类中组合 ``EventManager`` ，触发对方法的动作。中间的参数 ``trigger()`` 是“目标”，在这个例子中，即当前对象实例。这让事件监听器能够调用对象，通常是很有用的。
 
 .. code-block:: php
     :linenos:
@@ -115,17 +112,14 @@ gives event listeners access to the calling object, which can often be useful.
 
     $example->do('bar', 'bat');
 
-The above is basically the same as the first example. The main difference is
-that we're now using that middle argument in order to pass the target, the
-instance of ``Example``, on to the listeners. Our listener is now retrieving
-that (``$e->getTarget()``), and doing something with it.
+以上基本与第一个示例相同。主要的区别是这里使用了中间的参数来传递目标（实例化的 ``示例`` ）到监听器。
+现在监听器检索 (``$e->getTarget()``)，并用它作些事情。
 
-If you're reading this critically, you should have a new question: What is the
-call to ``setIdentifiers()`` for?
+认证的话，你会发现一个新问题： ``setIdentifiers()`` 是干什么的？
 
 .. _shared-managers:
 
-Shared managers
+共享管理
 ---------------
 
 One aspect that the ``EventManager`` implementation provides is an ability to
